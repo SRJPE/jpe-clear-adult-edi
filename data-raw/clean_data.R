@@ -57,10 +57,10 @@ glimpse(escapement_estimate_raw)
 # write files -------------------------------------------------------------
 write.csv(redd, here::here("data", "clear_redd.csv"), row.names = FALSE)
 write.csv(up, here::here("data", "clear_escapement_raw.csv"), row.names = FALSE)
-write.csv(up_estimate, here::here("data", "clear_escapement_estimates_raw.csv"), row.names = FALSE)
+write.csv(up_estimate, here::here("data", "clear_escapement_estimates.csv"), row.names = FALSE)
 
 
 # save cleaned data to `data/`
 read.csv(here::here("data", "clear_redd.csv")) |> glimpse()
 read.csv(here::here("data", "clear_escapement_raw.csv")) |> glimpse()
-read.csv(here::here("data", "clear_escapement_estimates_raw.csv")) |> glimpse()
+read.csv(here::here("data", "clear_escapement_estimates.csv")) |> glimpse()
