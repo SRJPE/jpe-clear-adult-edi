@@ -48,10 +48,9 @@ redd <- redd_raw |>
 glimpse(redd)
 
 up <- escapement_raw |>
-  select(-c(time, adipose_clipped, sex, passage_direction, viewing_condition,
-            spawning_condition, ladder, hours, comments, jack_size, confidence_in_sex, fork_length, status, dead, temperature, flow)) |>
+  select(-c(time, adipose_clipped, sex, passage_direction, viewing_condition, ladder, hours, comments, jack_size, confidence_in_sex, fork_length, status, dead, temperature, flow)) |>
   glimpse()
-#TODO check on flows adn temperature, because all NA's
+#TODO all methods are "video" do we keep them?
 up_estimate <- escapement_estimate_raw
 glimpse(escapement_estimate_raw)
 
