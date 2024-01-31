@@ -44,14 +44,14 @@ escapement_estimate_raw <- read.csv(here::here("data-raw", "standard_adult_passa
 
 #fields "run" and "species" are all "not recorded", opted to delete them
 redd <- redd_raw |>
-  select(-c(depth_m, starting_elevation_ft, num_of_fish_on_redd, latitude, longitude))
+  select(-c(depth_m, starting_elevation_ft, num_of_fish_on_redd, latitude, longitude, pre_redd_substrate_class, tail_substrate_class, redd_substrate_class, ))
 glimpse(redd)
 
 up <- escapement_raw |>
   select(-c(time, adipose_clipped, sex, passage_direction, viewing_condition,
-            spawning_condition, ladder, hours, comments, jack_size)) |>
+            spawning_condition, ladder, hours, comments, jack_size, confidence_in_sex, fork_length, status, dead, temperature, flow)) |>
   glimpse()
-
+#TODO check on flows adn temperature, because all NA's
 up_estimate <- escapement_estimate_raw
 glimpse(escapement_estimate_raw)
 
