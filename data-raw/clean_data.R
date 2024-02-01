@@ -42,15 +42,15 @@ escapement_estimate_raw <- read.csv(here::here("data-raw", "standard_adult_passa
 # check unique values for each column
 # check that all fields are being read in the right way (usually has to do with dates)
 
-#fields "run" and "species" are all "not recorded", opted to delete them
 redd <- redd_raw |>
-  select(-c(depth_m, starting_elevation_ft, num_of_fish_on_redd, latitude, longitude, pre_redd_substrate_class, tail_substrate_class, redd_substrate_class, ))
+  select(-c(depth_m, starting_elevation_ft, num_of_fish_on_redd, latitude,
+            longitude, pre_redd_substrate_class, tail_substrate_class, redd_substrate_class))
 glimpse(redd)
-
+#fields removed because all NA's
 up <- escapement_raw |>
-  select(-c(time, adipose_clipped, sex, passage_direction, viewing_condition, ladder, hours, comments, jack_size, confidence_in_sex, fork_length, status, dead, temperature, flow)) |>
+  select(-c(ladder, hours, comments, confidence_in_sex, fork_length, status, dead, temperature, flow)) |>
   glimpse()
-#TODO all methods are "video" do we keep them?
+#fields removed because all NA's
 up_estimate <- escapement_estimate_raw
 glimpse(escapement_estimate_raw)
 
