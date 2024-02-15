@@ -21,7 +21,7 @@
       <organizationName>U.S Fish and Wildlife Service</organizationName>
       <electronicMailAddress>natasha_wingerter@fws.gov</electronicMailAddress>
     </creator>
-    <pubDate>2024-02-01</pubDate>
+    <pubDate>2024-02-15</pubDate>
     <abstract>
       <para>
     abstract
@@ -117,67 +117,136 @@
     <methods>
       <methodStep>
         <description>
-          <para>
-    Methods Overview
-  </para>
-          <para>
-    Clear Creek methodology from USFWS 2018
-  </para>
-          <para>
-    Adult Upstream
-  </para>
-          <para>
-    The Clear Creek video monitoring system has been in operation at the
-    mouth of Clear Creek since 2012 and is operated August through
-    December. Fish are funneled through a resistance board weir. Inside
-    the weir there is one overhead camera and three underwater cameras.
-    Cameras operate 24 hours a day, using red lights at night. Footage
-    is viewed and entered into excel at the end of each monitoring
-    season. When fish counts are unclear from the footage, it is
-    reviewed by up to three experts. Missing data is interpolated using
-    Generalized Additive Models (GAM). 
-  </para>
-          <para>
-    Video data is focused on count of fish passage through the
-    resistance board weir upstream. Additional information describing
-    fish biology is collected by the Clear Creek monitoring program:
-    date, time, count, run, adipose fin clip status, sex, passage
-    direction, jack size, and spawning condition. Viewing condition is
-    collected less consistently (75% NAs). Run assignment of chinook
-    salmon is recorded based on date of passage observation. Some
-    limitations of the video system and passage estimates based on the
-    video system include identification challenges because of camera
-    placement, turbidity visibility challenges, run determination by
-    date inaccuracies, video outages in high flow years, and GAM model
-    performance when there are low counts or uneven daily counts. 
-  </para>
-          <para>
-    Snorkel Surveys 
-  </para>
-          <para>
-    Surveys have been conducted to collect adult data on Clear Creek
-    since 2000. Each year crews perform an August index and then perform
-    surveys on either side of pulse flow releases. An additional 3 - 4
-    surveys are conducted throughout the spawning season. The first 7
-    years of surveys were focused on Redd and Carcass data but in 2008
-    surveys expanded to include holding data. The snorkel sampling reach
-    is from Lower Clear Creek from Whiskeytown Dam located at river mile
-    18.1, (40.597786N latitude, -122.538791W longitude) to the Clear
-    Creek Video Station located at river mile 0.0 (40.504836N latitude,
-    -122.369693W longitude ) near the confluence with the Sacramento
-    River (Figure 6). Data displayed below are filtered to Spring Run
-    and reaches 6 &amp;amp; 7 are excluded because they primarily contain
-    Fall or Late Fall Run populations. 
-  </para>
-          <para>
-    Annual Adult Counts 
-  </para>
-          <para>
-    Redd surveys have been conducted since 2000; whereas holding surveys
-    started in 2008, and upstream passage began in 2012. Upstream
-    passage is generally greater than holding and redd counts except in
-    2017-2019. 
-  </para>
+          <section>
+            <title>Methods Overview</title>
+            <para>
+      Clear Creek methodology from USFWS 2018
+    </para>
+          </section>
+          <section>
+            <title>Data available:</title>
+            <itemizedlist>
+              <listitem>
+                <para>
+          Redd
+        </para>
+              </listitem>
+              <listitem>
+                <para>
+          Holding
+        </para>
+              </listitem>
+              <listitem>
+                <para>
+          Carcass
+        </para>
+              </listitem>
+            </itemizedlist>
+          </section>
+          <section>
+            <title>Methods</title>
+            <para>
+              <emphasis role="strong">Adult Upstream</emphasis>
+            </para>
+            <para>
+      The Clear Creek video monitoring system has been in operation at
+      the mouth of Clear Creek since 2012 and is operated August through
+      December. Fish are funneled through a resistance board weir.
+      Inside the weir there is one overhead camera and three underwater
+      cameras. Footage is viewed and entered into excel at the end of
+      each monitoring season. When fish counts are unclear from the
+      footage, it is reviewed by up to three experts.
+    </para>
+            <para><emphasis role="strong">Location:</emphasis> Mouth of Clear Lake
+    </para>
+            <para><emphasis role="strong">Times of operation:</emphasis> Cameras
+      operate 24 hours a day, using red lights at night.
+    </para>
+            <para><emphasis role="strong">Interpolation method:</emphasis> Missing
+      data is interpolated using Generalized Additive Models (GAM). 
+    </para>
+            <para><emphasis role="strong">Equipment:</emphasis> Overhead camera and
+      three underwater cameras
+    </para>
+            <para>
+      Video data is focused on count of fish passage through the
+      resistance board weir upstream. Additional information describing
+      fish biology is collected by the Clear Creek monitoring program:
+      date, time, count, run, adipose fin clip status, sex, passage
+      direction, jack size, and spawning condition. Viewing condition is
+      collected less consistently (75% NAs). Run assignment of chinook
+      salmon is recorded based on date of passage observation. Some
+      limitations of the video system and passage estimates based on the
+      video system include identification challenges because of camera
+      placement, turbidity visibility challenges, run determination by
+      date inaccuracies, video outages in high flow years, and GAM model
+      performance when there are low counts or uneven daily counts. 
+    </para>
+            <para>
+              <emphasis role="strong">Snorkel Surveys </emphasis>
+            </para>
+            <para>
+      Surveys have been conducted to collect adult data on Clear Creek
+      since 2000. The first 7 years of surveys were focused on Redd and
+      Carcass data but in 2008 surveys expanded to include holding data.
+      Data displayed below are filtered to Spring Run and reaches 6
+      &amp; 7 are excluded because they primarily contain Fall or Late
+      Fall Run populations. 
+    </para>
+            <para><emphasis role="strong">Location</emphasis>: The snorkel sampling
+      reach is from Lower Clear Creek from Whiskeytown Dam located at
+      river mile 18.1, (40.597786N latitude, -122.538791W longitude) to
+      the Clear Creek Video Station located at river mile 0.0
+      (40.504836N latitude, -122.369693W longitude ) near the confluence
+      with the Sacramento River (Figure 6).
+    </para>
+            <para><emphasis role="strong">Times of operation:</emphasis> Each year
+      crews perform an August index and then perform surveys on either
+      side of pulse flow releases. An additional 3 - 4 surveys are
+      conducted throughout the spawning season.
+    </para>
+            <para>
+              <emphasis role="strong">Interpolation method (if any):</emphasis>
+            </para>
+            <para>
+              <emphasis role="strong">Equipment:</emphasis>
+            </para>
+            <itemizedlist>
+              <listitem>
+                <para><emphasis role="strong">Holding:</emphasis> Holding surveys
+          began in 2008 and are ongoing, FlowWest acquired data from
+          2008 - 2019. Clear Creek consistently collects date, reach,
+          river mile, count of fish, jacks, latitude, longitude, year,
+          survey intent, and picket weir location information. 
+        </para>
+              </listitem>
+              <listitem>
+                <para><emphasis role="strong">Redd:</emphasis> Redd datasets span
+          from 2000-2022 (ongoing). Variables collected consistently by
+          Clear Creek include: date, latitude, longitude, reach, river
+          mile, year, method, and run. Species is collected less
+          consistently (57% NAs). Redd data is considered an accurate
+          count of the spawning population. Redd data most accurately
+          counts total spawning population in years with fewer redds and
+          is a less reliable measure in years with large spawning
+          populations. 
+        </para>
+              </listitem>
+              <listitem>
+                <para><emphasis role="strong">Carcass:</emphasis> Carcass datasets
+          span from 2000-2022 (ongoing). Carcasses are sampled when they
+          are encountered on a snorkel survey. Crews collect the
+          following data on the carcass: tissue for genetics, scales for
+          age, fork length, sex, egg retention, adipose clip status, and
+          tagging. Heads are collected for any clipped or unknown fish
+          for CWT extraction. No mark recovery is conducted for
+          carcasses so do not know carcass sampling efficiency. There
+          are typically very few carcass recoveries on clear creek so do
+          not quantify prespawn mortality. 
+        </para>
+              </listitem>
+            </itemizedlist>
+          </section>
         </description>
       </methodStep>
     </methods>

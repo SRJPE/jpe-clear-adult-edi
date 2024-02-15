@@ -51,8 +51,9 @@ up <- escapement_raw |>
   select(-c(ladder, hours, comments, confidence_in_sex, fork_length, status, dead, temperature, flow)) |>
   glimpse()
 #fields removed because all NA's
-up_estimate <- escapement_estimate_raw
-glimpse(escapement_estimate_raw)
+up_estimate <- escapement_estimate_raw |>
+  select(-c(ladder, lcl, ucl, confidence_interval)) |>
+  glimpse()
 
 # write files -------------------------------------------------------------
 write.csv(redd, here::here("data", "clear_redd.csv"), row.names = FALSE)
