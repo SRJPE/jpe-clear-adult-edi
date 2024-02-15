@@ -7,7 +7,6 @@ library(googleCloudStorageR)
 # TODO funding
 # TODO project
 # TODO coverage
-# TODO when do we merge in standardized reaches?
 
 # pull in data from google cloud ---------------------------------------------------
 gcs_auth(json_file = Sys.getenv("GCS_AUTH_FILE"))
@@ -42,9 +41,12 @@ escapement_estimate_raw <- read.csv(here::here("data-raw", "standard_adult_passa
 # check unique values for each column
 # check that all fields are being read in the right way (usually has to do with dates)
 
+# TODO confirm NAs are chinook
 redd <- redd_raw |>
+  mutate(species = ifelse(is.na(species), "chinook", species)) |>
+  filter(species != "steelhead") |>
   select(-c(depth_m, starting_elevation_ft, num_of_fish_on_redd, latitude,
-            longitude, pre_redd_substrate_class, tail_substrate_class, redd_substrate_class))
+            longitude, species, pre_redd_substrate_class, tail_substrate_class, redd_substrate_class))
 glimpse(redd)
 #fields removed because all NA's
 up <- escapement_raw |>
@@ -52,7 +54,7 @@ up <- escapement_raw |>
   glimpse()
 #fields removed because all NA's
 up_estimate <- escapement_estimate_raw |>
-  select(-c(ladder, lcl, ucl, confidence_interval)) |>
+  select(-c(ladder, ucl, lcl, confidence_interval)) |>
   glimpse()
 
 # write files -------------------------------------------------------------
