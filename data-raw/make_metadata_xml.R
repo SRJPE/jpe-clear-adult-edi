@@ -6,18 +6,18 @@ library(EML)
 
 datatable_metadata <-
   dplyr::tibble(filepath = c("data/clear_redd.csv",
-                             "data/clear_escapement_raw.csv",
-                             "data/clear_escapement_estimates.csv"),
+                             "data/clear_upstream_passage_raw.csv",
+                             "data/clear_upstream_passage_estimates.csv"),
                 attribute_info = c("data-raw/metadata/clear_redd_metadata.xlsx",
-                                   "data-raw/metadata/clear_escapement_raw_metadata.xlsx",
-                                   "data-raw/metadata/clear_escapement_estimates_metadata.xlsx"),
+                                   "data-raw/metadata/clear_upstream_passage_raw_metadata.xlsx",
+                                   "data-raw/metadata/clear_upstream_passage_estimates_metadata.xlsx"),
                 datatable_description = c("Daily redd survey data",
-                                          "Daily escapement data, raw count",
-                                          "Daily escapement data, interpolated estimates"),
+                                          "Daily upstream passage data, raw count",
+                                          "Yearly passage data, interpolated estimates"),
                 datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/",
                                        c("clear_redd.csv",
-                                         "clear_escapement_raw.csv",
-                                         "clear_escapement_estimates.csv")))
+                                         "clear_upstream_passage_raw.csv",
+                                         "clear_upstream_passage_estimates.csv")))
 # save cleaned data to `data/`
 excel_path <- "data-raw/metadata/clear_adult_metadata.xlsx"
 sheets <- readxl::excel_sheets(excel_path)
@@ -44,11 +44,11 @@ dataset <- list() %>%
   add_datatable(datatable_metadata)
 
 # GO through and check on all units
-custom_units <- data.frame(id = c("count of fish", "count of redd", "year"),
+custom_units <- data.frame(id = c("count of fish", "count of redds", "year"),
                            unitType = c("dimensionless","dimensionless","dimensionless"),
                            parentSI = c(NA, NA, NA),
                            multiplierToSI = c(NA, NA, NA),
-                           description = c("number of fish counted", "number of redds counted", "year of sampling"))
+                           description = c("number of fish counted", "number of redds counted", "age of redd sampled in years"))
 
 
 unitList <- EML::set_unitList(custom_units)

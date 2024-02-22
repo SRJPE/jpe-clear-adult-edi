@@ -21,7 +21,7 @@
       <organizationName>U.S Fish and Wildlife Service</organizationName>
       <electronicMailAddress>natasha_wingerter@fws.gov</electronicMailAddress>
     </creator>
-    <pubDate>2024-02-15</pubDate>
+    <pubDate>2024-02-20</pubDate>
     <abstract>
       <para>
     abstract
@@ -125,29 +125,21 @@
           </section>
           <section>
             <title>Data available:</title>
-            <itemizedlist>
-              <listitem>
-                <para>
-          Redd
-        </para>
-              </listitem>
-              <listitem>
-                <para>
-          Holding
-        </para>
-              </listitem>
-              <listitem>
-                <para>
-          Carcass
-        </para>
-              </listitem>
-            </itemizedlist>
+            <para>
+      Redd
+    </para>
+            <para>
+      Holding
+    </para>
+            <para>
+      Carcass
+    </para>
           </section>
           <section>
             <title>Methods</title>
             <para>
-              <emphasis role="strong">Adult Upstream</emphasis>
-            </para>
+      Adult Upstream
+    </para>
             <para>
       The Clear Creek video monitoring system has been in operation at
       the mouth of Clear Creek since 2012 and is operated August through
@@ -157,16 +149,19 @@
       each monitoring season. When fish counts are unclear from the
       footage, it is reviewed by up to three experts.
     </para>
-            <para><emphasis role="strong">Location:</emphasis> Mouth of Clear Lake
+            <para>
+      Location: Mouth of Clear Lake
     </para>
-            <para><emphasis role="strong">Times of operation:</emphasis> Cameras
-      operate 24 hours a day, using red lights at night.
+            <para>
+      Times of operation: Cameras operate 24 hours a day, using red
+      lights at night.
     </para>
-            <para><emphasis role="strong">Interpolation method:</emphasis> Missing
-      data is interpolated using Generalized Additive Models (GAM). 
+            <para>
+      Interpolation method: Missing data is interpolated using
+      Generalized Additive Models (GAM). 
     </para>
-            <para><emphasis role="strong">Equipment:</emphasis> Overhead camera and
-      three underwater cameras
+            <para>
+      Equipment: Overhead camera and three underwater cameras
     </para>
             <para>
       Video data is focused on count of fish passage through the
@@ -183,8 +178,8 @@
       performance when there are low counts or uneven daily counts. 
     </para>
             <para>
-              <emphasis role="strong">Snorkel Surveys </emphasis>
-            </para>
+      Snorkel Surveys 
+    </para>
             <para>
       Surveys have been conducted to collect adult data on Clear Creek
       since 2000. The first 7 years of surveys were focused on Redd and
@@ -193,59 +188,54 @@
       &amp; 7 are excluded because they primarily contain Fall or Late
       Fall Run populations. 
     </para>
-            <para><emphasis role="strong">Location</emphasis>: The snorkel sampling
-      reach is from Lower Clear Creek from Whiskeytown Dam located at
-      river mile 18.1, (40.597786N latitude, -122.538791W longitude) to
-      the Clear Creek Video Station located at river mile 0.0
-      (40.504836N latitude, -122.369693W longitude ) near the confluence
-      with the Sacramento River (Figure 6).
-    </para>
-            <para><emphasis role="strong">Times of operation:</emphasis> Each year
-      crews perform an August index and then perform surveys on either
-      side of pulse flow releases. An additional 3 - 4 surveys are
-      conducted throughout the spawning season.
+            <para>
+      Location: The snorkel sampling reach is from Lower Clear Creek
+      from Whiskeytown Dam located at river mile 18.1, (40.597786N
+      latitude, -122.538791W longitude) to the Clear Creek Video Station
+      located at river mile 0.0 (40.504836N latitude, -122.369693W
+      longitude ) near the confluence with the Sacramento River (Figure
+      6).
     </para>
             <para>
-              <emphasis role="strong">Interpolation method (if any):</emphasis>
-            </para>
+      Times of operation: Each year crews perform an August index and
+      then perform surveys on either side of pulse flow releases. An
+      additional 3 - 4 surveys are conducted throughout the spawning
+      season.
+    </para>
             <para>
-              <emphasis role="strong">Equipment:</emphasis>
-            </para>
-            <itemizedlist>
-              <listitem>
-                <para><emphasis role="strong">Holding:</emphasis> Holding surveys
-          began in 2008 and are ongoing, FlowWest acquired data from
-          2008 - 2019. Clear Creek consistently collects date, reach,
-          river mile, count of fish, jacks, latitude, longitude, year,
-          survey intent, and picket weir location information. 
-        </para>
-              </listitem>
-              <listitem>
-                <para><emphasis role="strong">Redd:</emphasis> Redd datasets span
-          from 2000-2022 (ongoing). Variables collected consistently by
-          Clear Creek include: date, latitude, longitude, reach, river
-          mile, year, method, and run. Species is collected less
-          consistently (57% NAs). Redd data is considered an accurate
-          count of the spawning population. Redd data most accurately
-          counts total spawning population in years with fewer redds and
-          is a less reliable measure in years with large spawning
-          populations. 
-        </para>
-              </listitem>
-              <listitem>
-                <para><emphasis role="strong">Carcass:</emphasis> Carcass datasets
-          span from 2000-2022 (ongoing). Carcasses are sampled when they
-          are encountered on a snorkel survey. Crews collect the
-          following data on the carcass: tissue for genetics, scales for
-          age, fork length, sex, egg retention, adipose clip status, and
-          tagging. Heads are collected for any clipped or unknown fish
-          for CWT extraction. No mark recovery is conducted for
-          carcasses so do not know carcass sampling efficiency. There
-          are typically very few carcass recoveries on clear creek so do
-          not quantify prespawn mortality. 
-        </para>
-              </listitem>
-            </itemizedlist>
+      Interpolation method (if any):
+    </para>
+            <para>
+      Equipment:
+    </para>
+            <para>
+      Holding: Holding surveys began in 2008 and are ongoing, FlowWest
+      acquired data from 2008 - 2019. Clear Creek consistently collects
+      date, reach, river mile, count of fish, jacks, latitude,
+      longitude, year, survey intent, and picket weir location
+      information. 
+    </para>
+            <para>
+      Redd: Redd datasets span from 2000-2022 (ongoing). Variables
+      collected consistently by Clear Creek include: date, latitude,
+      longitude, reach, river mile, year, method, and run. Species is
+      collected less consistently (57% NAs). Redd data is considered an
+      accurate count of the spawning population. Redd data most
+      accurately counts total spawning population in years with fewer
+      redds and is a less reliable measure in years with large spawning
+      populations. 
+    </para>
+            <para>
+      Carcass: Carcass datasets span from 2000-2022 (ongoing). Carcasses
+      are sampled when they are encountered on a snorkel survey. Crews
+      collect the following data on the carcass: tissue for genetics,
+      scales for age, fork length, sex, egg retention, adipose clip
+      status, and tagging. Heads are collected for any clipped or
+      unknown fish for CWT extraction. No mark recovery is conducted for
+      carcasses so do not know carcass sampling efficiency. There are
+      typically very few carcass recoveries on clear creek so do not
+      quantify prespawn mortality. 
+    </para>
           </section>
         </description>
       </methodStep>
@@ -305,12 +295,12 @@
         <attribute>
           <attributeName>reach</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Survey reach</attributeDefinition>
+          <attributeDefinition>Survey reach. Levels = c("R1", "R2", "R4", "R5", "R3", "R6A", "R7")</attributeDefinition>
           <measurementScale>
             <ordinal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Survey reach</definition>
+                  <definition>Survey reach. Levels = c("R1", "R2", "R4", "R5", "R3", "R6A", "R7")</definition>
                 </textDomain>
               </nonNumericDomain>
             </ordinal>
@@ -319,12 +309,12 @@
         <attribute>
           <attributeName>river_mile</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>River mile associated with redd measured</attributeDefinition>
+          <attributeDefinition>River mile where the redd was measured</attributeDefinition>
           <measurementScale>
             <ordinal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>River mile associated with redd measured</definition>
+                  <definition>River mile where the redd was measured</definition>
                 </textDomain>
               </nonNumericDomain>
             </ordinal>
@@ -375,7 +365,7 @@
         <attribute>
           <attributeName>redd_width</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Width of redd measured (m)</attributeDefinition>
+          <attributeDefinition>Width of redd measured</attributeDefinition>
           <measurementScale>
             <ratio>
               <unit>
@@ -394,7 +384,7 @@
         <attribute>
           <attributeName>redd_length</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Length of redd measured (m)</attributeDefinition>
+          <attributeDefinition>Length of redd measured</attributeDefinition>
           <measurementScale>
             <ratio>
               <unit>
@@ -413,7 +403,7 @@
         <attribute>
           <attributeName>velocity</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Measured stream velocity (ft/s)</attributeDefinition>
+          <attributeDefinition>Measured stream velocity</attributeDefinition>
           <measurementScale>
             <ratio>
               <unit>
@@ -469,7 +459,7 @@
           <measurementScale>
             <ratio>
               <unit>
-                <customUnit>count of redd</customUnit>
+                <customUnit>count of redds</customUnit>
               </unit>
               <numericDomain>
                 <numberType>whole</numberType>
@@ -482,47 +472,14 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>stream</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Name of the stream where data is collected</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Name of the stream where data is collected</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>year</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Year the upstream passage data were recorded</attributeDefinition>
-          <measurementScale>
-            <interval>
-              <unit>
-                <customUnit>year</customUnit>
-              </unit>
-              <numericDomain>
-                <numberType>integer</numberType>
-                <bounds>
-                  <minimum exclusive="false">1997</minimum>
-                  <maximum exclusive="false">2020</maximum>
-                </bounds>
-              </numericDomain>
-            </interval>
-          </measurementScale>
-        </attribute>
-        <attribute>
           <attributeName>survey_method</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Survey method</attributeDefinition>
+          <attributeDefinition>Survey method. Levels = c("snorkel", "rstr", "pw")</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Survey method</definition>
+                  <definition>Survey method. Levels = c("snorkel", "rstr", "pw")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
@@ -531,39 +488,25 @@
         <attribute>
           <attributeName>run</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Run of fish associated with redd</attributeDefinition>
+          <attributeDefinition>Run of fish associated with redd. Levels = c("spring")</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Run of fish associated with redd</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>species</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Species associated with redd</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Species associated with redd</definition>
+                  <definition>Run of fish associated with redd. Levels = c("spring")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>2217</numberOfRecords>
+      <numberOfRecords>2171</numberOfRecords>
     </dataTable>
     <dataTable>
-      <entityName>clear_escapement_raw.csv</entityName>
-      <entityDescription>Daily escapement data, raw count</entityDescription>
+      <entityName>clear_upstream_passage_raw.csv</entityName>
+      <entityDescription>Daily upstream passage data, raw count</entityDescription>
       <physical>
-        <objectName>clear_escapement_raw.csv</objectName>
+        <objectName>clear_upstream_passage_raw.csv</objectName>
         <size unit="bytes">14</size>
         <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
         <dataFormat>
@@ -578,28 +521,14 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/clear_escapement_raw.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/clear_upstream_passage_raw.csv</url>
           </online>
         </distribution>
       </physical>
       <attributeList>
         <attribute>
-          <attributeName>stream</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>Name of the stream where data is collected</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Name of the stream where data is collected</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
           <attributeName>date</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
           <attributeDefinition>Date the upstream passage data were recorded</attributeDefinition>
           <measurementScale>
             <dateTime>
@@ -615,8 +544,8 @@
         </attribute>
         <attribute>
           <attributeName>time</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>time of video footage</attributeDefinition>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>Time of data collection</attributeDefinition>
           <measurementScale>
             <dateTime>
               <formatString>hh:mm:ss</formatString>
@@ -631,7 +560,7 @@
         </attribute>
         <attribute>
           <attributeName>count</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
           <attributeDefinition>Number of fish counted</attributeDefinition>
           <measurementScale>
             <ratio>
@@ -650,7 +579,7 @@
         </attribute>
         <attribute>
           <attributeName>run</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
           <attributeDefinition>Run designation. Levels = c("spring")</attributeDefinition>
           <measurementScale>
             <nominal>
@@ -664,13 +593,13 @@
         </attribute>
         <attribute>
           <attributeName>adipose_clipped</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>if adipose fin is clipped (TRUE/FALSE)</attributeDefinition>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>Whether adipose fin is clipped (TRUE/FALSE)</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>if adipose fin is clipped (TRUE/FALSE)</definition>
+                  <definition>Whether adipose fin is clipped (TRUE/FALSE)</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
@@ -678,13 +607,13 @@
         </attribute>
         <attribute>
           <attributeName>sex</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>sex of fish observed</attributeDefinition>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>Sex of fish observed. Levels = c("male", "unknown", "female", "not recorded")</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>sex of fish observed</definition>
+                  <definition>Sex of fish observed. Levels = c("male", "unknown", "female", "not recorded")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
@@ -692,13 +621,13 @@
         </attribute>
         <attribute>
           <attributeName>passage_direction</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>direction of fish passage</attributeDefinition>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>Direction of fish passage. Levels = c("up", "down")</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>direction of fish passage</definition>
+                  <definition>Direction of fish passage. Levels = c("up", "down")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
@@ -706,13 +635,13 @@
         </attribute>
         <attribute>
           <attributeName>viewing_condition</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>direction of fish observed (normal, readable, not readable, weir is flooded)</attributeDefinition>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>Viewing conditions at time of data collection. Levels = c("normal", NA, "not readable", "readable")</attributeDefinition>
           <measurementScale>
             <ordinal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>direction of fish observed (normal, readable, not readable, weir is flooded)</definition>
+                  <definition>Viewing conditions at time of data collection. Levels = c("normal", NA, "not readable", "readable")</definition>
                 </textDomain>
               </nonNumericDomain>
             </ordinal>
@@ -720,13 +649,13 @@
         </attribute>
         <attribute>
           <attributeName>spawning_condition</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>description of spawning status based on coloration (none, energetic, spawning colors, fungus, unknown)</attributeDefinition>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>Description of spawning status based on coloration . Levels = c("full spawn coloration", NA, "unknown", "no spawn coloration",  "some spawn coloration", "post spawn")</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>description of spawning status based on coloration (none, energetic, spawning colors, fungus, unknown)</definition>
+                  <definition>Description of spawning status based on coloration . Levels = c("full spawn coloration", NA, "unknown", "no spawn coloration",  "some spawn coloration", "post spawn")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
@@ -734,13 +663,13 @@
         </attribute>
         <attribute>
           <attributeName>jack_size</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>If the fish is jack sized or not</attributeDefinition>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>Whether the fish is jack-sized or not. Levels = c("no", "yes", "unknown", NA)</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>If the fish is jack sized or not</definition>
+                  <definition>Whether the fish is jack-sized or not. Levels = c("no", "yes", "unknown", NA)</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
@@ -748,13 +677,13 @@
         </attribute>
         <attribute>
           <attributeName>method</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>Method of survey</attributeDefinition>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>Survey method. Levels = ("video")</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Method of survey</definition>
+                  <definition>Survey method. Levels = ("video")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
@@ -764,10 +693,10 @@
       <numberOfRecords>6015</numberOfRecords>
     </dataTable>
     <dataTable>
-      <entityName>clear_escapement_estimates.csv</entityName>
-      <entityDescription>Daily escapement data, interpolated estimates</entityDescription>
+      <entityName>clear_upstream_passage_estimates.csv</entityName>
+      <entityDescription>Yearly passage data, interpolated estimates</entityDescription>
       <physical>
-        <objectName>clear_escapement_estimates.csv</objectName>
+        <objectName>clear_upstream_passage_estimates.csv</objectName>
         <size unit="bytes">14</size>
         <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
         <dataFormat>
@@ -782,47 +711,30 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/clear_escapement_estimates.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/clear_upstream_passage_estimates.csv</url>
           </online>
         </distribution>
       </physical>
       <attributeList>
         <attribute>
           <attributeName>year</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>upstream_passage_estimates</attributeLabel>
           <attributeDefinition>Year the upstream passage data were recorded</attributeDefinition>
           <measurementScale>
-            <interval>
-              <unit>
-                <customUnit>year</customUnit>
-              </unit>
-              <numericDomain>
-                <numberType>integer</numberType>
+            <dateTime>
+              <formatString>YYYY</formatString>
+              <dateTimeDomain>
                 <bounds>
                   <minimum exclusive="false">1995</minimum>
                   <maximum exclusive="false">2021</maximum>
                 </bounds>
-              </numericDomain>
-            </interval>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>stream</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
-          <attributeDefinition>Name of the stream where data is collected</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Name of the stream where data is collected</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
+              </dateTimeDomain>
+            </dateTime>
           </measurementScale>
         </attribute>
         <attribute>
           <attributeName>passage_estimate</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>upstream_passage_estimates</attributeLabel>
           <attributeDefinition>Passage escapement estimate</attributeDefinition>
           <measurementScale>
             <ratio>
@@ -841,7 +753,7 @@
         </attribute>
         <attribute>
           <attributeName>run</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>upstream_passage_estimates</attributeLabel>
           <attributeDefinition>Run designation. Levels = c("spring")</attributeDefinition>
           <measurementScale>
             <nominal>
@@ -855,7 +767,7 @@
         </attribute>
         <attribute>
           <attributeName>adipose_clipped</attributeName>
-          <attributeLabel>upstream_passage</attributeLabel>
+          <attributeLabel>upstream_passage_estimates</attributeLabel>
           <attributeDefinition>if adipose fin is clipped (TRUE/FALSE)</attributeDefinition>
           <measurementScale>
             <nominal>
@@ -877,11 +789,11 @@
         <unit id="count of fish" name="count of fish" unitType="dimensionless">
           <description>number of fish counted</description>
         </unit>
-        <unit id="count of redd" name="count of redd" unitType="dimensionless">
+        <unit id="count of redds" name="count of redds" unitType="dimensionless">
           <description>number of redds counted</description>
         </unit>
         <unit id="year" name="year" unitType="dimensionless">
-          <description>year of sampling</description>
+          <description>age of redd sampled in years</description>
         </unit>
       </unitList>
     </metadata>
