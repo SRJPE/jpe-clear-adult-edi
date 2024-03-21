@@ -15,13 +15,22 @@
     <title>Monitoring adult spring-run Chinook salmon throughout the adult lifespan on Deer and Mill Creek</title>
     <creator>
       <individualName>
-        <givenName>Natasha</givenName>
-        <surName>Wingerter</surName>
+        <givenName>Ryan</givenName>
+        <surName>Schaefer</surName>
       </individualName>
       <organizationName>U.S Fish and Wildlife Service</organizationName>
-      <electronicMailAddress>natasha_wingerter@fws.gov</electronicMailAddress>
+      <electronicMailAddress>ryan_a_schaefer@fws.gov</electronicMailAddress>
     </creator>
-    <pubDate>2024-02-22</pubDate>
+    <associatedParty>
+      <individualName>
+        <givenName>Samuel</givenName>
+        <surName>Provins</surName>
+      </individualName>
+      <organizationName>U.S Fish and Wildlife Service</organizationName>
+      <electronicMailAddress>samuel_provins@fws.gov</electronicMailAddress>
+      <role>principal investigator</role>
+    </associatedParty>
+    <pubDate>2024-03-21</pubDate>
     <abstract>
       <para>
     abstract
@@ -108,11 +117,11 @@
     </maintenance>
     <contact>
       <individualName>
-        <givenName>Natasha</givenName>
-        <surName>Wingerter</surName>
+        <givenName>Ryan</givenName>
+        <surName>Schaefer</surName>
       </individualName>
       <organizationName>U.S Fish and Wildlife Service</organizationName>
-      <electronicMailAddress>natasha_wingerter@fws.gov</electronicMailAddress>
+      <electronicMailAddress>ryan_a_schaefer@fws.gov</electronicMailAddress>
     </contact>
     <methods>
       <methodStep>
@@ -238,11 +247,11 @@
       <title>Monitoring adult spring-run Chinook salmon throughout the adult lifespan on Deer and Mill Creek</title>
       <personnel>
         <individualName>
-          <givenName>Natasha</givenName>
-          <surName>Wingerter</surName>
+          <givenName>Ryan</givenName>
+          <surName>Schaefer</surName>
         </individualName>
         <organizationName>U.S Fish and Wildlife Service</organizationName>
-        <electronicMailAddress>natasha_wingerter@fws.gov</electronicMailAddress>
+        <electronicMailAddress>ryan_a_schaefer@fws.gov</electronicMailAddress>
         <role>Project Lead</role>
       </personnel>
     </project>
@@ -273,7 +282,7 @@
         <attribute>
           <attributeName>date</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Date the upstream passage data were recorded</attributeDefinition>
+          <attributeDefinition>Date of survey</attributeDefinition>
           <measurementScale>
             <dateTime>
               <formatString>YYYY-MM-DD</formatString>
@@ -449,14 +458,14 @@
         <attribute>
           <attributeName>redd_count</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Number of redds sampled</attributeDefinition>
+          <attributeDefinition>Number of redds counted</attributeDefinition>
           <measurementScale>
             <ratio>
               <unit>
                 <customUnit>count of redds</customUnit>
               </unit>
               <numericDomain>
-                <numberType>whole</numberType>
+                <numberType>integer</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
                   <maximum exclusive="false">1</maximum>
@@ -523,7 +532,7 @@
         <attribute>
           <attributeName>date</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Date the upstream passage data were recorded</attributeDefinition>
+          <attributeDefinition>Date of survey</attributeDefinition>
           <measurementScale>
             <dateTime>
               <formatString>YYYY-MM-DD</formatString>
@@ -539,7 +548,7 @@
         <attribute>
           <attributeName>time</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Time of data collection</attributeDefinition>
+          <attributeDefinition>Time of survey</attributeDefinition>
           <measurementScale>
             <dateTime>
               <formatString>hh:mm:ss</formatString>
@@ -672,12 +681,12 @@
         <attribute>
           <attributeName>method</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Survey method. Levels = ("video")</attributeDefinition>
+          <attributeDefinition>Method by which the data were captured. Levels = "video"</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Survey method. Levels = ("video")</definition>
+                  <definition>Method by which the data were captured. Levels = "video"</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
@@ -729,7 +738,7 @@
         <attribute>
           <attributeName>passage_estimate</attributeName>
           <attributeLabel>upstream_passage_estimates</attributeLabel>
-          <attributeDefinition>Passage escapement estimate</attributeDefinition>
+          <attributeDefinition>Upstream passage estimate (interpolated)</attributeDefinition>
           <measurementScale>
             <ratio>
               <unit>
@@ -762,12 +771,12 @@
         <attribute>
           <attributeName>adipose_clipped</attributeName>
           <attributeLabel>upstream_passage_estimates</attributeLabel>
-          <attributeDefinition>if adipose fin is clipped (TRUE/FALSE)</attributeDefinition>
+          <attributeDefinition>Whether or not the adipose fin was clipped on the observed fish. Levels = c(TRUE, FALSE)</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>if adipose fin is clipped (TRUE/FALSE)</definition>
+                  <definition>Whether or not the adipose fin was clipped on the observed fish. Levels = c(TRUE, FALSE)</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
