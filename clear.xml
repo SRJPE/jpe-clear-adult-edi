@@ -359,12 +359,12 @@
         <attribute>
           <attributeName>run</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Run of the fish on the redd. Run is determined fprimarily by whether or not the redd was observed above or below a picket weir installed near a natural barrier. Years prior to 2003 do not have the picket weir information, but are considered reliable for run assignment. Levels = c("spring")</attributeDefinition>
+          <attributeDefinition>Run of the fish on the redd. Run is determined primarily by whether or not the redd was observed above or below a picket weir installed near a natural barrier. Years prior to 2003 do not have the picket weir information, but are considered reliable for run assignment. Levels = c("spring")</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Run of the fish on the redd. Run is determined fprimarily by whether or not the redd was observed above or below a picket weir installed near a natural barrier. Years prior to 2003 do not have the picket weir information, but are considered reliable for run assignment. Levels = c("spring")</definition>
+                  <definition>Run of the fish on the redd. Run is determined primarily by whether or not the redd was observed above or below a picket weir installed near a natural barrier. Years prior to 2003 do not have the picket weir information, but are considered reliable for run assignment. Levels = c("spring")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
