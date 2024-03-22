@@ -3,18 +3,16 @@ Upstream passage
 
 Redd
 
-Holding
-
-Carcass
-
 # Adult Upstream
-*Objective:*
+*Objective:* Estimate escapement numbers
 
 *Type:* Overhead camera and three underwater cameras
 
 *Location:* Mouth of Clear Creek
 
 *Times of operation:* August-December; 24 hours/day
+
+*Consistency:* Some years are not directly comparable to others. Please contact staff associated with this package for more information.
 
 The Clear Creek video monitoring system has been in operation at the mouth of Clear Creek since 2012 and is operated August through December. Fish are funneled through a resistance board weir. Inside the weir there is one overhead camera and three underwater cameras. Footage is viewed and entered into excel at the end of each monitoring season. When fish counts are unclear from the footage, it is reviewed by up to three experts.
 
@@ -27,22 +25,17 @@ Surveys have been conducted to collect adult data on Clear Creek since 2000. The
 
 *Times of operation:* August index and surveys on either side of pulse flow releases. An additional 3 - 4 surveys are conducted throughout the spawning season.
 
-# Holding
-*Objective:*
-
-*Type:* Snorkel survey
+*Consistency*: Some years did not survey all reaches and thus are not directly comparable with other years. Please contact staff associated with this package for more information.
 
 # Redd
 *Objective:* Estimate spawning population
 
 *Type:* Sample reaches are surveyed multiple times per season to determine redd decomposition rate
 
-Variables collected consistently by Clear Creek include: date, latitude, longitude, reach, river mile, year, method, and run. Species is collected less consistently (57% NAs). Redd data is considered an accurate count of the spawning population. Redd data most accurately counts total spawning population in years with fewer redds and is a less reliable measure in years with large spawning populations.
+Variables collected consistently by Clear Creek include: date, latitude, longitude, reach, river mile, year, method, and run. Species is collected less consistently (57% NAs). Redd data is considered an accurate count of the spawning population. Redd data most accurately counts total spawning population in years with fewer redds and is a less reliable measure in years with large spawning populations. 
 
-# Carcass
-*Objective:*
+Redds are assigned a unique redd ID upon observation. If a redd is observed more than once, it may be assigned an age, and that redd ID may have multiple observations in a table.
 
-*Type:* Snorkel survey; no mark-recapture
+There is a natural barrier in Clear Creek where a picket weir is temporarily installed. Any Chinook redds observed above this picket weir are spring run. 
 
-Carcasses are sampled when they are encountered on a snorkel survey. Crews collect the following data on the carcass: tissue for genetics, scales for age, fork length, sex, egg retention, adipose clip status, and tagging. Heads are collected for any clipped or unknown fish for CWT extraction. No mark recovery is conducted for carcasses so do not know carcass sampling efficiency. There are typically very few carcass recoveries on Clear Creek so do not quantify prespawn mortality.
-
+Methods for measuring substrate size has varied over the years and for this package, substrate class was standardized using the Wentworth scale, created by W.C. Krumbein. This scale is what is commonly used in the United States. When the size range fell into two categories, they were rounded down. The scale, in descending size order, is boulder (>256mm), cobble (64-256mm), very coarse gravel (32-64mm), coarse gravel (16-32mm), medium gravel (8-16mm), fine gravel (4-8mm), very fine gravel (2-4mm), very coarse sand (1-2mm), coarse sand (0.5-1mm), medium sand (0.25-0.5mm), fine sand – clay (<0.25mm). 
