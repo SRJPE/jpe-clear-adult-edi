@@ -11,8 +11,8 @@
     </allow>
   </access>
   <dataset>
-    <shortName>Clear_Creek Adult Chinook Monitoring</shortName>
-    <title>Monitoring adult spring-run Chinook salmon throughout the adult lifespan on Deer and Mill Creek</title>
+    <shortName>Clear Creek Adult Chinook Monitoring</shortName>
+    <title>Monitoring adult Chinook salmon throughout the adult lifespan on Clear Creek</title>
     <creator>
       <individualName>
         <givenName>Ryan</givenName>
@@ -30,7 +30,7 @@
       <electronicMailAddress>samuel_provins@fws.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2024-03-21</pubDate>
+    <pubDate>2024-03-22</pubDate>
     <abstract>
       <para>
     abstract
@@ -62,10 +62,10 @@
       <geographicCoverage>
         <geographicDescription>Deer and Mill Creek adult spring-run chinook surveys</geographicDescription>
         <boundingCoordinates>
-          <westBoundingCoordinate>-122.4967</westBoundingCoordinate>
-          <eastBoundingCoordinate>-122.1416</eastBoundingCoordinate>
-          <northBoundingCoordinate>40.5064</northBoundingCoordinate>
-          <southBoundingCoordinate>40.3979</southBoundingCoordinate>
+          <westBoundingCoordinate>-122.5546</westBoundingCoordinate>
+          <eastBoundingCoordinate>-122.3668</eastBoundingCoordinate>
+          <northBoundingCoordinate>40.6001</northBoundingCoordinate>
+          <southBoundingCoordinate>40.4872</southBoundingCoordinate>
         </boundingCoordinates>
       </geographicCoverage>
       <temporalCoverage>
@@ -244,7 +244,7 @@
       </methodStep>
     </methods>
     <project>
-      <title>Monitoring adult spring-run Chinook salmon throughout the adult lifespan on Deer and Mill Creek</title>
+      <title>Monitoring adult Chinook salmon throughout the adult lifespan on Clear Creek</title>
       <personnel>
         <individualName>
           <givenName>Ryan</givenName>
@@ -282,7 +282,7 @@
         <attribute>
           <attributeName>date</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Date of survey</attributeDefinition>
+          <attributeDefinition>Date of redd survey</attributeDefinition>
           <measurementScale>
             <dateTime>
               <formatString>YYYY-MM-DD</formatString>
@@ -296,130 +296,45 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>reach</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Survey reach. Levels = c("R1", "R2", "R4", "R5", "R3", "R6A", "R7")</attributeDefinition>
-          <measurementScale>
-            <ordinal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Survey reach. Levels = c("R1", "R2", "R4", "R5", "R3", "R6A", "R7")</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </ordinal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>river_mile</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>River mile where the redd was measured</attributeDefinition>
-          <measurementScale>
-            <ordinal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>River mile where the redd was measured</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </ordinal>
-          </measurementScale>
-        </attribute>
-        <attribute>
           <attributeName>redd_id</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Unique redd ID</attributeDefinition>
+          <attributeDefinition>Unique redd ID assigned to the redd being sampled. One redd may have been observed multiple times, resulting in multiple rows for one redd ID.</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Unique redd ID</definition>
+                  <definition>Unique redd ID assigned to the redd being sampled. One redd may have been observed multiple times, resulting in multiple rows for one redd ID.</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>fish_guarding</attributeName>
+          <attributeName>reach</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Whether or not fish were observed guarding the redd (T/F)</attributeDefinition>
+          <attributeDefinition>Survey reach. Levels =c("R1", "R2", "R4", "R3", "R5")</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Survey reach. Levels =c("R1", "R2", "R4", "R3", "R5")</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>fish_on_redd</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Whether or not a fish was observed on the redd being sampled. Levels = c("NA", "TRUE", "FALSE")</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Whether or not fish were observed guarding the redd (T/F)</definition>
+                  <definition>Whether or not a fish was observed on the redd being sampled. Levels = c("NA", "TRUE", "FALSE")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>redd_measured</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Whether or not redd was measured (T/F)</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Whether or not redd was measured (T/F)</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>redd_width</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Width of redd measured</attributeDefinition>
-          <measurementScale>
-            <ratio>
-              <unit>
-                <standardUnit>meter</standardUnit>
-              </unit>
-              <numericDomain>
-                <numberType>real</numberType>
-                <bounds>
-                  <minimum exclusive="false">0.43180089999999999</minimum>
-                  <maximum exclusive="false">9.1440180000000009</maximum>
-                </bounds>
-              </numericDomain>
-            </ratio>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>redd_length</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Length of redd measured</attributeDefinition>
-          <measurementScale>
-            <ratio>
-              <unit>
-                <standardUnit>meter</standardUnit>
-              </unit>
-              <numericDomain>
-                <numberType>real</numberType>
-                <bounds>
-                  <minimum exclusive="false">0.63500129999999999</minimum>
-                  <maximum exclusive="false">11.176019999999999</maximum>
-                </bounds>
-              </numericDomain>
-            </ratio>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>velocity</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Measured stream velocity</attributeDefinition>
-          <measurementScale>
-            <ratio>
-              <unit>
-                <standardUnit>feetPerSecond</standardUnit>
-              </unit>
-              <numericDomain>
-                <numberType>real</numberType>
-                <bounds>
-                  <minimum exclusive="false">0.252</minimum>
-                  <maximum exclusive="false">407.94810000000001</maximum>
-                </bounds>
-              </numericDomain>
-            </ratio>
           </measurementScale>
         </attribute>
         <attribute>
@@ -442,23 +357,23 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>age_index</attributeName>
+          <attributeName>run</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Number of times redd was aged. If 0, redd was sampled but not aged</attributeDefinition>
+          <attributeDefinition>Run of the fish on the redd. Run is determined fprimarily by whether or not the redd was observed above or below a picket weir installed near a natural barrier. Years prior to 2003 do not have the picket weir information, but are considered reliable for run assignment. Levels = c("spring")</attributeDefinition>
           <measurementScale>
-            <ordinal>
+            <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Number of times redd was aged. If 0, redd was sampled but not aged</definition>
+                  <definition>Run of the fish on the redd. Run is determined fprimarily by whether or not the redd was observed above or below a picket weir installed near a natural barrier. Years prior to 2003 do not have the picket weir information, but are considered reliable for run assignment. Levels = c("spring")</definition>
                 </textDomain>
               </nonNumericDomain>
-            </ordinal>
+            </nominal>
           </measurementScale>
         </attribute>
         <attribute>
           <attributeName>redd_count</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Number of redds counted</attributeDefinition>
+          <attributeDefinition>Number of redds counted.</attributeDefinition>
           <measurementScale>
             <ratio>
               <unit>
@@ -475,35 +390,183 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>survey_method</attributeName>
+          <attributeName>redd_measured</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Survey method. Levels = c("snorkel", "rstr", "pw")</attributeDefinition>
+          <attributeDefinition>Whether or not the redd was measured at time of observation. Levels = c(FALSE, TRUE)</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Survey method. Levels = c("snorkel", "rstr", "pw")</definition>
+                  <definition>Whether or not the redd was measured at time of observation. Levels = c(FALSE, TRUE)</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>run</attributeName>
+          <attributeName>redd_width</attributeName>
           <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Run of fish associated with redd. Levels = c("spring")</attributeDefinition>
+          <attributeDefinition>The width of the redd measured in meters</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.43180089999999999</minimum>
+                  <maximum exclusive="false">9.1440180000000009</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>redd_length</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>The length of the redd measured in meters</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.63500129999999999</minimum>
+                  <maximum exclusive="false">11.176019999999999</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pre_redd_depth</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Pre-redd depth in inches.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>inch</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.12700030000000001</minimum>
+                  <maximum exclusive="false">2.2352045</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>redd_pit_depth</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Pit depth in inches.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>inch</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.15240029999999999</minimum>
+                  <maximum exclusive="false">2.4130047999999999</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>redd_tail_depth</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Tailspill depth in inches.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>inch</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">7.6200149999999994E-2</minimum>
+                  <maximum exclusive="false">2.1336042700000002</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pre_redd_substrate_class</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Size class determined by millimeter size of substrate, and standardized using the Wentworth scale (see Methods). Levels = c(NA, "very fine gravel", "very coarse sand", "coarse sand", &#13;
+"fine gravel", "coarse gravel to boulder")</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Run of fish associated with redd. Levels = c("spring")</definition>
+                  <definition>Size class determined by millimeter size of substrate, and standardized using the Wentworth scale (see Methods). Levels = c(NA, "very fine gravel", "very coarse sand", "coarse sand", &#13;
+"fine gravel", "coarse gravel to boulder")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
           </measurementScale>
         </attribute>
+        <attribute>
+          <attributeName>redd_substrate_class</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Size class determined by millimeter size of substrate, and standardized using the Wentworth scale (see Methods). Levels =c(NA, "very fine gravel", "very coarse sand", "coarse sand", &#13;
+"fine gravel", "coarse gravel to boulder", "medium gravel")</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Size class determined by millimeter size of substrate, and standardized using the Wentworth scale (see Methods). Levels =c(NA, "very fine gravel", "very coarse sand", "coarse sand", &#13;
+"fine gravel", "coarse gravel to boulder", "medium gravel")</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>tail_substrate_class</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Size class determined by millimeter size of substrate, and standardized using the Wentworth scale (see Methods). Levels = c(NA, "very fine gravel", "very coarse sand", "fine gravel", &#13;
+"coarse sand")</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Size class determined by millimeter size of substrate, and standardized using the Wentworth scale (see Methods). Levels = c(NA, "very fine gravel", "very coarse sand", "fine gravel", &#13;
+"coarse sand")</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>velocity</attributeName>
+          <attributeLabel>redd</attributeLabel>
+          <attributeDefinition>Measured stream velocity</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>feetPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.252</minimum>
+                  <maximum exclusive="false">407.94810000000001</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
       </attributeList>
-      <numberOfRecords>2171</numberOfRecords>
+      <numberOfRecords>1613</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>clear_upstream_passage_raw.csv</entityName>
@@ -532,14 +595,14 @@
         <attribute>
           <attributeName>date</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Date of survey</attributeDefinition>
+          <attributeDefinition>Date the upstream passage data were recorded</attributeDefinition>
           <measurementScale>
             <dateTime>
               <formatString>YYYY-MM-DD</formatString>
               <dateTimeDomain>
                 <bounds>
-                  <minimum exclusive="false">2012-12-17</minimum>
-                  <maximum exclusive="false">2020-01-01</maximum>
+                  <minimum exclusive="false">2012-12-20</minimum>
+                  <maximum exclusive="false">2020-08-15</maximum>
                 </bounds>
               </dateTimeDomain>
             </dateTime>
@@ -548,7 +611,7 @@
         <attribute>
           <attributeName>time</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Time of survey</attributeDefinition>
+          <attributeDefinition>Time of day the upstream passage count was recorded</attributeDefinition>
           <measurementScale>
             <dateTime>
               <formatString>hh:mm:ss</formatString>
@@ -564,7 +627,7 @@
         <attribute>
           <attributeName>count</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Number of fish counted</attributeDefinition>
+          <attributeDefinition>Number of fish counted.</attributeDefinition>
           <measurementScale>
             <ratio>
               <unit>
@@ -574,7 +637,7 @@
                 <numberType>integer</numberType>
                 <bounds>
                   <minimum exclusive="false">1</minimum>
-                  <maximum exclusive="false">2</maximum>
+                  <maximum exclusive="false">1</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -583,12 +646,12 @@
         <attribute>
           <attributeName>run</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Run designation. Levels = c("spring")</attributeDefinition>
+          <attributeDefinition>Assigned run of the fish viewed. Levels = c("not recorded", "spring", "unknown")</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Run designation. Levels = c("spring")</definition>
+                  <definition>Assigned run of the fish viewed. Levels = c("not recorded", "spring", "unknown")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
@@ -597,12 +660,12 @@
         <attribute>
           <attributeName>adipose_clipped</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Whether adipose fin is clipped (TRUE/FALSE)</attributeDefinition>
+          <attributeDefinition>Whether or not the adipose fin was clipped. Levels = c(TRUE, FALSE, NA). Levels = c(NA, FALSE, TRUE)</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Whether adipose fin is clipped (TRUE/FALSE)</definition>
+                  <definition>Whether or not the adipose fin was clipped. Levels = c(TRUE, FALSE, NA). Levels = c(NA, FALSE, TRUE)</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
@@ -667,12 +730,12 @@
         <attribute>
           <attributeName>jack_size</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Whether the fish is jack-sized or not. Levels = c("no", "yes", "unknown", NA)</attributeDefinition>
+          <attributeDefinition>Whether the fish is jack-sized or not. Levels = c(FALSE, NA, TRUE)</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Whether the fish is jack-sized or not. Levels = c("no", "yes", "unknown", NA)</definition>
+                  <definition>Whether the fish is jack-sized or not. Levels = c(FALSE, NA, TRUE)</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
@@ -681,19 +744,19 @@
         <attribute>
           <attributeName>method</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Method by which the data were captured. Levels = "video"</attributeDefinition>
+          <attributeDefinition>Method by which the data were collected. Levels = "video"</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Method by which the data were captured. Levels = "video"</definition>
+                  <definition>Method by which the data were collected. Levels = "video"</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>6015</numberOfRecords>
+      <numberOfRecords>3645</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>clear_upstream_passage_estimates.csv</entityName>
@@ -769,14 +832,14 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>adipose_clipped</attributeName>
+          <attributeName>stat_method</attributeName>
           <attributeLabel>upstream_passage_estimates</attributeLabel>
-          <attributeDefinition>Whether or not the adipose fin was clipped on the observed fish. Levels = c(TRUE, FALSE)</attributeDefinition>
+          <attributeDefinition>Statistical method used to interpolate the missing values in upstream passage data. This is only available for some years. Levels = c("raw counts", "generalized additive model (GAM)")</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Whether or not the adipose fin was clipped on the observed fish. Levels = c(TRUE, FALSE)</definition>
+                  <definition>Statistical method used to interpolate the missing values in upstream passage data. This is only available for some years. Levels = c("raw counts", "generalized additive model (GAM)")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
