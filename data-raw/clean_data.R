@@ -28,6 +28,9 @@ upstream_passage_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_c
 upstream_passage_estimate_raw <- read.csv(here::here("data-raw", "standard_adult_passage_estimate.csv")) |>
   filter(stream == "clear creek")
 
+years_to_include_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_counts.xlsx"),
+                                          sheet = "Metadata",
+                                          skip = 15)
 
 # redd --------------------------------------------------------------------
 # standardize substrate sizes for redd using the Wentworth Scale, created by W.C Krumbein
@@ -128,6 +131,13 @@ up <- upstream_passage_raw |>
     mutate(run = "spring") |>
     glimpse()
 
+# TODO how to include this information in the edi package?
+years_to_include <- years_to_include_raw |>
+  rename(brood_year = `Brief Year Description`,
+         removed = `...2`,
+         description = `...3`) |>
+  mutate(removed = ifelse(removed == "Removed", TRUE, FALSE)) |>
+  glimpse()
 
 up_estimate <- upstream_passage_estimate_raw |>
   select(-c(ladder, stream, adipose_clipped, ucl, lcl, confidence_interval)) |>
