@@ -646,9 +646,9 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>time</attributeName>
+          <attributeName>time_block</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Time of day the upstream passage count was recorded</attributeDefinition>
+          <attributeDefinition>30 minute block of time out of a 24 hour day.</attributeDefinition>
           <measurementScale>
             <dateTime>
               <formatString>hh:mm:ss</formatString>
@@ -659,6 +659,20 @@
                 </bounds>
               </dateTimeDomain>
             </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>brood_year</attributeName>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>Brood year, defined as December 20 through August 15</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Brood year, defined as December 20 through August 15</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
           </measurementScale>
         </attribute>
         <attribute>
@@ -681,48 +695,6 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>run</attributeName>
-          <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Assigned run of the fish viewed. Levels = c("not recorded", "spring", "unknown")</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Assigned run of the fish viewed. Levels = c("not recorded", "spring", "unknown")</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>adipose_clipped</attributeName>
-          <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Whether or not the adipose fin was clipped. Levels = c(TRUE, FALSE, NA). Levels = c(NA, FALSE, TRUE)</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Whether or not the adipose fin was clipped. Levels = c(TRUE, FALSE, NA). Levels = c(NA, FALSE, TRUE)</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>sex</attributeName>
-          <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Sex of fish observed. Levels = c("male", "unknown", "female", "not recorded")</attributeDefinition>
-          <measurementScale>
-            <nominal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Sex of fish observed. Levels = c("male", "unknown", "female", "not recorded")</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
           <attributeName>passage_direction</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
           <attributeDefinition>Direction of fish passage. Levels = c("up", "down")</attributeDefinition>
@@ -739,26 +711,70 @@
         <attribute>
           <attributeName>viewing_condition</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Viewing conditions at time of data collection. Levels = c("normal", NA, "not readable", "readable")</attributeDefinition>
+          <attributeDefinition>Water clarity measurements at time of data collection. Levels = c("clear", "light turbidity to turbid", "flooded", "turbid to extreme turbidity")</attributeDefinition>
           <measurementScale>
             <ordinal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Viewing conditions at time of data collection. Levels = c("normal", NA, "not readable", "readable")</definition>
+                  <definition>Water clarity measurements at time of data collection. Levels = c("clear", "light turbidity to turbid", "flooded", "turbid to extreme turbidity")</definition>
                 </textDomain>
               </nonNumericDomain>
             </ordinal>
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>spawning_condition</attributeName>
+          <attributeName>species</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Description of spawning status based on coloration . Levels = c("full spawn coloration", NA, "unknown", "no spawn coloration",  "some spawn coloration", "post spawn")</attributeDefinition>
+          <attributeDefinition>Species of fish observed. All records for this dataset are Chinook.</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Description of spawning status based on coloration . Levels = c("full spawn coloration", NA, "unknown", "no spawn coloration",  "some spawn coloration", "post spawn")</definition>
+                  <definition>Species of fish observed. All records for this dataset are Chinook.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>time_passed</attributeName>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>The exact time the fish completely passed the white plate in the video system.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>hh:mm:ss</formatString>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">00:00:00</minimum>
+                  <maximum exclusive="false">23:59:00</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>sex</attributeName>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>Sex of fish observed, determined by  phenotypic characteristics, kype, and tail wear. Levels = c("female", "male", "unknown", NA)</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Sex of fish observed, determined by  phenotypic characteristics, kype, and tail wear. Levels = c("female", "male", "unknown", NA)</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>spawning_condition</attributeName>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>Spawning conditions (SC) measurements. c(NA, "spawning colors, defined kype, some tail wear or small amount sof fungus",  "fungus, lethargic, wandering, zombie fish; significant tail wear in females to indicate spawning in progress or has been completed",  "energetic, bright or silvery, non spawning coloration or developed secondary sex characteristics",  "energetic, can tell sex from secondary characteristics, silvery or bright coloration but may have hints of spawning colors")</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Spawning conditions (SC) measurements. c(NA, "spawning colors, defined kype, some tail wear or small amount sof fungus",  "fungus, lethargic, wandering, zombie fish; significant tail wear in females to indicate spawning in progress or has been completed",  "energetic, bright or silvery, non spawning coloration or developed secondary sex characteristics",  "energetic, can tell sex from secondary characteristics, silvery or bright coloration but may have hints of spawning colors")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
@@ -767,33 +783,47 @@
         <attribute>
           <attributeName>jack_size</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Whether the fish is jack-sized or not. Levels = c(FALSE, NA, TRUE)</attributeDefinition>
+          <attributeDefinition>Whether the fish is jack-sized or not. If a fish is under 600mm fork length, it is considered jack-size for Chinook. Levels = c(TRUE, FALSE, NA)</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Whether the fish is jack-sized or not. Levels = c(FALSE, NA, TRUE)</definition>
+                  <definition>Whether the fish is jack-sized or not. If a fish is under 600mm fork length, it is considered jack-size for Chinook. Levels = c(TRUE, FALSE, NA)</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>method</attributeName>
+          <attributeName>adipose_clipped</attributeName>
           <attributeLabel>upstream_passage_raw</attributeLabel>
-          <attributeDefinition>Method by which the data were collected. Levels = "video"</attributeDefinition>
+          <attributeDefinition>Whether or not the adipose fin was clipped. Levels = c(TRUE, FALSE, NA).</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Method by which the data were collected. Levels = "video"</definition>
+                  <definition>Whether or not the adipose fin was clipped. Levels = c(TRUE, FALSE, NA).</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>run</attributeName>
+          <attributeLabel>upstream_passage_raw</attributeLabel>
+          <attributeDefinition>Run of the fish based on spring run timing. All records are assigned spring and were observed between February 20 and August 15.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Run of the fish based on spring run timing. All records are assigned spring and were observed between February 20 and August 15.</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>3645</numberOfRecords>
+      <numberOfRecords>14644</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>clear_upstream_passage_estimates.csv</entityName>
