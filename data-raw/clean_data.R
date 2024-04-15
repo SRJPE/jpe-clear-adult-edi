@@ -10,9 +10,9 @@ gcs_get_object(object_name = "adult-holding-redd-and-carcass-surveys/clear-creek
                saveToDisk = here::here("data-raw", "clear_daily_redd.csv"),
                overwrite = TRUE)
 
-gcs_get_object(object_name = "standard-format-data/standard_adult_upstream_passage.csv",
+gcs_get_object(object_name = "adult-upstream-passage-monitoring/clear-creek/data-raw/CCVS_SR_EDI.xlsx",
                bucket = gcs_get_global_bucket(),
-               saveToDisk = here::here("data-raw", "standard_adult_passage.csv"),
+               saveToDisk = here::here("data-raw", "clear_creek_raw_counts.xlsx"),
                overwrite = TRUE)
 
 gcs_get_object(object_name = "standard-format-data/standard_adult_passage_estimate.csv",
@@ -20,12 +20,10 @@ gcs_get_object(object_name = "standard-format-data/standard_adult_passage_estima
                saveToDisk = here::here("data-raw", "standard_adult_passage_estimate.csv"),
                overwrite = TRUE)
 
-pe-dev-bucket/adult-upstream-passage-monitoring/clear-creek/data/clear_passage.csv
-
 redd_raw <- read.csv(here::here("data-raw", "clear_daily_redd.csv"))
 
-upstream_passage_raw <- read.csv(here::here("data-raw", "standard_adult_passage.csv")) |>
-  filter(stream == "clear creek")
+upstream_passage_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_counts.xlsx"),
+                                          sheet = "SR 2_20-9_15")
 
 upstream_passage_estimate_raw <- read.csv(here::here("data-raw", "standard_adult_passage_estimate.csv")) |>
   filter(stream == "clear creek")
@@ -94,13 +92,42 @@ redd <- redd_raw |>
          tail_substrate_class, velocity)
   glimpse()
 
+
+# upstream passage --------------------------------------------------------
+
 up <- upstream_passage_raw |>
-  filter(run %in% c("not recorded", "spring", "unknown")) |>
-  select(-c(ladder, fork_length, temperature, flow, stream, hours)) |>
-  mutate(jack_size = case_when(jack_size == "yes" ~ TRUE,
-                               jack_size == "no" ~ FALSE,
-                               TRUE ~ NA)) |>
-  glimpse()
+    janitor::clean_names() |>
+    rename(brood_year = video_year) |>
+    mutate(time_block = format(time_block, "%H:%M:%S"),
+           time_passed = format(time_passed, "%H:%M:%S"),
+           viewing_condition = case_when(viewing_condition == 0 ~ "clear",
+                                         viewing_condition == 1 ~ "light turbidity to turbid",
+                                         viewing_condition == 2 ~ "turbid to extreme turbidity",
+                                         viewing_condition == 3 ~ "flooded",
+                                         TRUE ~ "unknown"),
+           adipose_clipped = str_to_lower(adipose),
+           adipose_clipped = case_when(adipose_clipped == "present" ~ TRUE,
+                                       adipose_clipped == "absent" ~ FALSE,
+                                       TRUE ~ NA),
+           sex = str_to_lower(sex),
+           sex = ifelse(sex == "unk", "unknown", sex),
+           spawning_condition = case_when(spawning_condition == 1 ~ "energetic, bright or silvery, non spawning coloration or developed secondary sex characteristics",
+                                          spawning_condition == 2 ~ "energetic, can tell sex from secondary characteristics, silvery or bright coloration but may have hints of spawning colors",
+                                          spawning_condition == 3 ~ "spawning colors, defined kype, some tail wear or small amount sof fungus",
+                                          spawning_condition %in% c(4, 5) ~ "fungus, lethargic, wandering, zombie fish; significant tail wear in females to indicate spawning in progress or has been completed",
+                                          TRUE ~ as.character(spawning_condition)),
+           jack_size = case_when(jack_size %in% c("YES", "Yes") ~ TRUE,
+                                 jack_size %in% c("NO", "No") ~ FALSE,
+                                 TRUE ~ NA),
+           species = ifelse(species == "CHN", "chinook", species)) |>
+    relocate(brood_year, .after = time_block) |>
+    pivot_longer(c(up, down), names_to = "passage_direction", values_to = "count") |>
+    relocate(count, .after = brood_year) |>
+    relocate(passage_direction, .after = count) |>
+    select(-adipose) |>
+    mutate(run = "spring") |>
+    glimpse()
+
 
 up_estimate <- upstream_passage_estimate_raw |>
   select(-c(ladder, stream, adipose_clipped, ucl, lcl, confidence_interval)) |>
