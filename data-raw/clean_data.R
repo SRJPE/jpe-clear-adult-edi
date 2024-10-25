@@ -93,9 +93,13 @@ redd <- redd_raw |>
          redd_measured = measured, redd_width, redd_length, pre_redd_depth, redd_pit_depth,
          redd_tail_depth, pre_redd_substrate_class, redd_substrate_class,
          tail_substrate_class, velocity)
-  glimpse()
 
-
+  redd_summary <- redd |>
+    mutate(year = year(date)) |>
+    group_by(year) |>
+    distinct(redd_id, .keep_all = T) |>
+    summarize(total_annual_redd_count = sum(redd_count),
+              number_reaches_surveyed = length(unique(reach)))
 # upstream passage --------------------------------------------------------
 
 up <- upstream_passage_raw |>
@@ -149,12 +153,13 @@ up_estimate <- upstream_passage_estimate_raw |>
   glimpse()
 
 # write files -------------------------------------------------------------
-write.csv(redd, here::here("data", "clear_redd.csv"), row.names = FALSE)
-write.csv(up, here::here("data", "clear_upstream_passage_raw.csv"), row.names = FALSE)
-write.csv(up_estimate, here::here("data", "clear_upstream_passage_estimates.csv"), row.names = FALSE)
+write_csv(redd, here::here("data", "clear_redd.csv"))
+write_csv(redd_summary, here::here("data", "clear_redd_summary.csv"))
+write_csv(up, here::here("data", "clear_upstream_passage_raw.csv"))
+write_csv(up_estimate, here::here("data", "clear_upstream_passage_estimates.csv"))
 
 
 # save cleaned data to `data/`
-read.csv(here::here("data", "clear_redd.csv")) |> glimpse()
-read.csv(here::here("data", "clear_upstream_passage_raw.csv")) |> glimpse()
-read.csv(here::here("data", "clear_upstream_passage_estimates.csv")) |> glimpse()
+# read.csv(here::here("data", "clear_redd.csv")) |> glimpse()
+# read.csv(here::here("data", "clear_upstream_passage_raw.csv")) |> glimpse()
+# read.csv(here::here("data", "clear_upstream_passage_estimates.csv")) |> glimpse()
