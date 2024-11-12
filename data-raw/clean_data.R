@@ -1,5 +1,6 @@
 library(tidyverse)
 library(googleCloudStorageR)
+library(janitor)
 
 # pull in data from google cloud ---------------------------------------------------
 gcs_auth(json_file = Sys.getenv("GCS_AUTH_FILE"))
@@ -25,8 +26,10 @@ redd_raw <- read.csv(here::here("data-raw", "clear_daily_redd.csv"))
 upstream_passage_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_counts.xlsx"),
                                           sheet = "SR 2_20-9_15")
 
-upstream_passage_estimate_raw <- read.csv(here::here("data-raw", "standard_adult_passage_estimate.csv")) |>
-  filter(stream == "clear creek")
+# upstream_passage_estimate_raw <- read.csv(here::here("data-raw", "standard_adult_passage_estimate.csv")) |>
+#   filter(stream == "clear creek")
+
+upstream_passage_estimate_raw <- read.csv(here::here("data-raw", "clear_upstream_passage_estimates.csv"))
 
 years_to_include_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_counts.xlsx"),
                                           sheet = "Metadata",
@@ -143,13 +146,19 @@ years_to_include <- years_to_include_raw |>
   mutate(removed = ifelse(removed == "Removed", TRUE, FALSE)) |>
   glimpse()
 
+# up_estimate <- upstream_passage_estimate_raw |>
+#   select(-c(ladder, stream, adipose_clipped, ucl, lcl, confidence_interval)) |>
+#   # add stat method from USFWS Adult Spring-run Chinook Salmon Monitoring in Clear Creek, California, 2013-2018 Report
+#   # https://drive.google.com/drive/u/0/folders/1vv_QV9NdiIc4tlWPPB3UBs1s8idBOiSB
+#   mutate(stat_method = case_when(year %in% c(2013:2016, 2018) ~ "generalized additive model (GAM)",
+#                                  year == 2017 ~ "raw data",
+#                                  TRUE ~ "not recorded")) |>
+#   glimpse()
+
 up_estimate <- upstream_passage_estimate_raw |>
-  select(-c(ladder, stream, adipose_clipped, ucl, lcl, confidence_interval)) |>
-  # add stat method from USFWS Adult Spring-run Chinook Salmon Monitoring in Clear Creek, California, 2013-2018 Report
-  # https://drive.google.com/drive/u/0/folders/1vv_QV9NdiIc4tlWPPB3UBs1s8idBOiSB
-  mutate(stat_method = case_when(year %in% c(2013:2016, 2018) ~ "generalized additive model (GAM)",
-                                 year == 2017 ~ "raw data",
-                                 TRUE ~ "not recorded")) |>
+  clean_names() |>
+  mutate(method = tolower(method_correction)) |>
+  select(-c(stat_method, method_correction)) |>
   glimpse()
 
 # write files -------------------------------------------------------------
