@@ -157,8 +157,9 @@ years_to_include <- years_to_include_raw |>
 
 up_estimate <- upstream_passage_estimate_raw |>
   clean_names() |>
-  mutate(method = tolower(method_correction)) |>
-  select(-c(stat_method, method_correction)) |>
+  select(-c(stat_method)) |>
+  mutate(stat_method = tolower(method_correction)) |>
+  select(-method_correction) |>
   glimpse()
 
 # write files -------------------------------------------------------------
