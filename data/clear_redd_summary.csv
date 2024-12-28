@@ -1,4 +1,5 @@
 year,total_annual_redd_count,number_reaches_surveyed
+10,3,3
 2000,8,3
 2001,47,5
 2002,149,5
@@ -6,7 +7,7 @@ year,total_annual_redd_count,number_reaches_surveyed
 2004,37,5
 2005,52,5
 2006,82,5
-2007,53,5
+2007,49,5
 2008,86,5
 2009,64,5
 2010,9,3
@@ -19,3 +20,6 @@ year,total_annual_redd_count,number_reaches_surveyed
 2017,9,3
 2018,4,4
 2019,44,5
+2020,1,1
+2022,6,5
+2023,0,5

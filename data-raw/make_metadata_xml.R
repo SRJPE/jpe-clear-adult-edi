@@ -8,20 +8,24 @@ datatable_metadata <-
   dplyr::tibble(filepath = c("data/clear_redd.csv",
                              "data/clear_redd_summary.csv",
                              "data/clear_upstream_passage_raw.csv",
-                             "data/clear_upstream_passage_estimates.csv"),
+                             "data/clear_upstream_passage_estimates.csv",
+                             "data/clear_years_to_include.csv"),
                 attribute_info = c("data-raw/metadata/clear_redd_metadata.xlsx",
                                    "data-raw/metadata/clear_redd_summary_metadata.xlsx",
                                    "data-raw/metadata/clear_upstream_passage_raw_metadata.xlsx",
-                                   "data-raw/metadata/clear_upstream_passage_estimates_metadata.xlsx"),
+                                   "data-raw/metadata/clear_upstream_passage_estimates_metadata.xlsx",
+                                   "data-raw/metadata/clear_years_to_include_metadata.xlsx"),
                 datatable_description = c("Daily repeated observation redd survey data",
                                           "Annual redd summary",
                                           "Daily upstream passage data, raw count",
-                                          "Yearly passage data, interpolated estimates"),
+                                          "Yearly passage data, interpolated estimates",
+                                          "Description of data caveats"),
                 datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/",
                                        c("clear_redd.csv",
                                          "clear_redd_symmary.csv",
                                          "clear_upstream_passage_raw.csv",
-                                         "clear_upstream_passage_estimates.csv")))
+                                         "clear_upstream_passage_estimates.csv",
+                                         "clear_years_to_include.csv")))
 # save cleaned data to `data/`
 excel_path <- "data-raw/metadata/clear_adult_metadata.xlsx"
 sheets <- readxl::excel_sheets(excel_path)

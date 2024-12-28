@@ -15,11 +15,11 @@
     <title>Monitoring Chinook Salmon (Oncorhynchus tshawytscha) throughout the adult lifespan on Clear Creek</title>
     <creator>
       <individualName>
-        <givenName>Ryan</givenName>
-        <surName>Schaefer</surName>
+        <givenName>Teresa</givenName>
+        <surName>Urrutia</surName>
       </individualName>
       <organizationName>U.S Fish and Wildlife Service</organizationName>
-      <electronicMailAddress>ryan_a_schaefer@fws.gov</electronicMailAddress>
+      <electronicMailAddress>teresa_urrutia@fws.gov</electronicMailAddress>
     </creator>
     <associatedParty>
       <individualName>
@@ -30,7 +30,7 @@
       <electronicMailAddress>samuel_provins@fws.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2024-10-25</pubDate>
+    <pubDate>2024-12-27</pubDate>
     <abstract>
       <para>
     The U.S. Fish and Wildlife Service (USFWS) collects data on adult
@@ -126,11 +126,11 @@
     </maintenance>
     <contact>
       <individualName>
-        <givenName>Ryan</givenName>
-        <surName>Schaefer</surName>
+        <givenName>Teresa</givenName>
+        <surName>Urrutia</surName>
       </individualName>
       <organizationName>U.S Fish and Wildlife Service</organizationName>
-      <electronicMailAddress>ryan_a_schaefer@fws.gov</electronicMailAddress>
+      <electronicMailAddress>teresa_urrutia@fws.gov</electronicMailAddress>
     </contact>
     <methods>
       <methodStep>
@@ -284,11 +284,11 @@
       <title>Monitoring Chinook Salmon (Oncorhynchus tshawytscha) throughout the adult lifespan on Clear Creek</title>
       <personnel>
         <individualName>
-          <givenName>Ryan</givenName>
-          <surName>Schaefer</surName>
+          <givenName>Teresa</givenName>
+          <surName>Urrutia</surName>
         </individualName>
         <organizationName>U.S Fish and Wildlife Service</organizationName>
-        <electronicMailAddress>ryan_a_schaefer@fws.gov</electronicMailAddress>
+        <electronicMailAddress>teresa_urrutia@fws.gov</electronicMailAddress>
         <role>Project Lead</role>
       </personnel>
     </project>
@@ -405,25 +405,6 @@
                 </textDomain>
               </nonNumericDomain>
             </nominal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>redd_count</attributeName>
-          <attributeLabel>redd</attributeLabel>
-          <attributeDefinition>Number of redds counted.</attributeDefinition>
-          <measurementScale>
-            <ratio>
-              <unit>
-                <customUnit>number of redds</customUnit>
-              </unit>
-              <numericDomain>
-                <numberType>integer</numberType>
-                <bounds>
-                  <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">1</maximum>
-                </bounds>
-              </numericDomain>
-            </ratio>
           </measurementScale>
         </attribute>
         <attribute>
@@ -603,7 +584,7 @@
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>1613</numberOfRecords>
+      <numberOfRecords>1711</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>clear_redd_summary.csv</entityName>
@@ -687,7 +668,7 @@
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>20</numberOfRecords>
+      <numberOfRecords>24</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>clear_upstream_passage_raw.csv</entityName>
@@ -943,7 +924,7 @@
               <dateTimeDomain>
                 <bounds>
                   <minimum exclusive="false">1995</minimum>
-                  <maximum exclusive="false">2021</maximum>
+                  <maximum exclusive="false">2023</maximum>
                 </bounds>
               </dateTimeDomain>
             </dateTime>
@@ -985,19 +966,93 @@
         <attribute>
           <attributeName>stat_method</attributeName>
           <attributeLabel>upstream_passage_estimates</attributeLabel>
-          <attributeDefinition>Statistical method used to interpolate the missing values in upstream passage data. This is only available for some years. Levels = c("raw counts", "generalized additive model (GAM)")</attributeDefinition>
+          <attributeDefinition>Statistical method used to interpolate the missing values in upstream passage data. This is only available for some years. Levels = c("snorkel survey", "redd expansion factor", "vieo weir / generalized additive model (gam)", "video weir / raw count")</attributeDefinition>
           <measurementScale>
             <nominal>
               <nonNumericDomain>
                 <textDomain>
-                  <definition>Statistical method used to interpolate the missing values in upstream passage data. This is only available for some years. Levels = c("raw counts", "generalized additive model (GAM)")</definition>
+                  <definition>Statistical method used to interpolate the missing values in upstream passage data. This is only available for some years. Levels = c("snorkel survey", "redd expansion factor", "vieo weir / generalized additive model (gam)", "video weir / raw count")</definition>
                 </textDomain>
               </nonNumericDomain>
             </nominal>
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>27</numberOfRecords>
+      <numberOfRecords>29</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>clear_years_to_include.csv</entityName>
+      <entityDescription>Description of data caveats</entityDescription>
+      <physical>
+        <objectName>clear_years_to_include.csv</objectName>
+        <size unit="bytes">14</size>
+        <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/clear_years_to_include.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>brood_year</attributeName>
+          <attributeLabel>years_to_include</attributeLabel>
+          <attributeDefinition>Year of  adult data collection</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>year</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">2012</minimum>
+                  <maximum exclusive="false">2023</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>removed</attributeName>
+          <attributeLabel>years_to_include</attributeLabel>
+          <attributeDefinition>Indicates if year should be removed from analysis if TRUE</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Indicates if year should be removed from analysis if TRUE</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>description</attributeName>
+          <attributeLabel>years_to_include</attributeLabel>
+          <attributeDefinition>Description of caveats that should be considered when using the data</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Description of caveats that should be considered when using the data</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>11</numberOfRecords>
     </dataTable>
   </dataset>
   <additionalMetadata>
