@@ -1,0 +1,13 @@
+JPE Clear Adutl EDI Upload Workflow
+================
+
+This guide provides step-by-step instructions to update the Clear Creek
+Adult EDI package with new redd data.
+
+## Navigating to the Repository
+
+All data processing and EDI uploads are managed in the same
+repository.  
+1. Navigate to the [project
+repository](https://github.com/FlowWest/jpe-clear-adult-edi) and clone
+it to your local machine.
