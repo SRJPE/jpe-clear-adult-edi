@@ -21,66 +21,66 @@ cleaning will be needed, and therefore EDI updates will run smoothly.
 
 \#TODO check these descriptions
 
-| **Field**      | **Data Type (R)** | **Description**                                   | **Allowed Values/Format**              |
-|----------------|-------------------|---------------------------------------------------|----------------------------------------|
-| `method`       | `character`       | Sampling or measurement method used               | `"Snorkel"`                            |
-| `point_x`      | `numeric`         | X-coordinate of the point (geographical location) | Decimal values (e.g., -122.5404)       |
-| `point_y`      | `numeric`         | Y-coordinate of the point (geographical location) | Decimal values (e.g., 40.58156)        |
-| `survey_8`     | `numeric`         | Survey ID or reference for the 8th survey         | `NA` or numeric                        |
-| `river_mile`   | `numeric`         | River mile marker of the observation              | Decimal values                         |
-| `x1000ftbreak` | `numeric`         | Categorization based on 1000 ft breaks            | Numeric values (e.g., 87000)           |
-| `ucc_relate`   | `character`       | Relationship to Upper Columbia Conservation (UCC) | `"Above"`, `"Below"`                   |
-| `pw_location`  | `numeric`         | Location based on PW (Programmatic Work)          | Numeric values (e.g., 8.2)             |
-| `pw_relate`    | `character`       | Relationship to PW                                | `"Above"`, `"Below"`                   |
-| `date`         | `POSIXct`         | Observation or sampling date                      | Date-time format (e.g., `2000-09-25`)  |
-| `reach`        | `character`       | Designated river reach or area                    | `"R1"`, `"R2"`, `"R3"`, `"R4"`, `"R5"` |
-| `redd_id`      | `character`       | Identifier for a redd (spawning bed)              | `NA` or free text                      |
-| `species`      | `character`       | Species being observed                            | `"CHINOOK"`                            |
-| `age`          | `numeric`         | Age of the observed species                       | `NA` or numeric                        |
-| `redd_loc`     | `character`       | Location of the redd                              | `NA` or free text                      |
-| `gravel`       | `character`       | Type of gravel or substrate                       | `"Native"`                             |
-| `inj_site`     | `character`       | Site of injury or observation                     | Free text (e.g., `"Paige Bar"`)        |
-| `pre_sub`      | `character`       | Pre-substrate condition                           | `NA` or free text                      |
-| `side_sub`     | `character`       | Side-substrate condition                          | `NA` or free text                      |
-| `tail_sub`     | `character`       | Tail-substrate condition                          | `NA` or free text                      |
-| `fish_on_re`   | `character`       | Presence of fish on redd                          | `NA` or free text                      |
-| `measure`      | `character`       | Measurement notes                                 | `"NO"`                                 |
-| `why_not_me`   | `character`       | Reason for missing measurement                    | `NA` or free text                      |
-| `date_mea`     | `POSIXct`         | Date measurement was taken                        | `NA` or date-time format               |
-| `pre_in`       | `numeric`         | Pre-measurement in inches                         | `NA` or numeric                        |
-| `pit_in`       | `numeric`         | Pit measurement in inches                         | `NA` or numeric                        |
-| `tail_in`      | `numeric`         | Tail measurement in inches                        | `NA` or numeric                        |
-| `length_in`    | `numeric`         | Length in inches                                  | `NA` or numeric                        |
-| `width_in`     | `numeric`         | Width in inches                                   | `NA` or numeric                        |
-| `velocity`     | `numeric`         | Water velocity at the measurement site            | `NA` or numeric                        |
-| `start_60`     | `numeric`         | Start time for 60-second measurement              | `NA` or numeric                        |
-| `end_60`       | `numeric`         | End time for 60-second measurement                | `NA` or numeric                        |
-| `sec_60`       | `numeric`         | Duration of 60-second measurement                 | `NA` or numeric                        |
-| `start_80`     | `numeric`         | Start time for 80-second measurement              | `NA` or numeric                        |
-| `end_80`       | `numeric`         | End time for 80-second measurement                | `NA` or numeric                        |
-| `secs_80`      | `numeric`         | Duration of 80-second measurement                 | `NA` or numeric                        |
-| `bomb_vel60`   | `numeric`         | Bomb velocity for 60 seconds                      | `NA` or numeric                        |
-| `bomb_vel80`   | `numeric`         | Bomb velocity for 80 seconds                      | `NA` or numeric                        |
-| `comments`     | `character`       | Additional comments or observations               | Free text                              |
-| `date_1`       | `POSIXct`         | Date for the first observation                    | `NA` or date-time format               |
-| `age_1`        | `numeric`         | Age recorded for the first observation            | `NA` or numeric                        |
-| `date_2`       | `POSIXct`         | Date for the second observation                   | `NA` or date-time format               |
-| `age_2`        | `numeric`         | Age recorded for the second observation           | `NA` or numeric                        |
-| `date_3`       | `POSIXct`         | Date for the third observation                    | `NA` or date-time format               |
-| `age_3`        | `numeric`         | Age recorded for the third observation            | `NA` or numeric                        |
-| `date_4`       | `POSIXct`         | Date for the fourth observation                   | `NA` or date-time format               |
-| `age_4`        | `numeric`         | Age recorded for the fourth observation           | `NA` or numeric                        |
-| `date_5`       | `POSIXct`         | Date for the fifth observation                    | `NA` or date-time format               |
-| `age_5`        | `numeric`         | Age recorded for the fifth observation            | `NA` or numeric                        |
-| `date_6`       | `POSIXct`         | Date for the sixth observation                    | `NA` or date-time format               |
-| `age_6`        | `numeric`         | Age recorded for the sixth observation            | `NA` or numeric                        |
-| `date_7`       | `POSIXct`         | Date for the seventh observation                  | `NA` or date-time format               |
-| `age_7`        | `numeric`         | Age recorded for the seventh observation          | `NA` or numeric                        |
-| `date_8`       | `POSIXct`         | Date for the eighth observation                   | `NA` or date-time format               |
-| `age_8`        | `numeric`         | Age recorded for the eighth observation           | `NA` or numeric                        |
-| `date_9`       | `POSIXct`         | Date for the ninth observation                    | `NA` or date-time format               |
-| `age_9`        | `numeric`         | Age recorded for the ninth observation            | `NA` or numeric                        |
-| `run`          | `character`       | Description of the fish run                       | Free text                              |
+| **Field**      | **Data Type (R)** | **Description**                                        | **Allowed Values/Format**                                          |
+|----------------|-------------------|--------------------------------------------------------|--------------------------------------------------------------------|
+| `method`       | `character`       | Sampling or measurement method used                    | `"Snorkel"`                                                        |
+| `point_x`      | `numeric`         | X-coordinate of the point (geographical location)      | Decimal values (e.g., -122.5404)                                   |
+| `point_y`      | `numeric`         | Y-coordinate of the point (geographical location)      | Decimal values (e.g., 40.58156)                                    |
+| `survey_8`     | `numeric`         | Survey ID or reference for the survey                  | `NA` or numeric                                                    |
+| `river_mile`   | `numeric`         | River mile marker of the observation                   | Decimal values                                                     |
+| `x1000ftbreak` | `numeric`         | Categorization based on 1000 ft breaks                 | Numeric values (e.g., 87000)                                       |
+| `ucc_relate`   | `character`       | Relationship to UCC                                    | `"Above"`, `"Below"`                                               |
+| `pw_location`  | `numeric`         | Location based on PW (Programmatic Work)               | Numeric values (e.g., 8.2)                                         |
+| `pw_relate`    | `character`       | Relationship to PW                                     | `"Above"`, `"Below"`                                               |
+| `date`         | `POSIXct`         | Observation or sampling date                           | Date-time format (e.g., `2000-09-25`)                              |
+| `reach`        | `character`       | Designated river reach or area                         | `"R1"`, `"R2"`, `"R3"`, `"R4"`, `"R5"`                             |
+| `redd_id`      | `character`       | Identifier for a redd (spawning bed)                   | `NA` or free text                                                  |
+| `species`      | `character`       | Species being observed                                 | `"CHINOOK"`                                                        |
+| `age`          | `numeric`         | Age of the observed species                            | `NA` or numeric                                                    |
+| `redd_loc`     | `character`       | Location of the redd                                   | `NA` or free text                                                  |
+| `gravel`       | `character`       | Type of gravel or substrate                            | `"Native"`, `"Combination"`, `"Injection"`                         |
+| `inj_site`     | `character`       | Site of inj or observation                             | Free text (e.g., `"Paige Bar"`)                                    |
+| `pre_sub`      | `character`       | Pre-substrate condition                                | “\<0.25”, “0.25-0.5”, “0.5-1”, “1-2”, “2-4”, “4-8”, “8-16”, “\>16” |
+| `side_sub`     | `character`       | Side-substrate condition                               | Same as `pre_redd_substrate_in`                                    |
+| `tail_sub`     | `character`       | Tail-substrate condition                               | Same as `pre_redd_substrate_in`                                    |
+| `fish_on_re`   | `character`       | Presence of fish on redd                               | `TRUE`, `FALSE`                                                    |
+| `measure`      | `character`       | Redd measurement was taken                             | `TRUE`, `FALSE`                                                    |
+| `why_not_me`   | `character`       | Reason for missing measurement                         | `NA` or free text                                                  |
+| `date_mea`     | `Date`            | Date measurement was taken                             | `MM/DD/YYYY`                                                       |
+| `pre_in`       | `numeric`         | Pre-measurement in inches                              | `NA` or numeric                                                    |
+| `pit_in`       | `numeric`         | Pit measurement in inches                              | `NA` or numeric                                                    |
+| `tail_in`      | `numeric`         | Tail measurement in inches                             | `NA` or numeric                                                    |
+| `length_in`    | `numeric`         | Length in inches                                       | `NA` or numeric                                                    |
+| `width_in`     | `numeric`         | Width in inches                                        | `NA` or numeric                                                    |
+| `velocity`     | `numeric`         | Water velocity at the measurement site                 | `NA` or numeric                                                    |
+| `start_60`     | `numeric`         | Start values on the mechanical flow meter at 60% depth | `NA` or numeric                                                    |
+| `end_60`       | `numeric`         | End values on the mechanical flow meter at 60% depth   | `NA` or numeric                                                    |
+| `sec_60`       | `numeric`         | Duration meter was in the water at 60% depth           | `NA` or numeric                                                    |
+| `start_80`     | `numeric`         | Start values on the mechanical flow meter at 80% depth | `NA` or numeric                                                    |
+| `end_80`       | `numeric`         | End values on the mechanical flow meter at 80% depth   | `NA` or numeric                                                    |
+| `secs_80`      | `numeric`         | Duration meter was in the water at 80% depth           | `NA` or numeric                                                    |
+| `bomb_vel60`   | `numeric`         | Mean water column velocity measured at 60% depth       | `NA` or numeric                                                    |
+| `bomb_vel80`   | `numeric`         | Mean water column velocity measured at 80% depth       | `NA` or numeric                                                    |
+| `comments`     | `character`       | Additional comments or observations                    | Free text                                                          |
+| `date_1`       | `Date`            | Date for the first observation                         | `MM/DD/YYYY`                                                       |
+| `age_1`        | `numeric`         | Age recorded for the first observation                 | `NA` or numeric                                                    |
+| `date_2`       | `Date`            | Date for the second observation                        | `MM/DD/YYYY`                                                       |
+| `age_2`        | `numeric`         | Age recorded for the second observation                | `NA` or numeric                                                    |
+| `date_3`       | `Date`            | Date for the third observation                         | `MM/DD/YYYY`                                                       |
+| `age_3`        | `numeric`         | Age recorded for the third observation                 | `NA` or numeric                                                    |
+| `date_4`       | `Date`            | Date for the fourth observation                        | `MM/DD/YYYY`                                                       |
+| `age_4`        | `numeric`         | Age recorded for the fourth observation                | `NA` or numeric                                                    |
+| `date_5`       | `Date`            | Date for the fifth observation                         | `MM/DD/YYYY`                                                       |
+| `age_5`        | `numeric`         | Age recorded for the fifth observation                 | `NA` or numeric                                                    |
+| `date_6`       | `Date`            | Date for the sixth observation                         | `MM/DD/YYYY`                                                       |
+| `age_6`        | `numeric`         | Age recorded for the sixth observation                 | `NA` or numeric                                                    |
+| `date_7`       | `Date`            | Date for the seventh observation                       | `MM/DD/YYYY`                                                       |
+| `age_7`        | `numeric`         | Age recorded for the seventh observation               | `NA` or numeric                                                    |
+| `date_8`       | `Date`            | Date for the eighth observation                        | `MM/DD/YYYY`                                                       |
+| `age_8`        | `numeric`         | Age recorded for the eighth observation                | `NA` or numeric                                                    |
+| `date_9`       | `Date`            | Date for the ninth observation                         | `MM/DD/YYYY`                                                       |
+| `age_9`        | `numeric`         | Age recorded for the ninth observation                 | `NA` or numeric                                                    |
+| `run`          | `character`       | Description of the fish run                            | Free text                                                          |
 
 ## Substrate Classification System
 
