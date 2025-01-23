@@ -28,3 +28,4 @@ year,passage_estimate,run,stat_method
 2021,2252,spring,video weir / generalized additive model (gam)
 2022,195,spring,video weir / raw count
 2023,0,spring,snorkel survey
+2024,6,spring,

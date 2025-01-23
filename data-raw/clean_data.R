@@ -40,6 +40,8 @@ redd_raw <- read.csv(here::here("data-raw", "clear_daily_redd.csv"))
 redd_2020_raw <- read_csv(here::here("data-raw","Clear_Creek_2020_SCS_redds.csv"))
 
 redd_2022_raw <- read_csv(here::here("data-raw","Clear_Creek_2022_SCS_redds.csv"))
+#TODO addd redd data for 2024
+
 
 # this is the one additional redd that was missing
 # i think this was filtered out because of picket weir relation is below?
@@ -279,7 +281,18 @@ years_to_include <- years_to_include_raw |>
 #                                  TRUE ~ "not recorded")) |>
 #   glimpse()
 
-up_estimate <- upstream_passage_estimate_raw |>
+# Adding 2024 data that was shared by Samuel Proving in Jan 14
+row_2024 <- data.frame(
+  year = 2024,
+  run = "spring",
+  passage_estimate = 6,
+  Method_Correction = "", #TODO check if these two rows should be empty
+  stat_method = "")
+
+upstream_passage_estimate_bind <- rbind(upstream_passage_estimate_raw, row_2024)
+
+
+up_estimate <- upstream_passage_estimate_bind |>
   clean_names() |>
   select(-c(stat_method)) |>
   mutate(stat_method = tolower(method_correction)) |>
