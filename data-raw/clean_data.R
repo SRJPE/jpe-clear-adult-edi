@@ -37,15 +37,25 @@ gcs_get_object(object_name = "standard-format-data/standard_adult_passage_estima
 # prior to 2003 does not distinguish between runs and would not be comparable.
 redd_raw <- read.csv(here::here("data-raw", "clear_daily_redd.csv"))
 
-redd_2020_raw <- read_csv(here::here("data-raw","Clear_Creek_2020_SCS_redds.csv"))
+redd_2020_raw <- read_csv(here::here("data-raw","Clear_Creek_2020_SCS_redds.csv")) |>
+  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y")) |>
+  glimpse()
 
-redd_2022_raw <- read_csv(here::here("data-raw","Clear_Creek_2022_SCS_redds.csv"))
-#TODO addd redd data for 2024
+redd_2022_raw <- read_csv(here::here("data-raw","Clear_Creek_2022_SCS_redds.csv")) |>
+  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y")) |>
+  glimpse()
+
+redd_2024_raw <- readxl::read_xlsx(here::here("data-raw","Clear_Creek_2024_SCS_redds.xlsx")) |>
+  mutate(DATE = as.Date(DATE)) |>
+  rename(Fish_on_RE = 'Fish on redd') |>
+  glimpse()
 
 
 # this is the one additional redd that was missing
 # i think this was filtered out because of picket weir relation is below?
-redd_2010_raw <- read_csv(here::here("data-raw","Clear_Creek_2010_additional_redd.csv"))
+redd_2010_raw <- read_csv(here::here("data-raw","Clear_Creek_2010_additional_redd.csv")) |>
+  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y")) |>
+  glimpse()
 
 upstream_passage_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_counts.xlsx"),
                                           sheet = "SR 2_20-9_15")
@@ -64,8 +74,9 @@ years_to_include_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_c
 # We need to get the new 2020 and 2022 data in the same format as the other years
 # The cleaning was previously done in SRJPEdatasets
 
-redd_2020_2022_raw <- bind_rows(redd_2020_raw, redd_2022_raw, redd_2010_raw)
-cleaner_data <- redd_2020_2022_raw |>
+redd_2020_2024_raw <- bind_rows(redd_2020_raw, redd_2022_raw, redd_2010_raw, redd_2024_raw)
+
+cleaner_data <- redd_2020_2024_raw |>
   janitor::clean_names() |>
   rename('longitude' = 'point_x',
          'latitude' = 'point_y',
@@ -197,7 +208,7 @@ standard_reach_lookup <- read_csv(here::here("data-raw",  "standard-reach-lookup
 
 redd <- redd_raw_combined |>
   filter(species == "Chinook",
-         picket_weir_relation == "above") |>
+         picket_weir_relation == "above") |> #TODO this filter is leaving out newer data (2024). Should we check on this criteria?
   left_join(redd_substrate_size_lookup |>
               select(redd_substrate_size, redd_substrate_class),
             by = c("redd_substrate_size")) |>
