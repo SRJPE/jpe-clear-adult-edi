@@ -46,8 +46,14 @@ redd_2022_raw <- read_csv(here::here("data-raw","Clear_Creek_2022_SCS_redds.csv"
   glimpse()
 
 redd_2024_raw <- readxl::read_xlsx(here::here("data-raw","Clear_Creek_2024_SCS_redds.xlsx")) |>
-  mutate(DATE = as.Date(DATE)) |>
+  mutate(DATE = as.Date(DATE),
+         `PW Relate` = "above",) |>
   rename(Fish_on_RE = 'Fish on redd') |>
+  janitor::clean_names() |>
+  mutate(qc_date = as.Date(qa_qc_date),
+         year = year(date)) |>
+  rename(restoration_rm = restoration_river_mile) |>
+  select(-"qa_qc_date") |>
   glimpse()
 
 
@@ -74,7 +80,14 @@ years_to_include_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_c
 # We need to get the new 2020 and 2022 data in the same format as the other years
 # The cleaning was previously done in SRJPEdatasets
 
-redd_2020_2024_raw <- bind_rows(redd_2020_raw, redd_2022_raw, redd_2010_raw, redd_2024_raw)
+# redd_2020_2024_raw <- bind_rows(redd_2020_raw, redd_2022_raw, redd_2010_raw, redd_2024_raw)
+
+redd_2020_2022_raw <- bind_rows(redd_2020_raw, redd_2022_raw, redd_2010_raw) |>
+  janitor::clean_names() |>
+  mutate(qc_date = as.Date(qc_date, format = "%m/%d/%Y"))
+
+redd_2020_2024_raw <- bind_rows(redd_2020_2022_raw, redd_2024_raw)
+
 
 cleaner_data <- redd_2020_2024_raw |>
   janitor::clean_names() |>
@@ -208,7 +221,7 @@ standard_reach_lookup <- read_csv(here::here("data-raw",  "standard-reach-lookup
 
 redd <- redd_raw_combined |>
   filter(species == "Chinook",
-         picket_weir_relation == "above") |> #TODO this filter is leaving out newer data (2024). Should we check on this criteria?
+         picket_weir_relation == "above") |>
   left_join(redd_substrate_size_lookup |>
               select(redd_substrate_size, redd_substrate_class),
             by = c("redd_substrate_size")) |>

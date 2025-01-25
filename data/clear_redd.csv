@@ -1608,105 +1608,139 @@ date,redd_id,reach,fish_on_redd,age,run,redd_measured,redd_width,redd_length,pre
 2019-09-24,2019_1540,R1,NA,2,spring,TRUE,3.937007874015748,7.518415036830074,0.7366014732029464,0.8636017272034545,0.33020066040132084,coarse sand,very coarse sand,very coarse sand,NA
 2019-10-07,2019_1540,R1,NA,3,spring,TRUE,3.937007874015748,7.518415036830074,0.7366014732029464,0.8636017272034545,0.33020066040132084,coarse sand,very coarse sand,very coarse sand,NA
 2019-10-21,2019_1540,R1,NA,4,spring,TRUE,3.937007874015748,7.518415036830074,0.7366014732029464,0.8636017272034545,0.33020066040132084,coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,2,spring,NA,NA,NA,9,14,7,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,21,30,18,very coarse sand,very coarse sand,very coarse sand,NA
-2020-10-28,10-06-20_NA_NA,NA,NA,4,spring,NA,NA,NA,21,30,18,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,31,32,14,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,2,spring,NA,NA,NA,18,26,13,very coarse sand,very coarse sand,very coarse sand,NA
-2020-10-28,10-06-20_NA_NA,NA,NA,4,spring,NA,NA,NA,18,26,13,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,14,18,10,very coarse sand,very coarse sand,very coarse sand,NA
-2020-10-28,10-06-20_NA_NA,NA,NA,4,spring,NA,NA,NA,14,18,10,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,24,29,10,very coarse sand,very coarse sand,very coarse sand,NA
-2020-10-28,10-06-20_NA_NA,NA,NA,4,spring,NA,NA,NA,24,29,10,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,18,24,12,very coarse sand,very coarse sand,very coarse sand,NA
-2020-10-28,10-06-20_NA_NA,NA,NA,4,spring,NA,NA,NA,18,24,12,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,15,20,10,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,18,25,10,very coarse sand,very fine gravel,very coarse sand,NA
-2020-10-28,10-06-20_NA_NA,NA,NA,4,spring,NA,NA,NA,18,25,10,very coarse sand,very fine gravel,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,2,spring,NA,NA,NA,38,45,19,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,2,spring,NA,NA,NA,NA,NA,7,NA,very coarse sand,very coarse sand,NA
-2020-10-28,10-06-20_NA_NA,NA,NA,4,spring,NA,NA,NA,NA,NA,7,NA,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,12,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,14,very coarse sand,very coarse sand,very coarse sand,NA
-2020-10-28,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,14,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,10,very coarse sand,very coarse sand,very coarse sand,NA
-2020-10-28,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,10,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,14,very coarse sand,very coarse sand,very coarse sand,NA
-2020-10-28,10-06-20_NA_NA,NA,NA,4,spring,NA,NA,NA,NA,NA,14,very coarse sand,very coarse sand,very coarse sand,NA
-10-06-20,10-06-20_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,7,very coarse sand,very coarse sand,very coarse sand,NA
-2020-10-28,10-06-20_NA_NA,NA,NA,4,spring,NA,NA,NA,NA,NA,7,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-03,NA_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
-2022-10-24,NA_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-03,NA_R1_NA,R1,NA,4,spring,NA,NA,NA,16,22,4,very fine gravel,very fine gravel,very fine gravel,NA
-2022-10-24,NA_R1_NA,R1,NA,4,spring,NA,NA,NA,16,22,4,very fine gravel,very fine gravel,very fine gravel,NA
-2022-10-24,NA_R1_NA,R1,NA,4,spring,NA,NA,NA,NA,NA,NA,coarse sand,very fine gravel,coarse sand,NA
-2022-10-03,NA_R1_NA,R1,NA,2,spring,NA,NA,NA,23,25,15,very fine gravel,very fine gravel,very fine gravel,NA
-2022-10-24,NA_R1_NA,R1,NA,4,spring,NA,NA,NA,23,25,15,very fine gravel,very fine gravel,very fine gravel,NA
-2022-10-24,NA_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very fine gravel,NA
-2022-10-24,NA_R1_NA,R1,NA,4,spring,NA,NA,NA,8,15,11,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-03,NA_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
-2022-10-24,NA_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
-2022-10-03,NA_R1_NA,R1,NA,4,spring,NA,NA,NA,NA,NA,NA,very coarse sand,fine gravel,very fine gravel,NA
-2022-10-03,NA_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,coarse sand,very fine gravel,very coarse sand,NA
-2022-10-03,NA_R1_NA,R1,NA,NA,spring,NA,NA,NA,NA,NA,NA,coarse sand,very fine gravel,very coarse sand,NA
-2022-10-24,NA_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,coarse sand,very fine gravel,very coarse sand,NA
-2022-10-03,NA_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
-2022-10-24,NA_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
-2022-10-03,NA_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
-2022-10-24,NA_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
-2022-10-06,NA_R4_NA,R4,NA,2,spring,NA,NA,NA,21,19,9,very fine gravel,very fine gravel,very coarse sand,NA
-2022-10-27,NA_R4_NA,R4,NA,4,spring,NA,NA,NA,21,19,9,very fine gravel,very fine gravel,very coarse sand,NA
-2022-10-06,NA_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-27,NA_R4_NA,R4,NA,5,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-06,NA_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-27,NA_R4_NA,R4,NA,5,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-06,NA_R4_NA,R4,NA,2,spring,NA,NA,NA,21,26,7,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-27,NA_R4_NA,R4,NA,3,spring,NA,NA,NA,21,26,7,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-06,NA_R4_NA,R4,NA,3,spring,NA,NA,NA,NA,NA,NA,very coarse sand,fine sand,very coarse sand,NA
-2022-10-27,NA_R4_NA,R4,NA,4,spring,NA,NA,NA,NA,NA,NA,very coarse sand,fine sand,very coarse sand,NA
-2022-10-06,NA_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-27,NA_R4_NA,R4,NA,3,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-06,NA_R4_NA,R4,NA,3,spring,NA,NA,NA,27,30,20,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-27,NA_R4_NA,R4,NA,4,spring,NA,NA,NA,27,30,20,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-06,NA_R4_NA,R4,NA,2,spring,NA,NA,NA,9,15,6,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-27,NA_R4_NA,R4,NA,4,spring,NA,NA,NA,9,15,6,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-06,NA_R4_NA,R4,NA,3,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very coarse sand,very fine gravel,NA
-2022-10-27,NA_R4_NA,R4,NA,4,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very coarse sand,very fine gravel,NA
-2022-10-06,NA_R4_NA,R4,NA,3,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very coarse sand,very coarse sand,NA
-2022-10-27,NA_R4_NA,R4,NA,4,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very coarse sand,very coarse sand,NA
-2022-10-06,NA_R4_NA,R4,NA,3,spring,NA,NA,NA,NA,NA,NA,fine sand,very fine gravel,very coarse sand,NA
-2022-10-27,NA_R4_NA,R4,NA,5,spring,NA,NA,NA,NA,NA,NA,fine sand,very fine gravel,very coarse sand,NA
-2022-10-06,NA_R5_NA,R5,NA,3,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very fine gravel,NA
-2022-10-27,NA_R5_NA,R5,NA,5,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very fine gravel,NA
-2022-10-27,NA_R5_NA,R5,NA,5,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
-10-03-20,10-03-20_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,fine gravel,NA
-2022-10-24,10-03-20_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,fine gravel,NA
-10-03-20,10-03-20_R1_NA,R1,NA,2,spring,NA,NA,NA,16,22,16,coarse sand,coarse sand,coarse sand,NA
-2022-10-24,10-03-20_R1_NA,R1,NA,4,spring,NA,NA,NA,16,22,16,coarse sand,coarse sand,coarse sand,NA
-10-03-20,10-03-20_R1_NA,R1,NA,2,spring,NA,NA,NA,16,23,4,very fine gravel,very coarse sand,very coarse sand,NA
-2022-10-24,10-03-20_R1_NA,R1,NA,4,spring,NA,NA,NA,16,23,4,very fine gravel,very coarse sand,very coarse sand,NA
-2022-10-24,10-03-20_R1_NA,R1,NA,4,spring,NA,NA,NA,16,23,4,very fine gravel,very coarse sand,very coarse sand,NA
-10-03-20,10-03-20_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,coarse sand,coarse sand,very coarse sand,NA
-10-03-20,10-03-20_R1_NA,R1,NA,3,spring,NA,NA,NA,19,20,10,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-24,10-03-20_R1_NA,R1,NA,3,spring,NA,NA,NA,19,20,10,very coarse sand,very coarse sand,very coarse sand,NA
-10-03-20,10-03-20_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
-10-03-20,10-03-20_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,coarse sand,very coarse sand,very fine gravel,NA
-10-03-20,10-03-20_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
-10-03-20,10-03-20_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
-10-03-20,10-03-20_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,coarse sand,very coarse sand,very coarse sand,NA
-2022-10-24,10-03-20_R1_NA,R1,NA,4,spring,NA,NA,NA,NA,NA,NA,coarse sand,very coarse sand,very coarse sand,NA
-10-03-20,10-03-20_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,coarse sand,very coarse sand,very coarse sand,NA
-2022-10-24,10-03-20_R1_NA,R1,NA,4,spring,NA,NA,NA,NA,NA,NA,coarse sand,very coarse sand,very coarse sand,NA
-10-03-20,10-03-20_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-03,10-03-20_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
-2022-10-24,10-03-20_R1_NA,R1,NA,4,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
-10-04-20,10-04-20_R2_NA,R2,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very fine gravel,NA
-2022-10-25,10-04-20_R2_NA,R2,NA,4,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very fine gravel,NA
-10-04-20,10-04-20_R2_NA,R2,NA,2,spring,NA,NA,NA,39,45,22,very fine gravel,very coarse sand,very fine gravel,NA
-2022-10-25,10-04-20_R2_NA,R2,NA,5,spring,NA,NA,NA,39,45,22,very fine gravel,very coarse sand,very fine gravel,NA
-10-04-20,10-04-20_R2_NA,R2,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
-2022-10-25,10-04-20_R2_NA,R2,NA,4,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
-10-04-20,10-04-20_R2_NA,R2,NA,2,spring,NA,NA,NA,29,41,25,coarse sand,very fine gravel,very coarse sand,NA
-2022-10-25,10-04-20_R2_NA,R2,NA,5,spring,NA,NA,NA,29,41,25,coarse sand,very fine gravel,very coarse sand,NA
-2022-10-07,NA_R3_NA,R3,NA,3,spring,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-2022-10-26,NA_R3_NA,R3,NA,4,spring,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,2,spring,NA,NA,NA,9,14,7,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,21,30,18,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-28,2020-10-06_NA_NA,NA,NA,4,spring,NA,NA,NA,21,30,18,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,31,32,14,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,2,spring,NA,NA,NA,18,26,13,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-28,2020-10-06_NA_NA,NA,NA,4,spring,NA,NA,NA,18,26,13,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,14,18,10,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-28,2020-10-06_NA_NA,NA,NA,4,spring,NA,NA,NA,14,18,10,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,24,29,10,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-28,2020-10-06_NA_NA,NA,NA,4,spring,NA,NA,NA,24,29,10,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,18,24,12,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-28,2020-10-06_NA_NA,NA,NA,4,spring,NA,NA,NA,18,24,12,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,15,20,10,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,18,25,10,very coarse sand,very fine gravel,very coarse sand,NA
+2020-10-28,2020-10-06_NA_NA,NA,NA,4,spring,NA,NA,NA,18,25,10,very coarse sand,very fine gravel,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,2,spring,NA,NA,NA,38,45,19,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,2,spring,NA,NA,NA,NA,NA,7,NA,very coarse sand,very coarse sand,NA
+2020-10-28,2020-10-06_NA_NA,NA,NA,4,spring,NA,NA,NA,NA,NA,7,NA,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,12,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,14,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-28,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,14,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,10,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-28,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,10,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,14,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-28,2020-10-06_NA_NA,NA,NA,4,spring,NA,NA,NA,NA,NA,14,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-06,2020-10-06_NA_NA,NA,NA,3,spring,NA,NA,NA,NA,NA,7,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-28,2020-10-06_NA_NA,NA,NA,4,spring,NA,NA,NA,NA,NA,7,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-28,2020-10-28_NA_NA,NA,NA,3,spring,NA,NA,NA,10,18,8,very coarse sand,very coarse sand,very coarse sand,NA
+2020-10-28,2020-10-28_NA_NA,NA,NA,4,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
+2020-10-28,2020-10-28_NA_NA,NA,NA,4,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very fine gravel,NA
+2022-09-19,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
+2022-10-03,2022-09-19_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
+2022-09-19,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-24,2022-09-19_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-09-19,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,16,22,4,very fine gravel,very fine gravel,very fine gravel,NA
+2022-10-03,2022-09-19_R1_NA,R1,NA,4,spring,NA,NA,NA,16,22,4,very fine gravel,very fine gravel,very fine gravel,NA
+2022-10-24,2022-09-19_R1_NA,R1,NA,4,spring,NA,NA,NA,16,22,4,very fine gravel,very fine gravel,very fine gravel,NA
+2022-09-19,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,coarse sand,very fine gravel,coarse sand,NA
+2022-10-24,2022-09-19_R1_NA,R1,NA,4,spring,NA,NA,NA,NA,NA,NA,coarse sand,very fine gravel,coarse sand,NA
+2022-09-19,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,23,25,15,very fine gravel,very fine gravel,very fine gravel,NA
+2022-10-03,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,23,25,15,very fine gravel,very fine gravel,very fine gravel,NA
+2022-10-24,2022-09-19_R1_NA,R1,NA,4,spring,NA,NA,NA,23,25,15,very fine gravel,very fine gravel,very fine gravel,NA
+2022-09-19,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very fine gravel,NA
+2022-10-24,2022-09-19_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very fine gravel,NA
+2022-09-19,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,8,15,11,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-24,2022-09-19_R1_NA,R1,NA,4,spring,NA,NA,NA,8,15,11,very coarse sand,very coarse sand,very coarse sand,NA
+2022-09-19,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
+2022-10-03,2022-09-19_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
+2022-10-24,2022-09-19_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
+2022-09-19,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,fine gravel,very fine gravel,NA
+2022-10-03,2022-09-19_R1_NA,R1,NA,4,spring,NA,NA,NA,NA,NA,NA,very coarse sand,fine gravel,very fine gravel,NA
+2022-09-19,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,coarse sand,very fine gravel,very coarse sand,NA
+2022-10-03,2022-09-19_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,coarse sand,very fine gravel,very coarse sand,NA
+2022-10-03,2022-09-19_R1_NA,R1,NA,NA,spring,NA,NA,NA,NA,NA,NA,coarse sand,very fine gravel,very coarse sand,NA
+2022-10-24,2022-09-19_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,coarse sand,very fine gravel,very coarse sand,NA
+2022-09-19,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
+2022-10-03,2022-09-19_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
+2022-10-24,2022-09-19_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
+2022-09-19,2022-09-19_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
+2022-10-03,2022-09-19_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
+2022-10-24,2022-09-19_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very coarse sand,NA
+2022-09-26,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,21,19,9,very fine gravel,very fine gravel,very coarse sand,NA
+2022-10-06,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,21,19,9,very fine gravel,very fine gravel,very coarse sand,NA
+2022-10-27,2022-09-26_R4_NA,R4,NA,4,spring,NA,NA,NA,21,19,9,very fine gravel,very fine gravel,very coarse sand,NA
+2022-09-26,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-06,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-27,2022-09-26_R4_NA,R4,NA,5,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-09-26,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-06,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-27,2022-09-26_R4_NA,R4,NA,5,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-09-26,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,21,26,7,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-06,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,21,26,7,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-27,2022-09-26_R4_NA,R4,NA,3,spring,NA,NA,NA,21,26,7,very coarse sand,very coarse sand,very coarse sand,NA
+2022-09-26,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,fine sand,very coarse sand,NA
+2022-10-06,2022-09-26_R4_NA,R4,NA,3,spring,NA,NA,NA,NA,NA,NA,very coarse sand,fine sand,very coarse sand,NA
+2022-10-27,2022-09-26_R4_NA,R4,NA,4,spring,NA,NA,NA,NA,NA,NA,very coarse sand,fine sand,very coarse sand,NA
+2022-09-26,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-06,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-27,2022-09-26_R4_NA,R4,NA,3,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-09-26,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,27,30,20,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-06,2022-09-26_R4_NA,R4,NA,3,spring,NA,NA,NA,27,30,20,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-27,2022-09-26_R4_NA,R4,NA,4,spring,NA,NA,NA,27,30,20,very coarse sand,very coarse sand,very coarse sand,NA
+2022-09-26,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,9,15,6,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-06,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,9,15,6,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-27,2022-09-26_R4_NA,R4,NA,4,spring,NA,NA,NA,9,15,6,very coarse sand,very coarse sand,very coarse sand,NA
+2022-09-26,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very coarse sand,very fine gravel,NA
+2022-10-06,2022-09-26_R4_NA,R4,NA,3,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very coarse sand,very fine gravel,NA
+2022-10-27,2022-09-26_R4_NA,R4,NA,4,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very coarse sand,very fine gravel,NA
+2022-09-26,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very coarse sand,very coarse sand,NA
+2022-10-06,2022-09-26_R4_NA,R4,NA,3,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very coarse sand,very coarse sand,NA
+2022-10-27,2022-09-26_R4_NA,R4,NA,4,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very coarse sand,very coarse sand,NA
+2022-09-26,2022-09-26_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,fine sand,very fine gravel,very coarse sand,NA
+2022-10-06,2022-09-26_R4_NA,R4,NA,3,spring,NA,NA,NA,NA,NA,NA,fine sand,very fine gravel,very coarse sand,NA
+2022-10-27,2022-09-26_R4_NA,R4,NA,5,spring,NA,NA,NA,NA,NA,NA,fine sand,very fine gravel,very coarse sand,NA
+2022-09-26,2022-09-26_R5_NA,R5,NA,2,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very fine gravel,NA
+2022-10-06,2022-09-26_R5_NA,R5,NA,3,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very fine gravel,NA
+2022-10-27,2022-09-26_R5_NA,R5,NA,5,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,very fine gravel,NA
+2022-09-26,2022-09-26_R5_NA,R5,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
+2022-10-27,2022-09-26_R5_NA,R5,NA,5,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,fine gravel,NA
+2022-10-24,2022-10-03_R1_NA,R1,NA,5,spring,NA,NA,NA,NA,NA,NA,very fine gravel,very fine gravel,fine gravel,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,2,spring,NA,NA,NA,16,22,16,coarse sand,coarse sand,coarse sand,NA
+2022-10-24,2022-10-03_R1_NA,R1,NA,4,spring,NA,NA,NA,16,22,16,coarse sand,coarse sand,coarse sand,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,2,spring,NA,NA,NA,16,23,4,very fine gravel,very coarse sand,very coarse sand,NA
+2022-10-24,2022-10-03_R1_NA,R1,NA,4,spring,NA,NA,NA,16,23,4,very fine gravel,very coarse sand,very coarse sand,NA
+2022-10-24,2022-10-03_R1_NA,R1,NA,4,spring,NA,NA,NA,16,23,4,very fine gravel,very coarse sand,very coarse sand,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,coarse sand,coarse sand,very coarse sand,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,3,spring,NA,NA,NA,19,20,10,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-24,2022-10-03_R1_NA,R1,NA,3,spring,NA,NA,NA,19,20,10,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,coarse sand,very coarse sand,very fine gravel,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,coarse sand,very coarse sand,very coarse sand,NA
+2022-10-24,2022-10-03_R1_NA,R1,NA,4,spring,NA,NA,NA,NA,NA,NA,coarse sand,very coarse sand,very coarse sand,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,coarse sand,very coarse sand,very coarse sand,NA
+2022-10-24,2022-10-03_R1_NA,R1,NA,4,spring,NA,NA,NA,NA,NA,NA,coarse sand,very coarse sand,very coarse sand,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-03,2022-10-03_R1_NA,R1,NA,3,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-24,2022-10-03_R1_NA,R1,NA,4,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very coarse sand,NA
+2022-10-04,2022-10-04_R2_NA,R2,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very fine gravel,NA
+2022-10-25,2022-10-04_R2_NA,R2,NA,4,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very coarse sand,very fine gravel,NA
+2022-10-04,2022-10-04_R2_NA,R2,NA,2,spring,NA,NA,NA,39,45,22,very fine gravel,very coarse sand,very fine gravel,NA
+2022-10-25,2022-10-04_R2_NA,R2,NA,5,spring,NA,NA,NA,39,45,22,very fine gravel,very coarse sand,very fine gravel,NA
+2022-10-04,2022-10-04_R2_NA,R2,NA,2,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
+2022-10-25,2022-10-04_R2_NA,R2,NA,4,spring,NA,NA,NA,NA,NA,NA,very coarse sand,very fine gravel,very fine gravel,NA
+2022-10-04,2022-10-04_R2_NA,R2,NA,2,spring,NA,NA,NA,29,41,25,coarse sand,very fine gravel,very coarse sand,NA
+2022-10-25,2022-10-04_R2_NA,R2,NA,5,spring,NA,NA,NA,29,41,25,coarse sand,very fine gravel,very coarse sand,NA
+2022-09-21,2022-09-21_R3_NA,R3,NA,2,spring,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2022-10-07,2022-09-21_R3_NA,R3,NA,3,spring,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2022-10-26,2022-09-21_R3_NA,R3,NA,4,spring,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2022-10-27,2022-10-27_R4_NA,R4,NA,2,spring,NA,NA,NA,NA,NA,NA,fine sand,very coarse sand,very coarse sand,NA
+2024-09-23,2024-09-23_R2_NA,R2,TRUE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2024-09-24,2024-09-24_R4_NA,R4,FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2024-10-07,2024-10-07_R2_NA,R2,FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2024-10-25,2024-10-25_R4_NA,R4,FALSE,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
