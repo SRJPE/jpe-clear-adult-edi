@@ -287,13 +287,17 @@ up <- upstream_passage_raw |>
     mutate(run = "spring") |>
     glimpse()
 
+  up <- up |>
+    mutate(spawning_condition = gsub(",", "/", spawning_condition))
+
 # TODO how to include this information in the edi package?
 years_to_include <- years_to_include_raw |>
   rename(brood_year = `Brief Year Description`,
          removed = `...2`,
          description = `...3`) |>
   mutate(removed = ifelse(removed == "Removed", TRUE, FALSE),
-         brood_year = as.numeric(paste0("20",brood_year))) |>
+         brood_year = as.numeric(paste0("20",brood_year)),
+         description = gsub(",", "/", description)) |>
   glimpse()
 
 # up_estimate <- upstream_passage_estimate_raw |>
