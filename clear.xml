@@ -30,7 +30,7 @@
       <electronicMailAddress>samuel_provins@fws.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2024-12-27</pubDate>
+    <pubDate>2025-01-24</pubDate>
     <abstract>
       <para>
     The U.S. Fish and Wildlife Service (USFWS) collects data on adult
@@ -297,8 +297,8 @@
       <entityDescription>Daily repeated observation redd survey data</entityDescription>
       <physical>
         <objectName>clear_redd.csv</objectName>
-        <size unit="bytes">14</size>
-        <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
+        <size unit="bytes">271190</size>
+        <authentication method="MD5">2c6e842145cf11adfd9bfaa368659a13</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -311,7 +311,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/clear_redd.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/clear_redd.csv</url>
           </online>
         </distribution>
       </physical>
@@ -326,7 +326,7 @@
               <dateTimeDomain>
                 <bounds>
                   <minimum exclusive="false">2000-09-25</minimum>
-                  <maximum exclusive="false">2019-10-24</maximum>
+                  <maximum exclusive="false">2024-10-25</maximum>
                 </bounds>
               </dateTimeDomain>
             </dateTime>
@@ -453,7 +453,7 @@
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0.63500129999999999</minimum>
-                  <maximum exclusive="false">11.176019999999999</maximum>
+                  <maximum exclusive="false">11.0490221</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -472,7 +472,7 @@
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0.12700030000000001</minimum>
-                  <maximum exclusive="false">2.2352045</maximum>
+                  <maximum exclusive="false">39</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -491,7 +491,7 @@
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0.15240029999999999</minimum>
-                  <maximum exclusive="false">2.4130047999999999</maximum>
+                  <maximum exclusive="false">45</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -510,7 +510,7 @@
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">7.6200149999999994E-2</minimum>
-                  <maximum exclusive="false">2.1336042700000002</maximum>
+                  <maximum exclusive="false">25</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -577,14 +577,14 @@
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0.252</minimum>
-                  <maximum exclusive="false">407.94810000000001</maximum>
+                  <maximum exclusive="false">11.05823</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>1711</numberOfRecords>
+      <numberOfRecords>1745</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>clear_redd_summary.csv</entityName>
@@ -605,7 +605,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/clear_redd_symmary.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/clear_redd_symmary.csv</url>
           </online>
         </distribution>
       </physical>
@@ -623,7 +623,7 @@
                 <numberType>whole</numberType>
                 <bounds>
                   <minimum exclusive="false">2000</minimum>
-                  <maximum exclusive="false">2019</maximum>
+                  <maximum exclusive="false">2024</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -641,7 +641,7 @@
               <numericDomain>
                 <numberType>whole</numberType>
                 <bounds>
-                  <minimum exclusive="false">4</minimum>
+                  <minimum exclusive="false">0</minimum>
                   <maximum exclusive="false">149</maximum>
                 </bounds>
               </numericDomain>
@@ -660,7 +660,7 @@
               <numericDomain>
                 <numberType>whole</numberType>
                 <bounds>
-                  <minimum exclusive="false">3</minimum>
+                  <minimum exclusive="false">1</minimum>
                   <maximum exclusive="false">5</maximum>
                 </bounds>
               </numericDomain>
@@ -675,8 +675,8 @@
       <entityDescription>Daily upstream passage data, raw count</entityDescription>
       <physical>
         <objectName>clear_upstream_passage_raw.csv</objectName>
-        <size unit="bytes">14</size>
-        <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
+        <size unit="bytes">2689626</size>
+        <authentication method="MD5">6ca9380646559773c1bf2848f6911ede</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -689,7 +689,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/clear_upstream_passage_raw.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/clear_upstream_passage_raw.csv</url>
           </online>
         </distribution>
       </physical>
@@ -720,7 +720,7 @@
               <dateTimeDomain>
                 <bounds>
                   <minimum exclusive="false">00:00:00</minimum>
-                  <maximum exclusive="false">23:59:00</maximum>
+                  <maximum exclusive="false">23:30:00</maximum>
                 </bounds>
               </dateTimeDomain>
             </dateTime>
@@ -752,8 +752,8 @@
               <numericDomain>
                 <numberType>integer</numberType>
                 <bounds>
-                  <minimum exclusive="false">1</minimum>
-                  <maximum exclusive="false">1</maximum>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">2</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -895,8 +895,8 @@
       <entityDescription>Yearly passage data, interpolated estimates</entityDescription>
       <physical>
         <objectName>clear_upstream_passage_estimates.csv</objectName>
-        <size unit="bytes">14</size>
-        <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
+        <size unit="bytes">1006</size>
+        <authentication method="MD5">edf1a4ece59aae283a220996f8cae391</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -909,7 +909,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/clear_upstream_passage_estimates.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/clear_upstream_passage_estimates.csv</url>
           </online>
         </distribution>
       </physical>
@@ -924,7 +924,7 @@
               <dateTimeDomain>
                 <bounds>
                   <minimum exclusive="false">1995</minimum>
-                  <maximum exclusive="false">2023</maximum>
+                  <maximum exclusive="false">2024</maximum>
                 </bounds>
               </dateTimeDomain>
             </dateTime>
@@ -978,15 +978,15 @@
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>29</numberOfRecords>
+      <numberOfRecords>30</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>clear_years_to_include.csv</entityName>
       <entityDescription>Description of data caveats</entityDescription>
       <physical>
         <objectName>clear_years_to_include.csv</objectName>
-        <size unit="bytes">14</size>
-        <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
+        <size unit="bytes">1058</size>
+        <authentication method="MD5">a907034a5585570c00ac5061283c965b</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -999,7 +999,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/clear_years_to_include.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/clear_years_to_include.csv</url>
           </online>
         </distribution>
       </physical>

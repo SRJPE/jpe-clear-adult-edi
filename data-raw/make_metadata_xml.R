@@ -20,7 +20,7 @@ datatable_metadata <-
                                           "Daily upstream passage data, raw count",
                                           "Yearly passage data, interpolated estimates",
                                           "Description of data caveats"),
-                datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/main/data/",
+                datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/",
                                        c("clear_redd.csv",
                                          "clear_redd_symmary.csv",
                                          "clear_upstream_passage_raw.csv",
