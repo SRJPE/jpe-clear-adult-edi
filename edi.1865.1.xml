@@ -591,8 +591,8 @@
       <entityDescription>Annual redd summary</entityDescription>
       <physical>
         <objectName>clear_redd_summary.csv</objectName>
-        <size unit="bytes">287</size>
-        <authentication method="MD5">9f32144d7e407d2cb3d6c21237533ee1</authentication>
+        <size unit="bytes">761</size>
+        <authentication method="MD5">16c8d65aff0b050e670fe1333f048163</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -646,6 +646,20 @@
                 </bounds>
               </numericDomain>
             </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>reach_numbers</attributeName>
+          <attributeLabel>redd_summary</attributeLabel>
+          <attributeDefinition>Survey reach where survey was done</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Survey reach where survey was done</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </ordinal>
           </measurementScale>
         </attribute>
         <attribute>

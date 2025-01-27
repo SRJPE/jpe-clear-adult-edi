@@ -344,8 +344,9 @@ write_csv(up, here::here("data", "clear_upstream_passage_raw.csv"))
 write_csv(up_estimate, here::here("data", "clear_upstream_passage_estimates.csv"))
 write_csv(years_to_include, here::here("data","clear_years_to_include.csv"))
 
-
+#TODO add redd summary metadata field
 # save cleaned data to `data/`
 # read.csv(here::here("data", "clear_redd.csv")) |> glimpse()
 # read.csv(here::here("data", "clear_upstream_passage_raw.csv")) |> glimpse()
+# read.csv(here::here("data", "clear_upstream_passage_estimates.csv")) |> glimpse()
 # read.csv(here::here("data", "clear_upstream_passage_estimates.csv")) |> glimpse()
