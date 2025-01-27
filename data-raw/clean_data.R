@@ -247,11 +247,17 @@ redd <- redd_raw_combined |>
     distinct(redd_id, .keep_all = T) |>
     mutate(redd_count = 1) |>
     summarize(total_annual_redd_count = sum(redd_count),
+              reach_numbers = str_c(sort(unique(reach)), collapse = ", "),
               number_reaches_surveyed = length(unique(reach))) |>
     # add row for 2023 where no redds were found
     add_row(year = 2023,
             total_annual_redd_count = 0,
             number_reaches_surveyed = 5)
+
+  redd_summary <- redd_summary |>
+    mutate(reach_numbers = gsub(",", " &", reach_numbers))
+
+  redd_summary$reach_numbers <- gsub("^'|\\s*'$", "", redd_summary$reach_numbers)
 # upstream passage --------------------------------------------------------
 
 up <- upstream_passage_raw |>
