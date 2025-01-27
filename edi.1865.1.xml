@@ -30,7 +30,7 @@
       <electronicMailAddress>samuel_provins@fws.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2025-01-24</pubDate>
+    <pubDate>2025-01-27</pubDate>
     <abstract>
       <para>
     The U.S. Fish and Wildlife Service (USFWS) collects data on adult
@@ -83,7 +83,7 @@
             <calendarDate>1995-01-01</calendarDate>
           </beginDate>
           <endDate>
-            <calendarDate>2021-01-01</calendarDate>
+            <calendarDate>2024-10-25</calendarDate>
           </endDate>
         </rangeOfDates>
       </temporalCoverage>
@@ -591,8 +591,8 @@
       <entityDescription>Annual redd summary</entityDescription>
       <physical>
         <objectName>clear_redd_summary.csv</objectName>
-        <size unit="bytes">14</size>
-        <authentication method="MD5">3be7b8b182ccd96e48989b4e57311193</authentication>
+        <size unit="bytes">287</size>
+        <authentication method="MD5">9f32144d7e407d2cb3d6c21237533ee1</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -605,7 +605,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/clear_redd_symmary.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/clear_redd_summary.csv</url>
           </online>
         </distribution>
       </physical>
@@ -675,8 +675,8 @@
       <entityDescription>Daily upstream passage data, raw count</entityDescription>
       <physical>
         <objectName>clear_upstream_passage_raw.csv</objectName>
-        <size unit="bytes">2689626</size>
-        <authentication method="MD5">6ca9380646559773c1bf2848f6911ede</authentication>
+        <size unit="bytes">2665234</size>
+        <authentication method="MD5">c2d1d5a7f0f3e6bbf3d276cb4e974d8e</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -985,8 +985,8 @@
       <entityDescription>Description of data caveats</entityDescription>
       <physical>
         <objectName>clear_years_to_include.csv</objectName>
-        <size unit="bytes">1058</size>
-        <authentication method="MD5">a907034a5585570c00ac5061283c965b</authentication>
+        <size unit="bytes">1046</size>
+        <authentication method="MD5">2fadfeada130085fd676df29609e97df</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
