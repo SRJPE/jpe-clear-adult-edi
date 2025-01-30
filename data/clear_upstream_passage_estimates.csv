@@ -1,0 +1,31 @@
+year,passage_estimate,run,stat_method
+1995,2,spring,snorkel survey
+1996,NA,spring,
+1997,NA,spring,
+1998,47,spring,snorkel survey
+1999,35,spring,snorkel survey
+2000,9,spring,snorkel survey
+2001,0,spring,snorkel survey
+2002,66,spring,snorkel survey
+2003,25,spring,snorkel survey
+2004,98,spring,snorkel survey
+2005,69,spring,snorkel survey
+2006,77,spring,snorkel survey
+2007,194,spring,snorkel survey
+2008,200,spring,snorkel survey
+2009,120,spring,snorkel survey
+2010,21,spring,snorkel survey
+2011,8,spring,snorkel survey
+2012,68,spring,snorkel survey
+2013,659,spring,snorkel survey
+2014,95,spring,snorkel survey
+2015,45,spring,snorkel survey
+2016,29,spring,snorkel survey
+2017,25,spring,redd expansion factor
+2018,49,spring,video weir / generalized additive model (gam)
+2019,62,spring,snorkel survey
+2020,172,spring,video weir / generalized additive model (gam)
+2021,2252,spring,video weir / generalized additive model (gam)
+2022,195,spring,video weir / raw count
+2023,0,spring,snorkel survey
+2024,6,spring,
