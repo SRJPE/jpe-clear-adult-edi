@@ -30,7 +30,7 @@
       <electronicMailAddress>samuel_provins@fws.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2025-01-27</pubDate>
+    <pubDate>2025-01-30</pubDate>
     <abstract>
       <para>
     The U.S. Fish and Wildlife Service (USFWS) collects data on adult
@@ -999,8 +999,8 @@
       <entityDescription>Description of data caveats</entityDescription>
       <physical>
         <objectName>clear_years_to_include.csv</objectName>
-        <size unit="bytes">1046</size>
-        <authentication method="MD5">2fadfeada130085fd676df29609e97df</authentication>
+        <size unit="bytes">1045</size>
+        <authentication method="MD5">61eae4d762e2e191a0c94c43661ab569</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -1038,7 +1038,7 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>removed</attributeName>
+          <attributeName>remove</attributeName>
           <attributeLabel>years_to_include</attributeLabel>
           <attributeDefinition>Indicates if year should be removed from analysis if TRUE</attributeDefinition>
           <measurementScale>
