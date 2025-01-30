@@ -299,9 +299,9 @@ up <- upstream_passage_raw |>
 # TODO how to include this information in the edi package?
 years_to_include <- years_to_include_raw |>
   rename(brood_year = `Brief Year Description`,
-         removed = `...2`,
+         remove = `...2`,
          description = `...3`) |>
-  mutate(removed = ifelse(removed == "Removed", TRUE, FALSE),
+  mutate(remove = ifelse(remove == "Removed", TRUE, FALSE),
          brood_year = as.numeric(paste0("20",brood_year)),
          description = gsub(",", "/", description)) |>
   glimpse()
