@@ -79,8 +79,15 @@ years_to_include_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_c
 
 # We need to get the new 2020 and 2022 data in the same format as the other years
 # The cleaning was previously done in SRJPEdatasets
+#  We originally converted 2000-2019 data to metric system to keep the units consistent across the central valley but
+# We now decided we are publishing this data in their original units (inches).
 
-# redd_2020_2024_raw <- bind_rows(redd_2020_raw, redd_2022_raw, redd_2010_raw, redd_2024_raw)
+redd_raw <- redd_raw |>
+  mutate(pre_redd_depth = pre_redd_depth * 39.3701,
+         redd_pit_depth = redd_pit_depth *  39.3701,
+         redd_tail_depth = redd_tail_depth * 39.3701,
+         redd_length = redd_length * 39.3701,
+         redd_width = redd_width * 39.3701)
 
 redd_2020_2022_raw <- bind_rows(redd_2020_raw, redd_2022_raw, redd_2010_raw) |>
   janitor::clean_names() |>
