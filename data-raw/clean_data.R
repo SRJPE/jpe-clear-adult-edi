@@ -320,7 +320,7 @@ row_2024 <- data.frame(
   year = 2024,
   run = "spring",
   passage_estimate = 6,
-  Method_Correction = "", #TODO check if these two rows should be empty
+  Method_Correction = "Video Weir / Raw Count",
   stat_method = "")
 
 upstream_passage_estimate_bind <- rbind(upstream_passage_estimate_raw, row_2024)
