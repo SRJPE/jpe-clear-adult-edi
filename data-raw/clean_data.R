@@ -340,9 +340,6 @@ up_estimate <- upstream_passage_estimate_bind |>
   select(-method_correction) |>
   glimpse()
 
-# Badhia's notes: I noted some dates that are no in a date format (0010-03-20)
-# redd_pit depth max is now 45, it was 2.4 before, we might want to check if this is a typo
-# redd_summary year format is off (probably 2021)
 
 # write files -------------------------------------------------------------
 write_csv(redd, here::here("data", "clear_redd.csv"))
