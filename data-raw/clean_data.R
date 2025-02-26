@@ -37,8 +37,21 @@ gcs_get_object(object_name = "standard-format-data/standard_adult_passage_estima
 # prior to 2003 does not distinguish between runs and would not be comparable.
 redd_raw <- read.csv(here::here("data-raw", "clear_daily_redd.csv"))
 
+redd_2007_raw <- read_csv(here::here("data-raw","Clear_Creek_2007_SCS_redds.csv")) |>
+  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y"),
+         PRE_SUB = as.character(PRE_SUB),
+         SIDE_SUB = as.character(SIDE_SUB),
+         TAIL_SUB = as.character(TAIL_SUB),
+         SEC_60 = as.numeric(SEC_60)) |>
+  glimpse()
+
 redd_2020_raw <- read_csv(here::here("data-raw","Clear_Creek_2020_SCS_redds.csv")) |>
   mutate(DATE = as.Date(DATE, format = "%m/%d/%Y")) |>
+  glimpse()
+
+redd_2021_raw <- read_csv(here::here("data-raw","Clear_Creek_2021_SCS_redds.csv")) |> # new
+  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y",),
+         Survey...16 = as.numeric(Survey...16)) |>
   glimpse()
 
 redd_2022_raw <- read_csv(here::here("data-raw","Clear_Creek_2022_SCS_redds.csv")) |>
@@ -59,8 +72,9 @@ redd_2024_raw <- readxl::read_xlsx(here::here("data-raw","Clear_Creek_2024_SCS_r
 
 # this is the one additional redd that was missing
 # i think this was filtered out because of picket weir relation is below?
-redd_2010_raw <- read_csv(here::here("data-raw","Clear_Creek_2010_additional_redd.csv")) |>
-  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y")) |>
+redd_2010_raw <- read_csv(here::here("data-raw","Clear_Creek_2010_additional_redd_updated.csv")) |>
+  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y",
+                        PRE_SUB = as.character(PRE_SUB))) |>
   glimpse()
 
 upstream_passage_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_counts.xlsx"),
@@ -89,7 +103,7 @@ redd_raw <- redd_raw |>
          redd_length = redd_length * 39.3701,
          redd_width = redd_width * 39.3701)
 
-redd_2020_2022_raw <- bind_rows(redd_2020_raw, redd_2022_raw, redd_2010_raw) |>
+redd_2020_2022_raw <- bind_rows(redd_2020_raw, redd_2022_raw, redd_2010_raw, redd_2021_raw, redd_2007_raw) |>
   janitor::clean_names() |>
   mutate(qc_date = as.Date(qc_date, format = "%m/%d/%Y"))
 
