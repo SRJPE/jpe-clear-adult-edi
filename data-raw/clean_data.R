@@ -240,7 +240,7 @@ standard_reach_lookup <- read_csv(here::here("data-raw",  "standard-reach-lookup
   filter(stream == "clear creek") |>
   select(reach, standardized_reach)
 
-redd <- redd_raw_combined |>
+redd_combined <- redd_raw_combined |>
   filter(species == "Chinook",
          picket_weir_relation == "above") |>
   left_join(redd_substrate_size_lookup |>
@@ -261,6 +261,13 @@ redd <- redd_raw_combined |>
   # remove redds that according to Teresa are not spring run
   filter(!redd_id %in% c("2007_797", "2007_798",
                          "2007_799", "2007_800"))
+
+redd <- redd_combined |>
+  mutate(year = year(date)) |>
+  filter(!(year %in% c(2000, 2001, 2002, 2020))) |>
+  select(-year) |>
+  glimpse()
+
 
   redd_summary <- redd |>
     mutate(year = year(date)) |>
