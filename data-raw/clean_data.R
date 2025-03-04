@@ -45,7 +45,7 @@ redd_2007_raw <- read_csv(here::here("data-raw","Clear_Creek_2007_SCS_redds.csv"
          SEC_60 = as.numeric(SEC_60)) |>
   glimpse()
 
-redd_2020_raw <- read_csv(here::here("data-raw","Clear_Creek_2020_SCS_redds.csv")) |>
+redd_2020_raw <- read_csv(here::here("data-raw","Clear_Creek_2020_SCS_redds.csv")) |> #TODO note that SIDE_SUB data is different than other years
   mutate(DATE = as.Date(DATE, format = "%m/%d/%Y")) |>
   glimpse()
 
