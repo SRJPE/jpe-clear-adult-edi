@@ -85,9 +85,12 @@ upstream_passage_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_c
 
 upstream_passage_estimate_raw <- read.csv(here::here("data-raw", "clear_upstream_passage_estimates.csv"))
 
-years_to_include_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_counts.xlsx"),
-                                          sheet = "Metadata",
-                                          skip = 15)
+# years_to_include_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_counts.xlsx"),
+#                                           sheet = "Metadata",
+#                                           skip = 15)
+years_to_include_raw <- readxl::read_xlsx(here::here("data-raw/Reaches_Surveyed_Summary.xlsx")) |>
+  clean_names() |>
+  glimpse()
 
 # redd --------------------------------------------------------------------
 
@@ -326,12 +329,13 @@ up <- upstream_passage_raw |>
 
 # TODO how to include this information in the edi package?
 years_to_include <- years_to_include_raw |>
-  rename(brood_year = `Brief Year Description`,
-         removed = `...2`,
-         description = `...3`) |>
-  mutate(removed = ifelse(removed == "Removed", TRUE, FALSE),
-         brood_year = as.numeric(paste0("20",brood_year)),
+  rename(brood_year = year,
+         removed = fws_reccomendation_to_include_data_from_this_year_in_detailed_modeling_efforts,
+         description = reasoning) |>
+  mutate(removed = ifelse(removed == "yes", FALSE, TRUE),
+         brood_year = as.numeric(brood_year),
          description = gsub(",", "/", description)) |>
+  select(-c(total_number_of_reaches_surveyed, total_number_of_survey_days, reaches_surveyed_on_clear_creek)) |>
   glimpse()
 
 # up_estimate <- upstream_passage_estimate_raw |>
