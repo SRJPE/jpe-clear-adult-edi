@@ -37,7 +37,13 @@ gcs_get_object(object_name = "standard-format-data/standard_adult_passage_estima
 # prior to 2003 does not distinguish between runs and would not be comparable.
 redd_raw <- read.csv(here::here("data-raw", "clear_daily_redd.csv"))
 
-redd_2007_raw <- read_csv(here::here("data-raw","Clear_Creek_2007_SCS_redds.csv")) |>
+# removing data from 2007 and 2010 since we got updated data for those years
+redd_raw <- redd_raw |>
+  mutate(year = year(date)) |>
+  filter(!(year %in% c(2007, 2010))) |>
+  glimpse()
+
+redd_2007_raw <- read_csv(here::here("data-raw","Clear_Creek_2007_SCS_redds.csv")) |> #new
   mutate(DATE = as.Date(DATE, format = "%m/%d/%Y"),
          PRE_SUB = as.character(PRE_SUB),
          SIDE_SUB = as.character(SIDE_SUB),
@@ -45,14 +51,21 @@ redd_2007_raw <- read_csv(here::here("data-raw","Clear_Creek_2007_SCS_redds.csv"
          SEC_60 = as.numeric(SEC_60)) |>
   glimpse()
 
-redd_2020_raw <- read_csv(here::here("data-raw","Clear_Creek_2020_SCS_redds.csv")) |> #TODO note that SIDE_SUB data is different than other years
+redd_2020_raw <- read_csv(here::here("data-raw","Clear_Creek_2020_SCS_redds.csv")) |>
   mutate(DATE = as.Date(DATE, format = "%m/%d/%Y")) |>
   glimpse()
 
-redd_2021_raw <- read_csv(here::here("data-raw","Clear_Creek_2021_SCS_redds.csv")) |> # new
+redd_2021_raw <- read_csv(here::here("data-raw","Clear_Creek_2021_SCS_redds.csv")) |> # new - note that SIDE_SUB data is different than other years
   mutate(DATE = as.Date(DATE, format = "%m/%d/%Y",),
          Survey...16 = as.numeric(Survey...16)) |>
   glimpse()
+
+redd_2021_raw <- redd_2021_raw |>
+  mutate(SIDE_SUB = case_when(
+    # SIDE_SUB == "3-Feb" ~ "2-3", #TODO check if this is the right correction
+    # SIDE_SUB == "4-Mar" ~ "3-4",
+    SIDE_SUB %in% c("3-Feb", "4-Mar") ~ NA, # setting to NA for now
+    T ~ SIDE_SUB))
 
 redd_2022_raw <- read_csv(here::here("data-raw","Clear_Creek_2022_SCS_redds.csv")) |>
   mutate(DATE = as.Date(DATE, format = "%m/%d/%Y")) |>
@@ -60,12 +73,31 @@ redd_2022_raw <- read_csv(here::here("data-raw","Clear_Creek_2022_SCS_redds.csv"
 
 redd_2024_raw <- readxl::read_xlsx(here::here("data-raw","Clear_Creek_2024_SCS_redds.xlsx")) |>
   mutate(DATE = as.Date(DATE),
-         `PW Relate` = "above",) |>
+         `PW Relate` = "above",) |> # adding this since otherwise it will get fileted out
   rename(Fish_on_RE = 'Fish on redd') |>
   janitor::clean_names() |>
   mutate(qc_date = as.Date(qa_qc_date),
-         year = year(date)) |>
-  rename(restoration_rm = restoration_river_mile) |>
+         year = year(date),
+         picket_weir_relation = "above") |>
+  rename('longitude' = 'point_x',
+         'latitude' = 'point_y',
+         'pre_redd_substrate_size' = 'pre_redd_substrate',
+         'redd_substrate_size' = 'side_substrate',
+         'tail_substrate_size' = 'tailspill_substrate',
+         'fish_on_redd' = 'fish_on_re',
+         'pre_redd_depth' = 'pre_redd_depth_in',
+         'redd_pit_depth' = 'pit_depth_in',
+         'redd_tail_depth' = 'tailspill_depth_in',
+         'redd_length_in' = 'length_in',
+         'redd_width_in' = 'width_in',
+         'surveyed_reach' = 'reach') |>
+         # 'survey' = 'survey_16',
+         # 'picket_weir_location' = 'pw_location',
+         # 'picket_weir_relation' = 'pw_relate',
+         # 'why_not_measured' = 'why_not_me',
+         # 'date_measured' = 'date_mea',
+         # 'measured' = 'measure',
+         # "survey_method" = "method") |>
   select(-"qa_qc_date") |>
   glimpse()
 
@@ -106,14 +138,14 @@ redd_raw <- redd_raw |>
          redd_length = redd_length * 39.3701,
          redd_width = redd_width * 39.3701)
 
-redd_2020_2022_raw <- bind_rows(redd_2020_raw, redd_2022_raw, redd_2010_raw, redd_2021_raw, redd_2007_raw) |>
+redd_2007_2022_raw <- bind_rows(redd_2020_raw, redd_2022_raw, redd_2010_raw, redd_2021_raw, redd_2007_raw) |>
   janitor::clean_names() |>
   mutate(qc_date = as.Date(qc_date, format = "%m/%d/%Y"))
 
-redd_2020_2024_raw <- bind_rows(redd_2020_2022_raw, redd_2024_raw)
+# redd_2020_2024_raw <- bind_rows(redd_2020_2022_raw, redd_2024_raw)
 
 
-cleaner_data <- redd_2020_2024_raw |>
+cleaner_data <- redd_2007_2022_raw |>
   janitor::clean_names() |>
   rename('longitude' = 'point_x',
          'latitude' = 'point_y',
@@ -133,8 +165,8 @@ cleaner_data <- redd_2020_2024_raw |>
          'why_not_measured' = 'why_not_me',
          'date_measured' = 'date_mea',
          'measured' = 'measure',
-         "survey_method" = "method"
-  ) |>
+         "survey_method" = "method") |>
+  bind_rows(redd_2024_raw) |>
   mutate(date = as.Date(date),
          date_measured = as.Date(date_measured, tryFormats = "%m/%d/%Y"),
          survey = as.character(survey),
@@ -221,12 +253,20 @@ substrate_class = data.frame("standardized_size_range" = c("<0.25",
 
 unique(redd_raw_combined$redd_substrate_size)
 
+redd_raw_combined <- redd_raw_combined |>
+  mutate(redd_substrate_size = str_replace_all(redd_substrate_size, "^'|\\s*-\\s*", "-"),  # Remove leading quotes & spaces around hyphens
+          redd_substrate_size = str_replace_all(redd_substrate_size, "^-", ""),  # Remove incorrect leading hyphens
+          redd_substrate_size = str_replace_all(redd_substrate_size, "-<", "<"),  # Fix misplaced "<"
+          redd_substrate_size = str_replace_all(redd_substrate_size, "^<\\s*", "<"))
+
+
 redd_substrate_size_lookup <-
   data.frame("redd_substrate_size" = unique(redd_raw_combined$redd_substrate_size),
              "standardized_size_range" = c(NA, "1-2", "2-4", "1-2",
                                            "2-4", "2-4", "0.5-1", "4-8",
-                                           "2-4", "4-8", "4-8", ">16", "8-16",
-                                           "2-4","1-2","2-4","4-8","<0.25","0.5-1"
+                                           "2-4", "4-8", "4-8", ">16", "8-16", "0.25-0.5",
+                                           "4-8", "1-2", "2-4", "4-8", "1-2", "1-2",
+                                           "2-4", "2-4", "2-4", "4-8"
                                            )) |>
 
   left_join(substrate_class)
@@ -245,7 +285,7 @@ standard_reach_lookup <- read_csv(here::here("data-raw",  "standard-reach-lookup
 
 redd_combined <- redd_raw_combined |>
   filter(species == "Chinook",
-         picket_weir_relation == "above") |>
+         picket_weir_relation == "above") |> # note that 2010 gets filtered out
   left_join(redd_substrate_size_lookup |>
               select(redd_substrate_size, redd_substrate_class),
             by = c("redd_substrate_size")) |>
@@ -266,29 +306,38 @@ redd_combined <- redd_raw_combined |>
                          "2007_799", "2007_800"))
 
 redd <- redd_combined |>
-  mutate(year = year(date)) |>
-  filter(!(year %in% c(2000, 2001, 2002, 2020))) |>
-  select(-year) |>
+  # mutate(year = year(date)) |>
+  # filter(!(year %in% c(2000, 2001, 2002, 2020))) |>
+  # select(-year) |>
   glimpse()
 
 
-  redd_summary <- redd |>
+redd_summary <- redd |>
     mutate(year = year(date)) |>
     group_by(year) |>
     distinct(redd_id, .keep_all = T) |>
     mutate(redd_count = 1) |>
-    summarize(total_annual_redd_count = sum(redd_count),
-              reach_numbers = str_c(sort(unique(reach)), collapse = ", "),
-              number_reaches_surveyed = length(unique(reach))) |>
-    # add row for 2023 where no redds were found
-    add_row(year = 2023,
-            total_annual_redd_count = 0,
-            number_reaches_surveyed = 5)
+    summarize(total_annual_redd_count = sum(redd_count)) |>
+  glimpse()
+#TODO join to years_to_include_raw to add reaches surveyed
 
-  redd_summary <- redd_summary |>
-    mutate(reach_numbers = gsub(",", " &", reach_numbers))
-
-  redd_summary$reach_numbers <- gsub("^'|\\s*'$", "", redd_summary$reach_numbers)
+# redd_summary <- redd |>
+#     mutate(year = year(date)) |>
+#     group_by(year) |>
+#     distinct(redd_id, .keep_all = T) |>
+#     mutate(redd_count = 1) |>
+#     summarize(total_annual_redd_count = sum(redd_count),
+#               reach_numbers = str_c(sort(unique(reach)), collapse = ", "),
+#               number_reaches_surveyed = length(unique(reach))) |>
+#     # add row for 2023 where no redds were found
+#     add_row(year = 2023,
+#             total_annual_redd_count = 0,
+#             number_reaches_surveyed = 5)
+#
+#   redd_summary <- redd_summary |>
+#     mutate(reach_numbers = gsub(",", " &", reach_numbers))
+#
+#   redd_summary$reach_numbers <- gsub("^'|\\s*'$", "", redd_summary$reach_numbers)
 # upstream passage --------------------------------------------------------
 
 up <- upstream_passage_raw |>
