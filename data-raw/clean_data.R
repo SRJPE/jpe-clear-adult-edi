@@ -35,7 +35,7 @@ gcs_get_object(object_name = "standard-format-data/standard_adult_passage_estima
 # was the first year a temporary barrier weir was constructed to physically separate
 # spring-run and fall-run spawning grounds after hybridization was observed. All data
 # prior to 2003 does not distinguish between runs and would not be comparable.
-redd_raw <- read.csv(here::here("data-raw", "clear_daily_redd.csv"))
+redd_raw <- read_csv(here::here("data-raw", "clear_daily_redd.csv"))
 
 # removing data from 2007 and 2010 since we got updated data for those years
 redd_raw <- redd_raw |>
@@ -73,7 +73,7 @@ redd_2022_raw <- read_csv(here::here("data-raw","Clear_Creek_2022_SCS_redds.csv"
 
 redd_2024_raw <- readxl::read_xlsx(here::here("data-raw","Clear_Creek_2024_SCS_redds.xlsx")) |>
   mutate(DATE = as.Date(DATE),
-         `PW Relate` = "above",) |> # adding this since otherwise it will get fileted out
+         `PW Relate` = "above",) |> # adding this since otherwise it will get filerted out
   rename(Fish_on_RE = 'Fish on redd') |>
   janitor::clean_names() |>
   mutate(qc_date = as.Date(qa_qc_date),
@@ -312,14 +312,20 @@ redd <- redd_combined |>
   glimpse()
 
 
-redd_summary <- redd |>
+redd_summary <- redd_combined |>
     mutate(year = year(date)) |>
     group_by(year) |>
     distinct(redd_id, .keep_all = T) |>
     mutate(redd_count = 1) |>
     summarize(total_annual_redd_count = sum(redd_count)) |>
+  left_join(years_to_include_raw, by = "year") |>
+  rename(number_reaches_surveyed = total_number_of_reaches_surveyed, # there is a data entry of 5.5, could this be an error?
+         reaches_numbers = reaches_surveyed_on_clear_creek) |>
+  select(year, total_annual_redd_count, number_reaches_surveyed, reaches_numbers) |>
+  mutate(reaches_numbers = gsub(",", " &", reaches_numbers)) |>
   glimpse()
-#TODO join to years_to_include_raw to add reaches surveyed
+
+redd_summary$reaches_numbers <- gsub("^'|\\s*'$", "", redd_summary$reaches_numbers)
 
 # redd_summary <- redd |>
 #     mutate(year = year(date)) |>
@@ -422,7 +428,7 @@ write_csv(up, here::here("data", "clear_upstream_passage_raw.csv"))
 write_csv(up_estimate, here::here("data", "clear_upstream_passage_estimates.csv"))
 write_csv(years_to_include, here::here("data","clear_years_to_include.csv"))
 
-#TODO add redd summary metadata field
+
 # save cleaned data to `data/`
 # read.csv(here::here("data", "clear_redd.csv")) |> glimpse()
 # read.csv(here::here("data", "clear_upstream_passage_raw.csv")) |> glimpse()
