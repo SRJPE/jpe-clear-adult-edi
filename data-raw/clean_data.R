@@ -117,12 +117,14 @@ upstream_passage_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_c
 
 upstream_passage_estimate_raw <- read.csv(here::here("data-raw", "clear_upstream_passage_estimates.csv"))
 
-# years_to_include_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_counts.xlsx"),
-#                                           sheet = "Metadata",
-#                                           skip = 15)
-years_to_include_raw <- readxl::read_xlsx(here::here("data-raw/Reaches_Surveyed_Summary.xlsx")) |>
-  clean_names() |>
+years_to_include_passage_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_counts.xlsx"),
+                                          sheet = "Metadata",
+                                          skip = 15)
+
+years_to_include_redd_raw <- readxl::read_xlsx(here::here("data-raw/Reaches_Surveyed_Summary.xlsx")) |>
+  clean_names() |> # this are all "redds" for data type. TODO - add the csv (passage) here and bind rows (https://github.com/SRJPE/jpe-clear-adult-edi/blob/main/data/clear_years_to_include.csv)
   glimpse()
+
 
 # redd --------------------------------------------------------------------
 
@@ -321,7 +323,7 @@ redd_summary <- redd_combined |>
   left_join(years_to_include_raw, by = "year") |>
   rename(number_reaches_surveyed = total_number_of_reaches_surveyed, # there is a data entry of 5.5, could this be an error?
          reaches_numbers = reaches_surveyed_on_clear_creek) |>
-  select(year, total_annual_redd_count, number_reaches_surveyed, reaches_numbers) |>
+  select(year, total_annual_redd_count, number_reaches_surveyed, reaches_numbers) |> # TODO add total number of survey days
   mutate(reaches_numbers = gsub(",", " &", reaches_numbers)) |>
   glimpse()
 
@@ -383,16 +385,30 @@ up <- upstream_passage_raw |>
     mutate(spawning_condition = gsub(",", "/", spawning_condition))
 
 # TODO how to include this information in the edi package?
-years_to_include <- years_to_include_raw |>
-  rename(brood_year = year,
-         removed = fws_reccomendation_to_include_data_from_this_year_in_detailed_modeling_efforts,
-         description = reasoning) |>
-  mutate(removed = ifelse(removed == "yes", FALSE, TRUE),
-         brood_year = as.numeric(brood_year),
-         description = gsub(",", "/", description)) |>
-  select(-c(total_number_of_reaches_surveyed, total_number_of_survey_days, reaches_surveyed_on_clear_creek)) |>
-  glimpse()
 
+#years to include PASSAGE
+  years_to_include_passage <- years_to_include_passage_raw |>
+    rename(brood_year = `Brief Year Description`,
+           remove = `...2`,
+           description = `...3`) |>
+    mutate(remove = ifelse(remove == "Removed", TRUE, FALSE),
+           brood_year = as.numeric(paste0("20",brood_year)),
+           description = gsub(",", "/", description),
+           data_type = "passage") |>
+    glimpse()
+# Years to include REDD
+years_to_include_redd <- years_to_include_redd_raw |>
+  rename(brood_year = year,
+         remove = fws_reccomendation_to_include_data_from_this_year_in_detailed_modeling_efforts,
+         description = reasoning) |>
+  mutate(remove = ifelse(remove == "yes", FALSE, TRUE),
+         brood_year = as.numeric(brood_year),
+         description = gsub(",", "/", description),
+         data_type = "redd") |>
+  select(-c(total_number_of_reaches_surveyed, total_number_of_survey_days, reaches_surveyed_on_clear_creek)) |>
+  glimpse() # add type of data (redd or passage)
+
+years_to_include <- years_to_include_passage |> bind_rows(years_to_include_redd)
 # up_estimate <- upstream_passage_estimate_raw |>
 #   select(-c(ladder, stream, adipose_clipped, ucl, lcl, confidence_interval)) |>
 #   # add stat method from USFWS Adult Spring-run Chinook Salmon Monitoring in Clear Creek, California, 2013-2018 Report

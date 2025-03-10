@@ -1,27 +1,38 @@
-brood_year,removed,description
-1999,TRUE,no physical separation of spring-run and fall-run prior to 2003 with implementation of temporary barrier weir
-2000,TRUE,no physical separation of spring-run and fall-run prior to 2003 with implementation of temporary barrier weir
-2001,TRUE,no physical separation of spring-run and fall-run prior to 2003 with implementation of temporary barrier weir
-2002,TRUE,no physical separation of spring-run and fall-run prior to 2003 with implementation of temporary barrier weir
-2003,FALSE,NA
-2004,FALSE,NA
-2005,FALSE,NA
-2006,FALSE,NA
-2007,FALSE,NA
-2008,FALSE,NA
-2009,FALSE,NA
-2010,FALSE,NA
-2011,FALSE,NA
-2012,FALSE,NA
-2013,FALSE,NA
-2014,FALSE,NA
-2015,FALSE,NA
-2016,FALSE,NA
-2017,FALSE,NA
-2018,FALSE,NA
-2019,FALSE,NA
-2020,TRUE,survey limitations due to Covid
-2021,FALSE,NA
-2022,FALSE,NA
-2023,FALSE,NA
-2024,FALSE,NA
+brood_year,remove,description,data_type
+2023,TRUE,Over a third of the year the weir was open due to high flows/ data was deemed to be too poor to verify and enter in master database at this time.,passage
+2022,FALSE,Chinook were transferred to Clear Creek from Keswick fish trap/ these Chinook were double floy tagged in their dorsal fin/ however these tags would fall out from time to time and were difficult to identify/ tagged Chinook that were ID were labled with a (SRT) in the spreadsheet,passage
+2021,FALSE,High spring run Chinook numbers/ however many of the Chinook were unusually golden in color and looked stressed (very unusually for Clear Creek) suspected they were strays from Butte Creek which was blocked by low flow conditions/ genetics from carcasses are still pending,passage
+2020,FALSE,Normal year/ good visibility,passage
+2019,TRUE,Data starts in May/ CDFW operated weir until this time,passage
+2018,TRUE,Data starts in May/ CDFW operated weir until this time,passage
+2017,FALSE,Normal year,passage
+2016,FALSE,Normal year,passage
+2015,FALSE,Normal year,passage
+2014,FALSE,Normal year,passage
+2013,FALSE,Normal year,passage
+1999,TRUE,no physical separation of spring-run and fall-run prior to 2003 with implementation of temporary barrier weir,redd
+2000,TRUE,no physical separation of spring-run and fall-run prior to 2003 with implementation of temporary barrier weir,redd
+2001,TRUE,no physical separation of spring-run and fall-run prior to 2003 with implementation of temporary barrier weir,redd
+2002,TRUE,no physical separation of spring-run and fall-run prior to 2003 with implementation of temporary barrier weir,redd
+2003,FALSE,NA,redd
+2004,FALSE,NA,redd
+2005,FALSE,NA,redd
+2006,FALSE,NA,redd
+2007,FALSE,NA,redd
+2008,FALSE,NA,redd
+2009,FALSE,NA,redd
+2010,FALSE,NA,redd
+2011,FALSE,NA,redd
+2012,FALSE,NA,redd
+2013,FALSE,NA,redd
+2014,FALSE,NA,redd
+2015,FALSE,NA,redd
+2016,FALSE,NA,redd
+2017,FALSE,NA,redd
+2018,FALSE,NA,redd
+2019,FALSE,NA,redd
+2020,TRUE,survey limitations due to Covid,redd
+2021,FALSE,NA,redd
+2022,FALSE,NA,redd
+2023,FALSE,NA,redd
+2024,FALSE,NA,redd
