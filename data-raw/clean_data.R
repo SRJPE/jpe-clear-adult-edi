@@ -122,7 +122,7 @@ years_to_include_passage_raw <- readxl::read_xlsx(here::here("data-raw/clear_cre
                                           skip = 15)
 
 years_to_include_redd_raw <- readxl::read_xlsx(here::here("data-raw/Reaches_Surveyed_Summary.xlsx")) |>
-  clean_names() |> # this are all "redds" for data type. TODO - add the csv (passage) here and bind rows (https://github.com/SRJPE/jpe-clear-adult-edi/blob/main/data/clear_years_to_include.csv)
+  clean_names() |>
   glimpse()
 
 
