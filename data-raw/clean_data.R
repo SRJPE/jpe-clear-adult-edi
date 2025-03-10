@@ -320,10 +320,11 @@ redd_summary <- redd_combined |>
     distinct(redd_id, .keep_all = T) |>
     mutate(redd_count = 1) |>
     summarize(total_annual_redd_count = sum(redd_count)) |>
-  left_join(years_to_include_raw, by = "year") |>
+  left_join(years_to_include_redd_raw, by = "year") |>
   rename(number_reaches_surveyed = total_number_of_reaches_surveyed, # there is a data entry of 5.5, could this be an error?
          reaches_numbers = reaches_surveyed_on_clear_creek) |>
-  select(year, total_annual_redd_count, number_reaches_surveyed, reaches_numbers) |> # TODO add total number of survey days
+  select(year, total_annual_redd_count, number_reaches_surveyed, reaches_numbers,
+         total_number_of_survey_days) |> # TODO check on description of this field
   mutate(reaches_numbers = gsub(",", " &", reaches_numbers)) |>
   glimpse()
 
