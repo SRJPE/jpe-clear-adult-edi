@@ -30,7 +30,7 @@
       <electronicMailAddress>samuel_provins@fws.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2025-01-27</pubDate>
+    <pubDate>2025-03-11</pubDate>
     <abstract>
       <para>
     The U.S. Fish and Wildlife Service (USFWS) collects data on adult
@@ -297,8 +297,8 @@
       <entityDescription>Daily repeated observation redd survey data</entityDescription>
       <physical>
         <objectName>clear_redd.csv</objectName>
-        <size unit="bytes">271190</size>
-        <authentication method="MD5">2c6e842145cf11adfd9bfaa368659a13</authentication>
+        <size unit="bytes">331211</size>
+        <authentication method="MD5">c6f389bfa065cdf529b5e451a851a2d2</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -311,7 +311,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/clear_redd.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/updates-create-edi/data/clear_redd.csv</url>
           </online>
         </distribution>
       </physical>
@@ -433,8 +433,8 @@
               <numericDomain>
                 <numberType>real</numberType>
                 <bounds>
-                  <minimum exclusive="false">0.43180089999999999</minimum>
-                  <maximum exclusive="false">9.1440180000000009</maximum>
+                  <minimum exclusive="false">17</minimum>
+                  <maximum exclusive="false">360</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -452,8 +452,8 @@
               <numericDomain>
                 <numberType>real</numberType>
                 <bounds>
-                  <minimum exclusive="false">0.63500129999999999</minimum>
-                  <maximum exclusive="false">11.0490221</maximum>
+                  <minimum exclusive="false">25</minimum>
+                  <maximum exclusive="false">435</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -471,8 +471,8 @@
               <numericDomain>
                 <numberType>real</numberType>
                 <bounds>
-                  <minimum exclusive="false">0.12700030000000001</minimum>
-                  <maximum exclusive="false">39</maximum>
+                  <minimum exclusive="false">5</minimum>
+                  <maximum exclusive="false">88</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -490,8 +490,8 @@
               <numericDomain>
                 <numberType>real</numberType>
                 <bounds>
-                  <minimum exclusive="false">0.15240029999999999</minimum>
-                  <maximum exclusive="false">45</maximum>
+                  <minimum exclusive="false">6</minimum>
+                  <maximum exclusive="false">95</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -509,8 +509,8 @@
               <numericDomain>
                 <numberType>real</numberType>
                 <bounds>
-                  <minimum exclusive="false">7.6200149999999994E-2</minimum>
-                  <maximum exclusive="false">25</maximum>
+                  <minimum exclusive="false">3</minimum>
+                  <maximum exclusive="false">84</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -584,15 +584,15 @@
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>1745</numberOfRecords>
+      <numberOfRecords>2332</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>clear_redd_summary.csv</entityName>
       <entityDescription>Annual redd summary</entityDescription>
       <physical>
         <objectName>clear_redd_summary.csv</objectName>
-        <size unit="bytes">761</size>
-        <authentication method="MD5">16c8d65aff0b050e670fe1333f048163</authentication>
+        <size unit="bytes">1243</size>
+        <authentication method="MD5">800a4bde825e8c71e1e3d4eeb97ee090</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -605,7 +605,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/clear_redd_summary.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/updates-create-edi/data/clear_redd_summary.csv</url>
           </online>
         </distribution>
       </physical>
@@ -641,25 +641,11 @@
               <numericDomain>
                 <numberType>whole</numberType>
                 <bounds>
-                  <minimum exclusive="false">0</minimum>
+                  <minimum exclusive="false">2</minimum>
                   <maximum exclusive="false">149</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>reach_numbers</attributeName>
-          <attributeLabel>redd_summary</attributeLabel>
-          <attributeDefinition>Survey reach where survey was done</attributeDefinition>
-          <measurementScale>
-            <ordinal>
-              <nonNumericDomain>
-                <textDomain>
-                  <definition>Survey reach where survey was done</definition>
-                </textDomain>
-              </nonNumericDomain>
-            </ordinal>
           </measurementScale>
         </attribute>
         <attribute>
@@ -674,15 +660,48 @@
               <numericDomain>
                 <numberType>whole</numberType>
                 <bounds>
-                  <minimum exclusive="false">1</minimum>
-                  <maximum exclusive="false">5</maximum>
+                  <minimum exclusive="false">5.5</minimum>
+                  <maximum exclusive="false">7</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>reaches_numbers</attributeName>
+          <attributeLabel>redd_summary</attributeLabel>
+          <attributeDefinition>Survey reach(es) where survey was done</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Survey reach(es) where survey was done</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>total_number_of_survey_days</attributeName>
+          <attributeLabel>redd_summary</attributeLabel>
+          <attributeDefinition>Total survey days that year</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>day</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">10</minimum>
+                  <maximum exclusive="false">76</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>24</numberOfRecords>
+      <numberOfRecords>23</numberOfRecords>
     </dataTable>
     <dataTable>
       <entityName>clear_upstream_passage_raw.csv</entityName>
@@ -703,7 +722,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/clear_upstream_passage_raw.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/updates-create-edi/data/clear_upstream_passage_raw.csv</url>
           </online>
         </distribution>
       </physical>
@@ -909,8 +928,8 @@
       <entityDescription>Yearly passage data, interpolated estimates</entityDescription>
       <physical>
         <objectName>clear_upstream_passage_estimates.csv</objectName>
-        <size unit="bytes">1006</size>
-        <authentication method="MD5">edf1a4ece59aae283a220996f8cae391</authentication>
+        <size unit="bytes">1028</size>
+        <authentication method="MD5">c7882ba806f7c5c35a92c5482b2a8ba2</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -923,7 +942,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/clear_upstream_passage_estimates.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/updates-create-edi/data/clear_upstream_passage_estimates.csv</url>
           </online>
         </distribution>
       </physical>
@@ -999,8 +1018,8 @@
       <entityDescription>Description of data caveats</entityDescription>
       <physical>
         <objectName>clear_years_to_include.csv</objectName>
-        <size unit="bytes">1046</size>
-        <authentication method="MD5">2fadfeada130085fd676df29609e97df</authentication>
+        <size unit="bytes">2089</size>
+        <authentication method="MD5">b1cd923f43b9f833d6da3109bfa9d90b</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -1013,7 +1032,7 @@
         </dataFormat>
         <distribution>
           <online>
-            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/clear_years_to_include.csv</url>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/updates-create-edi/data/clear_years_to_include.csv</url>
           </online>
         </distribution>
       </physical>
@@ -1030,15 +1049,15 @@
               <numericDomain>
                 <numberType>whole</numberType>
                 <bounds>
-                  <minimum exclusive="false">2012</minimum>
-                  <maximum exclusive="false">2023</maximum>
+                  <minimum exclusive="false">1999</minimum>
+                  <maximum exclusive="false">2024</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>removed</attributeName>
+          <attributeName>remove</attributeName>
           <attributeLabel>years_to_include</attributeLabel>
           <attributeDefinition>Indicates if year should be removed from analysis if TRUE</attributeDefinition>
           <measurementScale>
@@ -1065,8 +1084,22 @@
             </nominal>
           </measurementScale>
         </attribute>
+        <attribute>
+          <attributeName>data_type</attributeName>
+          <attributeLabel>years_to_include</attributeLabel>
+          <attributeDefinition>Type of data collected. Levels = c("passage", redd")</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Type of data collected. Levels = c("passage", redd")</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
       </attributeList>
-      <numberOfRecords>11</numberOfRecords>
+      <numberOfRecords>37</numberOfRecords>
     </dataTable>
   </dataset>
   <additionalMetadata>
@@ -1083,6 +1116,9 @@
         </unit>
         <unit id="number of reaches" name="number of reaches" unitType="dimensionless">
           <description>number of reaches</description>
+        </unit>
+        <unit id="day" name="day" unitType="dimensionless">
+          <description>number of survey days</description>
         </unit>
       </unitList>
     </metadata>

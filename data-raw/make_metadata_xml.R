@@ -20,7 +20,7 @@ datatable_metadata <-
                                           "Daily upstream passage data, raw count",
                                           "Yearly passage data, interpolated estimates",
                                           "Description of data caveats"),
-                datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/create-edi/data/",
+                datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/updates-create-edi/data/",
                                        c("clear_redd.csv",
                                          "clear_redd_summary.csv",
                                          "clear_upstream_passage_raw.csv",
@@ -53,11 +53,11 @@ dataset <- list() |>
   add_datatable(datatable_metadata)
 
 # GO through and check on all units
-custom_units <- data.frame(id = c("count of fish", "year", "number of redds", "number of reaches"),
-                           unitType = c("dimensionless", "dimensionless", "dimensionless", "dimensionless"),
-                           parentSI = c(NA, NA, NA, NA),
-                           multiplierToSI = c(NA, NA, NA, NA),
-                           description = c("number of fish counted", "age of redd in years", "number of redds counted", "number of reaches"))
+custom_units <- data.frame(id = c("count of fish", "year", "number of redds", "number of reaches", "day"),
+                           unitType = c("dimensionless", "dimensionless", "dimensionless", "dimensionless", "dimensionless"),
+                           parentSI = c(NA, NA, NA, NA, NA),
+                           multiplierToSI = c(NA, NA, NA, NA, NA),
+                           description = c("number of fish counted", "age of redd in years", "number of redds counted", "number of reaches", "number of survey days"))
 
 
 unitList <- EML::set_unitList(custom_units)
