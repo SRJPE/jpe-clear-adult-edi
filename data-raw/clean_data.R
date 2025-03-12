@@ -62,9 +62,9 @@ redd_2021_raw <- read_csv(here::here("data-raw","Clear_Creek_2021_SCS_redds.csv"
 
 redd_2021_raw <- redd_2021_raw |>
   mutate(SIDE_SUB = case_when(
-    # SIDE_SUB == "3-Feb" ~ "2-3", #TODO check if this is the right correction
-    # SIDE_SUB == "4-Mar" ~ "3-4",
-    SIDE_SUB %in% c("3-Feb", "4-Mar") ~ NA, # setting to NA for now
+    SIDE_SUB == "3-Feb" ~ "2-3", #TODO check if this is the right correction
+    SIDE_SUB == "4-Mar" ~ "3-4",
+    # SIDE_SUB %in% c("3-Feb", "4-Mar") ~ NA, # otherwise set to NA for now
     T ~ SIDE_SUB))
 
 redd_2022_raw <- read_csv(here::here("data-raw","Clear_Creek_2022_SCS_redds.csv")) |>
@@ -73,7 +73,7 @@ redd_2022_raw <- read_csv(here::here("data-raw","Clear_Creek_2022_SCS_redds.csv"
 
 redd_2024_raw <- readxl::read_xlsx(here::here("data-raw","Clear_Creek_2024_SCS_redds.xlsx")) |>
   mutate(DATE = as.Date(DATE),
-         `PW Relate` = "above",) |> # adding this since otherwise it will get filerted out
+         `PW Relate` = "above",) |> # adding this since otherwise it will get filtered out - might want to confirm
   rename(Fish_on_RE = 'Fish on redd') |>
   janitor::clean_names() |>
   mutate(qc_date = as.Date(qa_qc_date),
@@ -407,7 +407,7 @@ years_to_include_redd <- years_to_include_redd_raw |>
          description = gsub(",", "/", description),
          data_type = "redd") |>
   select(-c(total_number_of_reaches_surveyed, total_number_of_survey_days, reaches_surveyed_on_clear_creek)) |>
-  glimpse() # add type of data (redd or passage)
+  glimpse()
 
 years_to_include <- years_to_include_passage |> bind_rows(years_to_include_redd)
 # up_estimate <- upstream_passage_estimate_raw |>
