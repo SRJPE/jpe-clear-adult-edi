@@ -35,7 +35,7 @@ gcs_get_object(object_name = "standard-format-data/standard_adult_passage_estima
 # was the first year a temporary barrier weir was constructed to physically separate
 # spring-run and fall-run spawning grounds after hybridization was observed. All data
 # prior to 2003 does not distinguish between runs and would not be comparable.
-redd_raw <- read_csv(here::here("data-raw", "clear_daily_redd.csv"))
+redd_raw <- read_csv(here::here("data-raw", "clear_daily_redd.csv")) # meters
 
 # removing data from 2007 and 2010 since we got updated data for those years
 redd_raw <- redd_raw |>
@@ -44,19 +44,19 @@ redd_raw <- redd_raw |>
   glimpse()
 
 redd_2007_raw <- read_csv(here::here("data-raw","Clear_Creek_2007_SCS_redds.csv")) |> #new
-  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y"),
+  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y"), # inches
          PRE_SUB = as.character(PRE_SUB),
          SIDE_SUB = as.character(SIDE_SUB),
          TAIL_SUB = as.character(TAIL_SUB),
          SEC_60 = as.numeric(SEC_60)) |>
   glimpse()
 
-redd_2020_raw <- read_csv(here::here("data-raw","Clear_Creek_2020_SCS_redds.csv")) |>
+redd_2020_raw <- read_csv(here::here("data-raw","Clear_Creek_2020_SCS_redds.csv")) |> # inches
   mutate(DATE = as.Date(DATE, format = "%m/%d/%Y")) |>
   glimpse()
 
 redd_2021_raw <- read_csv(here::here("data-raw","Clear_Creek_2021_SCS_redds.csv")) |> # new - note that SIDE_SUB data is different than other years
-  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y",),
+  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y",), # inches
          Survey...16 = as.numeric(Survey...16)) |>
   glimpse()
 
@@ -68,7 +68,7 @@ redd_2021_raw <- redd_2021_raw |>
     T ~ SIDE_SUB))
 
 redd_2022_raw <- read_csv(here::here("data-raw","Clear_Creek_2022_SCS_redds.csv")) |>
-  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y")) |>
+  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y")) |> # inches
   glimpse()
 
 redd_2024_raw <- readxl::read_xlsx(here::here("data-raw","Clear_Creek_2024_SCS_redds.xlsx")) |>
@@ -76,7 +76,7 @@ redd_2024_raw <- readxl::read_xlsx(here::here("data-raw","Clear_Creek_2024_SCS_r
          `PW Relate` = "above",) |> # adding this since otherwise it will get filtered out - might want to confirm
   rename(Fish_on_RE = 'Fish on redd') |>
   janitor::clean_names() |>
-  mutate(qc_date = as.Date(qa_qc_date),
+  mutate(qc_date = as.Date(qa_qc_date), #inches
          year = year(date),
          picket_weir_relation = "above") |>
   rename('longitude' = 'point_x',
@@ -106,7 +106,7 @@ redd_2024_raw <- readxl::read_xlsx(here::here("data-raw","Clear_Creek_2024_SCS_r
 # i think this was filtered out because of picket weir relation is below?
 redd_2010_raw <- read_csv(here::here("data-raw","Clear_Creek_2010_additional_redd_updated.csv")) |>
   mutate(DATE = as.Date(DATE, format = "%m/%d/%Y",
-                        PRE_SUB = as.character(PRE_SUB))) |>
+                        PRE_SUB = as.character(PRE_SUB))) |> #inches
   glimpse()
 
 upstream_passage_raw <- readxl::read_xlsx(here::here("data-raw/clear_creek_raw_counts.xlsx"),
