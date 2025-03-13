@@ -1,6 +1,7 @@
 library(tidyverse)
 library(googleCloudStorageR)
 library(janitor)
+library(readxl)
 
 # pull in data from google cloud ---------------------------------------------------
 gcs_auth(json_file = Sys.getenv("GCS_AUTH_FILE"))
@@ -409,6 +410,17 @@ years_to_include_redd <- years_to_include_redd_raw |>
   glimpse()
 
 years_to_include <- years_to_include_passage |> bind_rows(years_to_include_redd)
+
+# surveyed reaches ----------------------------------------
+surveyed_reaches <- read_excel("data-raw/CC_environmentals_2003-2024.xlsx") |>
+  clean_names() |>
+  select(3:4) |>
+  mutate(date = as.Date(date),
+         reach = toupper(str_replace_all(reach, ",\\s*", "/")),
+         reach = case_when(reach == "5B" ~ "R5B",
+                           TRUE ~ reach)) |>
+  glimpse()
+
 # up_estimate <- upstream_passage_estimate_raw |>
 #   select(-c(ladder, stream, adipose_clipped, ucl, lcl, confidence_interval)) |>
 #   # add stat method from USFWS Adult Spring-run Chinook Salmon Monitoring in Clear Creek, California, 2013-2018 Report
@@ -443,6 +455,7 @@ write_csv(redd_summary, here::here("data", "clear_redd_summary.csv"))
 write_csv(up, here::here("data", "clear_upstream_passage_raw.csv"))
 write_csv(up_estimate, here::here("data", "clear_upstream_passage_estimates.csv"))
 write_csv(years_to_include, here::here("data","clear_years_to_include.csv"))
+write_csv(surveyed_reaches, here::here("data", "clear_redd_surveyed_reaches.csv"))
 
 
 # save cleaned data to `data/`
