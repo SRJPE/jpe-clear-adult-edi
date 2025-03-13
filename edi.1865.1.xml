@@ -30,7 +30,7 @@
       <electronicMailAddress>samuel_provins@fws.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2025-03-11</pubDate>
+    <pubDate>2025-03-13</pubDate>
     <abstract>
       <para>
     The U.S. Fish and Wildlife Service (USFWS) collects data on adult
@@ -428,7 +428,7 @@
           <measurementScale>
             <ratio>
               <unit>
-                <standardUnit>meter</standardUnit>
+                <standardUnit>inch</standardUnit>
               </unit>
               <numericDomain>
                 <numberType>real</numberType>
@@ -447,7 +447,7 @@
           <measurementScale>
             <ratio>
               <unit>
-                <standardUnit>meter</standardUnit>
+                <standardUnit>inch</standardUnit>
               </unit>
               <numericDomain>
                 <numberType>real</numberType>
@@ -591,8 +591,8 @@
       <entityDescription>Annual redd summary</entityDescription>
       <physical>
         <objectName>clear_redd_summary.csv</objectName>
-        <size unit="bytes">1243</size>
-        <authentication method="MD5">800a4bde825e8c71e1e3d4eeb97ee090</authentication>
+        <size unit="bytes">1144</size>
+        <authentication method="MD5">9d13b9ce7e1029e92979b03e7cbd3ad2</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -668,7 +668,7 @@
           </measurementScale>
         </attribute>
         <attribute>
-          <attributeName>reaches_numbers</attributeName>
+          <attributeName>reach_numbers</attributeName>
           <attributeLabel>redd_summary</attributeLabel>
           <attributeDefinition>Survey reach(es) where survey was done</attributeDefinition>
           <measurementScale>
@@ -679,25 +679,6 @@
                 </textDomain>
               </nonNumericDomain>
             </ordinal>
-          </measurementScale>
-        </attribute>
-        <attribute>
-          <attributeName>total_number_of_survey_days</attributeName>
-          <attributeLabel>redd_summary</attributeLabel>
-          <attributeDefinition>Total survey days that year</attributeDefinition>
-          <measurementScale>
-            <ratio>
-              <unit>
-                <customUnit>day</customUnit>
-              </unit>
-              <numericDomain>
-                <numberType>whole</numberType>
-                <bounds>
-                  <minimum exclusive="false">10</minimum>
-                  <maximum exclusive="false">76</maximum>
-                </bounds>
-              </numericDomain>
-            </ratio>
           </measurementScale>
         </attribute>
       </attributeList>
@@ -1100,6 +1081,63 @@
         </attribute>
       </attributeList>
       <numberOfRecords>37</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>clear_redd_surveyed_reaches.csv</entityName>
+      <entityDescription>Reaches surveyed for redds in Clear Creek</entityDescription>
+      <physical>
+        <objectName>clear_redd_surveyed_reaches.csv</objectName>
+        <size unit="bytes">15231</size>
+        <authentication method="MD5">20e6c6d9ef741c88a9f300a132af11e7</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/updates-create-edi/data/clear_redd_surveyed_reaches.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeLabel>surveyed_reaches</attributeLabel>
+          <attributeDefinition>Date when survey was conducted</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">04/21/2003</minimum>
+                  <maximum exclusive="false">10/25/2024</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>reach</attributeName>
+          <attributeLabel>surveyed_reaches</attributeLabel>
+          <attributeDefinition>Reach surveyed for redds. Levels =c("R1", "R3", "R2", "R4", "R5", "R6", "R7", "R5A", "R5B", "R5C", "R6A", "R6B")</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Reach surveyed for redds. Levels =c("R1", "R3", "R2", "R4", "R5", "R6", "R7", "R5A", "R5B", "R5C", "R6A", "R6B")</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>1045</numberOfRecords>
     </dataTable>
   </dataset>
   <additionalMetadata>

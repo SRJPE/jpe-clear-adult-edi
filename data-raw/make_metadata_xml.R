@@ -9,23 +9,27 @@ datatable_metadata <-
                              "data/clear_redd_summary.csv",
                              "data/clear_upstream_passage_raw.csv",
                              "data/clear_upstream_passage_estimates.csv",
-                             "data/clear_years_to_include.csv"),
+                             "data/clear_years_to_include.csv",
+                             "data/clear_redd_surveyed_reaches.csv"),
                 attribute_info = c("data-raw/metadata/clear_redd_metadata.xlsx",
                                    "data-raw/metadata/clear_redd_summary_metadata.xlsx",
                                    "data-raw/metadata/clear_upstream_passage_raw_metadata.xlsx",
                                    "data-raw/metadata/clear_upstream_passage_estimates_metadata.xlsx",
-                                   "data-raw/metadata/clear_years_to_include_metadata.xlsx"),
+                                   "data-raw/metadata/clear_years_to_include_metadata.xlsx",
+                                   "data-raw/metadata/clear_redd_surveyed_reaches_metadata.xlsx"),
                 datatable_description = c("Daily repeated observation redd survey data",
                                           "Annual redd summary",
                                           "Daily upstream passage data, raw count",
                                           "Yearly passage data, interpolated estimates",
-                                          "Description of data caveats"),
+                                          "Description of data caveats",
+                                          "Reaches surveyed for redds in Clear Creek"),
                 datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/updates-create-edi/data/",
                                        c("clear_redd.csv",
                                          "clear_redd_summary.csv",
                                          "clear_upstream_passage_raw.csv",
                                          "clear_upstream_passage_estimates.csv",
-                                         "clear_years_to_include.csv")))
+                                         "clear_years_to_include.csv",
+                                         "clear_redd_surveyed_reaches.csv")))
 # save cleaned data to `data/`
 excel_path <- "data-raw/metadata/clear_adult_metadata.xlsx"
 sheets <- readxl::excel_sheets(excel_path)
