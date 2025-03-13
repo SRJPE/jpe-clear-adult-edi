@@ -322,12 +322,12 @@ redd_summary <- redd_combined |>
     summarize(total_annual_redd_count = sum(redd_count)) |>
   left_join(years_to_include_redd_raw, by = "year") |>
   rename(number_reaches_surveyed = total_number_of_reaches_surveyed, # there is a data entry of 5.5, could this be an error?
-         reaches_numbers = reaches_surveyed_on_clear_creek) |>
-  select(year, total_annual_redd_count, number_reaches_surveyed, reaches_numbers) |>
-  mutate(reaches_numbers = gsub(",", " &", reaches_numbers)) |>
+         reach_numbers = reaches_surveyed_on_clear_creek) |>
+  select(year, total_annual_redd_count, number_reaches_surveyed, reach_numbers) |>
+  mutate(reach_numbers = gsub(",", " &", reach_numbers)) |>
   glimpse()
 
-redd_summary$reaches_numbers <- gsub("^'|\\s*'$", "", redd_summary$reaches_numbers)
+redd_summary$reach_numbers <- gsub("^'|\\s*'$", "", redd_summary$reach_numbers)
 
 # redd_summary <- redd |>
 #     mutate(year = year(date)) |>
