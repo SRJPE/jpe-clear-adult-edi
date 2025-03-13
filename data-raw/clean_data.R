@@ -323,8 +323,7 @@ redd_summary <- redd_combined |>
   left_join(years_to_include_redd_raw, by = "year") |>
   rename(number_reaches_surveyed = total_number_of_reaches_surveyed, # there is a data entry of 5.5, could this be an error?
          reaches_numbers = reaches_surveyed_on_clear_creek) |>
-  select(year, total_annual_redd_count, number_reaches_surveyed, reaches_numbers,
-         total_number_of_survey_days) |> # TODO check on description of this field
+  select(year, total_annual_redd_count, number_reaches_surveyed, reaches_numbers) |>
   mutate(reaches_numbers = gsub(",", " &", reaches_numbers)) |>
   glimpse()
 
