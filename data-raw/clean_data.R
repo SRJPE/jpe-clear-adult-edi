@@ -412,7 +412,7 @@ years_to_include_redd <- years_to_include_redd_raw |>
 years_to_include <- years_to_include_passage |> bind_rows(years_to_include_redd)
 
 # surveyed reaches ----------------------------------------
-surveyed_reaches <- read_excel("data-raw/CC_environmentals_2003-2024.xlsx") |>
+surveyed_reaches_1 <- read_excel("data-raw/CC_environmentals_2003-2024.xlsx") |>
   clean_names() |>
   select(3:4) |>
   mutate(date = as.Date(date),
@@ -421,6 +421,16 @@ surveyed_reaches <- read_excel("data-raw/CC_environmentals_2003-2024.xlsx") |>
                            TRUE ~ reach)) |>
   glimpse()
 
+surveyed_reaches_2 <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx") |>
+  clean_names() |>
+  select(3:4) |>
+  mutate(date = as.Date(date),
+         reach = toupper(str_replace_all(reach, ",\\s*", "/")),
+         reach = case_when(reach %in% c("FROM MSDAM (RM 6.5) TO LOWER SCHMITT (RM 2.2)", "FROM MSDAM (RM 6.5)") ~ "R6",
+                           TRUE ~ reach)) |>
+  glimpse()
+
+surveyed_reaches <- bind_rows(surveyed_reaches_1, surveyed_reaches_2)
 # up_estimate <- upstream_passage_estimate_raw |>
 #   select(-c(ladder, stream, adipose_clipped, ucl, lcl, confidence_interval)) |>
 #   # add stat method from USFWS Adult Spring-run Chinook Salmon Monitoring in Clear Creek, California, 2013-2018 Report
