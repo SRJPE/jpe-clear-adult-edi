@@ -430,7 +430,15 @@ surveyed_reaches_2 <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx
                            TRUE ~ reach)) |>
   glimpse()
 
-surveyed_reaches <- bind_rows(surveyed_reaches_1, surveyed_reaches_2)
+surveyed_reaches <- bind_rows(surveyed_reaches_1, surveyed_reaches_2) |>
+  mutate(reach = case_when(reach %in% c("R5A", "R5B","R5C", "R5AB", "R5ABC") ~ "R5",
+                           reach %in% c("R6A", "R6B") ~ "R6",
+                           TRUE ~ reach)) |>
+  separate_rows(reach, sep = "/") |>
+  mutate(reach = case_when(reach == "R6B" ~ "R6",
+                           reach %in% c("R5AB", "R5ABC", "R5A (ABOVE UCC)") ~ "R5",
+                           TRUE ~ reach)) |>
+  glimpse()
 
 #exploratory, looking into pre 2006 river miles for each reach- TODO figure out if we want this info
 reach_reference_raw <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx", sheet = 2, skip = 2) |>
