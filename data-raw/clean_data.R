@@ -441,11 +441,36 @@ surveyed_reaches <- bind_rows(surveyed_reaches_1, surveyed_reaches_2) |>
   glimpse()
 
 #exploratory, looking into pre 2006 river miles for each reach- TODO figure out if we want this info
-reach_reference_raw <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx", sheet = 2, skip = 2) |>
+reach_reference_1 <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx", sheet = 2, skip = 2) |>
   clean_names() |>
   slice(1:6) |>
   select(6:10) |>
-  glimpse()
+  mutate(river_mile_start = as.numeric(rm_8),
+         river_mile_end = as.numeric(rm_10),
+         reach_number = as.numeric(reach)) |>
+  select(-c(location_7, location_9, rm_8,rm_10, reach)) |>
+  mutate(years = "1999-2006")
+
+reach_reference_2 <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx", sheet = 2, skip = 12) |>
+  clean_names() |>
+  slice(1:7) |>
+  select(6:10) |>
+  mutate(river_mile_start = as.numeric(rm_8),
+         river_mile_end = as.numeric(rm_10),
+         reach_number = as.numeric(reach)) |>
+  select(-c(location_7, location_9, rm_8,rm_10, reach)) |>
+  mutate(years = "2006-2020")
+
+reach_reference_3 <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx", sheet = 2, skip = 22) |>
+  clean_names() |>
+  slice(1:7) |>
+  mutate(river_mile_start = as.numeric(rm_3),
+         river_mile_end = as.numeric(rm_5),
+         reach_number = as.numeric(reach)) |>
+  select(-c(location_2, location_4, rm_3, rm_5, reach)) |>
+  mutate(years = "2020-2024")
+
+river_mile_reference <- bind_rows(reach_reference_1, reach_reference_2, reach_reference_3) |> glimpse()
 # up_estimate <- upstream_passage_estimate_raw |>
 #   select(-c(ladder, stream, adipose_clipped, ucl, lcl, confidence_interval)) |>
 #   # add stat method from USFWS Adult Spring-run Chinook Salmon Monitoring in Clear Creek, California, 2013-2018 Report
@@ -481,7 +506,7 @@ write_csv(up, here::here("data", "clear_upstream_passage_raw.csv"))
 write_csv(up_estimate, here::here("data", "clear_upstream_passage_estimates.csv"))
 write_csv(years_to_include, here::here("data","clear_years_to_include.csv"))
 write_csv(surveyed_reaches, here::here("data", "clear_redd_surveyed_reaches.csv"))
-
+write_csv(river_mile_reference, here::here("data", "clear_redd_river_mile_reaches.csv"))
 
 # save cleaned data to `data/`
 # read.csv(here::here("data", "clear_redd.csv")) |> glimpse()
