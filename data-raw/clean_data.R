@@ -431,6 +431,13 @@ surveyed_reaches_2 <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx
   glimpse()
 
 surveyed_reaches <- bind_rows(surveyed_reaches_1, surveyed_reaches_2)
+
+#exploratory, looking into pre 2006 river miles for each reach- TODO figure out if we want this info
+reach_reference_raw <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx", sheet = 2, skip = 2) |>
+  clean_names() |>
+  slice(1:6) |>
+  select(6:10) |>
+  glimpse()
 # up_estimate <- upstream_passage_estimate_raw |>
 #   select(-c(ladder, stream, adipose_clipped, ucl, lcl, confidence_interval)) |>
 #   # add stat method from USFWS Adult Spring-run Chinook Salmon Monitoring in Clear Creek, California, 2013-2018 Report
