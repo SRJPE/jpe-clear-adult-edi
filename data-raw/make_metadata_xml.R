@@ -10,26 +10,30 @@ datatable_metadata <-
                              "data/clear_upstream_passage_raw.csv",
                              "data/clear_upstream_passage_estimates.csv",
                              "data/clear_years_to_include.csv",
-                             "data/clear_redd_surveyed_reaches.csv"),
+                             "data/clear_redd_surveyed_reaches.csv",
+                             "data/clear_redd_reach_river_mile_reference.csv"),
                 attribute_info = c("data-raw/metadata/clear_redd_metadata.xlsx",
                                    "data-raw/metadata/clear_redd_summary_metadata.xlsx",
                                    "data-raw/metadata/clear_upstream_passage_raw_metadata.xlsx",
                                    "data-raw/metadata/clear_upstream_passage_estimates_metadata.xlsx",
                                    "data-raw/metadata/clear_years_to_include_metadata.xlsx",
-                                   "data-raw/metadata/clear_redd_surveyed_reaches_metadata.xlsx"),
+                                   "data-raw/metadata/clear_redd_surveyed_reaches_metadata.xlsx",
+                                   "data-raw/metadata/clear_redd_reach_river_mile_reference_metadata.xlsx"),
                 datatable_description = c("Daily repeated observation redd survey data",
                                           "Annual redd summary",
                                           "Daily upstream passage data, raw count",
                                           "Yearly passage data, interpolated estimates",
                                           "Description of data caveats",
-                                          "Reaches surveyed for redds in Clear Creek"),
+                                          "Reaches surveyed for redds in Clear Creek",
+                                          "River mile extent of reaches"),
                 datatable_url = paste0("https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/updates-create-edi/data/",
                                        c("clear_redd.csv",
                                          "clear_redd_summary.csv",
                                          "clear_upstream_passage_raw.csv",
                                          "clear_upstream_passage_estimates.csv",
                                          "clear_years_to_include.csv",
-                                         "clear_redd_surveyed_reaches.csv")))
+                                         "clear_redd_surveyed_reaches.csv",
+                                         "clear_redd_reach_river_mile_reference.csv")))
 # save cleaned data to `data/`
 excel_path <- "data-raw/metadata/clear_adult_metadata.xlsx"
 sheets <- readxl::excel_sheets(excel_path)
@@ -57,11 +61,12 @@ dataset <- list() |>
   add_datatable(datatable_metadata)
 
 # GO through and check on all units
-custom_units <- data.frame(id = c("count of fish", "year", "number of redds", "number of reaches", "day"),
-                           unitType = c("dimensionless", "dimensionless", "dimensionless", "dimensionless", "dimensionless"),
-                           parentSI = c(NA, NA, NA, NA, NA),
-                           multiplierToSI = c(NA, NA, NA, NA, NA),
-                           description = c("number of fish counted", "age of redd in years", "number of redds counted", "number of reaches", "number of survey days"))
+custom_units <- data.frame(id = c("count of fish", "year", "number of redds", "number of reaches", "day", "rivermile", "reach"),
+                           unitType = c("dimensionless", "dimensionless", "dimensionless", "dimensionless", "dimensionless", "dimensionless", "dimensionless"),
+                           parentSI = c(NA, NA, NA, NA, NA, NA, NA),
+                           multiplierToSI = c(NA, NA, NA, NA, NA, NA, NA),
+                           description = c("number of fish counted", "age of redd in years", "number of redds counted",
+                                           "number of reaches", "number of survey days", "river mile of location", "reach number"))
 
 
 unitList <- EML::set_unitList(custom_units)

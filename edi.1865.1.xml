@@ -30,7 +30,7 @@
       <electronicMailAddress>samuel_provins@fws.gov</electronicMailAddress>
       <role>principal investigator</role>
     </associatedParty>
-    <pubDate>2025-03-13</pubDate>
+    <pubDate>2025-03-18</pubDate>
     <abstract>
       <para>
     The U.S. Fish and Wildlife Service (USFWS) collects data on adult
@@ -1115,7 +1115,7 @@
               <formatString>YYYY-MM-DD</formatString>
               <dateTimeDomain>
                 <bounds>
-                  <minimum exclusive="false">04/21/2003</minimum>
+                  <minimum exclusive="false">05/06/1995</minimum>
                   <maximum exclusive="false">10/25/2024</maximum>
                 </bounds>
               </dateTimeDomain>
@@ -1139,6 +1139,104 @@
       </attributeList>
       <numberOfRecords>1045</numberOfRecords>
     </dataTable>
+    <dataTable>
+      <entityName>clear_redd_reach_river_mile_reference.csv</entityName>
+      <entityDescription>River mile extent of reaches</entityDescription>
+      <physical>
+        <objectName>clear_redd_reach_river_mile_reference.csv</objectName>
+        <size unit="bytes">498</size>
+        <authentication method="MD5">6d7e523dc2130f398abdc91edbb5b50f</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://raw.githubusercontent.com/SRJPE/jpe-clear-adult-edi/updates-create-edi/data/clear_redd_reach_river_mile_reference.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>river_mile_start</attributeName>
+          <attributeLabel>reach_river_mile</attributeLabel>
+          <attributeDefinition>River mile where reach starts</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>rivermile</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+                <bounds>
+                  <minimum exclusive="false">1.77</minimum>
+                  <maximum exclusive="false">18.64</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>river_mile_end</attributeName>
+          <attributeLabel>river_mile_reaches</attributeLabel>
+          <attributeDefinition>River mile where reach ends</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>rivermile</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>integer</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.10</minimum>
+                  <maximum exclusive="false">16.45</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>reach_number</attributeName>
+          <attributeLabel>river_mile_reaches</attributeLabel>
+          <attributeDefinition>Survey reach number</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>reach</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                  <maximum exclusive="false">7</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>years</attributeName>
+          <attributeLabel>river_mile_reaches</attributeLabel>
+          <attributeDefinition>Years when river mile extent applies to</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Years when river mile extent applies to</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>21</numberOfRecords>
+    </dataTable>
   </dataset>
   <additionalMetadata>
     <metadata>
@@ -1157,6 +1255,12 @@
         </unit>
         <unit id="day" name="day" unitType="dimensionless">
           <description>number of survey days</description>
+        </unit>
+        <unit id="rivermile" name="rivermile" unitType="dimensionless">
+          <description>river mile of location</description>
+        </unit>
+        <unit id="reach" name="reach" unitType="dimensionless">
+          <description>reach number</description>
         </unit>
       </unitList>
     </metadata>
