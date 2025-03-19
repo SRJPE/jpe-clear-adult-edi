@@ -481,7 +481,10 @@ reach_reference_3 <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx"
   select(-c(location_2, location_4, rm_3, rm_5, reach)) |>
   mutate(years = "2020-2024")
 
-river_mile_reference <- bind_rows(reach_reference_1, reach_reference_2, reach_reference_3) |> glimpse()
+river_mile_reference <- bind_rows(reach_reference_1, reach_reference_2, reach_reference_3) |>
+  mutate(year_extent = years) |>
+  select(year_extent, reach_number, river_mile_start, river_mile_end) |>
+    glimpse()
 # up_estimate <- upstream_passage_estimate_raw |>
 #   select(-c(ladder, stream, adipose_clipped, ucl, lcl, confidence_interval)) |>
 #   # add stat method from USFWS Adult Spring-run Chinook Salmon Monitoring in Clear Creek, California, 2013-2018 Report
