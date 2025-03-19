@@ -517,7 +517,7 @@ write_csv(up, here::here("data", "clear_upstream_passage_raw.csv"))
 write_csv(up_estimate, here::here("data", "clear_upstream_passage_estimates.csv"))
 write_csv(years_to_include, here::here("data","clear_years_to_include.csv"))
 write_csv(surveyed_reaches, here::here("data", "clear_redd_surveyed_reaches.csv"))
-write_csv(river_mile_reference, here::here("data", "clear_redd_reach_river_mile.csv"))
+write_csv(river_mile_reference, here::here("data", "clear_redd_reach_river_mile_reference.csv"))
 
 # save cleaned data to `data/`
 # read.csv(here::here("data", "clear_redd.csv")) |> glimpse()
