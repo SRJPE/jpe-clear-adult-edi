@@ -57,6 +57,7 @@ redd_2020_raw <- read_csv(here::here("data-raw","Clear_Creek_2020_SCS_redds.csv"
   glimpse()
 
 redd_2021_raw <- read_csv(here::here("data-raw","Clear_Creek_2021_SCS_redds.csv")) |> # new - note that SIDE_SUB data is different than other years
+  slice(1:490) |>
   mutate(DATE = as.Date(DATE, format = "%m/%d/%Y",), # inches
          Survey...16 = as.numeric(Survey...16)) |>
   glimpse()
@@ -274,17 +275,17 @@ redd_substrate_size_lookup <-
 
   left_join(substrate_class)
 
-# standardize the reaches
-gcs_get_object(
-  object_name = "jpe-model-data/standard_reach_lookup.csv",
-  bucket = gcs_get_global_bucket(),
-  saveToDisk = here::here("data-raw",  "standard-reach-lookup.csv"),
-  overwrite = TRUE
-)
+# standardize the reaches - not using this since we got RMs for each Reach and Sub-Reach
+# gcs_get_object(
+#   object_name = "jpe-model-data/standard_reach_lookup.csv",
+#   bucket = gcs_get_global_bucket(),
+#   saveToDisk = here::here("data-raw",  "standard-reach-lookup.csv"),
+#   overwrite = TRUE
+# )
 
-standard_reach_lookup <- read_csv(here::here("data-raw",  "standard-reach-lookup.csv")) |>
-  filter(stream == "clear creek") |>
-  select(reach, standardized_reach)
+# standard_reach_lookup <- read_csv(here::here("data-raw",  "standard-reach-lookup.csv")) |>
+#   filter(stream == "clear creek") |>
+#   select(reach, standardized_reach)
 
 redd_combined <- redd_raw_combined |>
   filter(species == "Chinook",
@@ -298,8 +299,10 @@ redd_combined <- redd_raw_combined |>
   left_join(redd_substrate_size_lookup |>
               select(redd_substrate_size, pre_redd_substrate_class = redd_substrate_class),
             by = c("pre_redd_substrate_size" = "redd_substrate_size")) |>
-  left_join(standard_reach_lookup, by = c("surveyed_reach" = "reach")) |>
-  select(date, redd_id = JPE_redd_id, reach = standardized_reach, fish_on_redd,
+  # left_join(standard_reach_lookup, by = c("surveyed_reach" = "reach")) |> # removing this
+  select(date, redd_id = JPE_redd_id,
+         reach = surveyed_reach,
+         fish_on_redd,
          age, run,
          redd_measured = measured, redd_width, redd_length, pre_redd_depth, redd_pit_depth,
          redd_tail_depth, pre_redd_substrate_class, redd_substrate_class,
@@ -328,7 +331,7 @@ redd_summary <- redd_combined |>
   mutate(reach_numbers = gsub(",", " &", reach_numbers)) |>
   glimpse()
 
-redd_summary$reach_numbers <- gsub("^'|\\s*'$", "", redd_summary$reach_numbers)
+# redd_summary$reach_numbers <- gsub("^'|\\s*'$", "", redd_summary$reach_numbers)
 
 # redd_summary <- redd |>
 #     mutate(year = year(date)) |>
@@ -431,13 +434,9 @@ surveyed_reaches_2 <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx
   glimpse()
 
 surveyed_reaches <- bind_rows(surveyed_reaches_1, surveyed_reaches_2) |>
-  mutate(reach = case_when(reach %in% c("R5A", "R5B","R5C", "R5AB", "R5ABC") ~ "R5",
-                           reach %in% c("R6A", "R6B") ~ "R6",
-                           TRUE ~ reach)) |>
   separate_rows(reach, sep = "/") |>
-  mutate(reach = case_when(reach == "R6B" ~ "R6",
-                           reach %in% c("R5AB", "R5ABC", "R5A (ABOVE UCC)") ~ "R5",
-                           TRUE ~ reach)) |>
+  mutate(reach = case_when(reach == "R5A (ABOVE UCC)" ~ "R5A",
+                                  TRUE ~ reach)) |>
   glimpse()
 
 # river mile reference
@@ -545,3 +544,4 @@ write_csv(river_mile_reference, here::here("data", "clear_redd_reach_river_mile_
 # read.csv(here::here("data", "clear_upstream_passage_estimates.csv")) |> glimpse()
 # read.csv(here::here("data", "clear_upstream_passage_estimates.csv")) |> glimpse()
 # read.csv(here::here("data", "clear_redd_reache_river_mile.csv")) |> glimpse()
+# read.csv(here::here("data", "clear_redd_surveyed_reaches.csv")) |> glimpse()
