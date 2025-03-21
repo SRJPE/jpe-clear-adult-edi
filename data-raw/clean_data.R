@@ -440,51 +440,68 @@ surveyed_reaches <- bind_rows(surveyed_reaches_1, surveyed_reaches_2) |>
                            TRUE ~ reach)) |>
   glimpse()
 
-#exploratory, looking into pre 2006 river miles for each reach- TODO figure out if we want this info
-reach_reference_1 <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx", sheet = 2, skip = 2) |>
+# river mile reference
+reach_reference_1 <- read_excel("data-raw/Clear_Creek_River_Miles.xlsx", skip = 2) |>
   clean_names() |>
-  slice(1:5) |>
-  select(6:10) |>
-  mutate(river_mile_start = as.numeric(rm_8),
-         river_mile_end = as.numeric(rm_10),
-         reach_number = as.numeric(reach)) |>
-  select(-c(location_7, location_9, rm_8,rm_10, reach)) |>
-  mutate(years = "1999-2006") |>
+  slice(1:6) |>
+  mutate(river_mile_start = as.numeric(start_rm),
+         river_mile_end = as.numeric(end_rm),
+         reach_number = as.character(reach)) |>
+  mutate(year_extent = "1999-2006") |>
   bind_rows(
     data.frame( # adding manually since there is a note on sheet that they are different
       river_mile_start = 6.5,
       river_mile_end = 2.2,
-      reach_number = 6,
-      years = "1999"),
+      reach_number = "6",
+      year_extent = "1999"),
     data.frame(
       river_mile_start = 6.5,
       river_mile_end = 1.7,
-      reach_number = 6,
-      years = "2000-2006"))|> glimpse()
+      reach_number = "6",
+      year_extent = "2000-2006"),
+    data.frame( # adding RST
+      river_mile_start = 8.29,
+      river_mile_end = 8.29,
+      reach_number = "UCC RST",
+      year_extent = "1999-2006")) |>
+  select(year_extent, reach_number, river_mile_start, river_mile_end) |>
+  glimpse()
 
-reach_reference_2 <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx", sheet = 2, skip = 12) |>
+reach_reference_2 <- read_excel("data-raw/Clear_Creek_River_Miles.xlsx", skip = 14) |>
   clean_names() |>
-  slice(1:7) |>
-  select(6:10) |>
-  mutate(river_mile_start = as.numeric(rm_8),
-         river_mile_end = as.numeric(rm_10),
-         reach_number = as.numeric(reach)) |>
-  select(-c(location_7, location_9, rm_8,rm_10, reach)) |>
-  mutate(years = "2006-2020")
+  slice(1:10) |>
+  mutate(river_mile_start = as.numeric(start_rm),
+         river_mile_end = as.numeric(end_rm),
+         reach_number = as.character(reach)) |>
+  mutate(year_extent = "2006-2020") |>
+  bind_rows(
+    data.frame( # adding RST
+      river_mile_start = 8.42,
+      river_mile_end = 8.42,
+      reach_number = "UCC RST",
+      year_extent = "2006-2020")) |>
+  select(year_extent, reach_number, river_mile_start, river_mile_end) |>
+  glimpse()
 
-reach_reference_3 <- read_excel("data-raw/CC_environmentals_1999-2002_2020.xlsx", sheet = 2, skip = 22) |>
+reach_reference_3 <- read_excel("data-raw/Clear_Creek_River_Miles.xlsx", skip = 29) |>
   clean_names() |>
-  slice(1:7) |>
-  mutate(river_mile_start = as.numeric(rm_3),
-         river_mile_end = as.numeric(rm_5),
-         reach_number = as.numeric(reach)) |>
-  select(-c(location_2, location_4, rm_3, rm_5, reach)) |>
-  mutate(years = "2020-2024")
+  slice(1:10) |>
+  mutate(river_mile_start = as.numeric(start_rm),
+         river_mile_end = as.numeric(end_rm),
+         reach_number = as.character(reach)) |>
+  mutate(year_extent = "2020-2024") |>
+  bind_rows(
+    data.frame( # adding RST
+      river_mile_start = 8.74,
+      river_mile_end = 8.74,
+      reach_number = "UCC RST",
+      year_extent = "2020-2024")) |>
+  select(year_extent, reach_number, river_mile_start, river_mile_end) |>
+  glimpse()
 
 river_mile_reference <- bind_rows(reach_reference_1, reach_reference_2, reach_reference_3) |>
-  mutate(year_extent = years) |>
-  select(year_extent, reach_number, river_mile_start, river_mile_end) |>
     glimpse()
+
 # up_estimate <- upstream_passage_estimate_raw |>
 #   select(-c(ladder, stream, adipose_clipped, ucl, lcl, confidence_interval)) |>
 #   # add stat method from USFWS Adult Spring-run Chinook Salmon Monitoring in Clear Creek, California, 2013-2018 Report
