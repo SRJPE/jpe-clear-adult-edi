@@ -53,7 +53,10 @@ redd_2007_raw <- read_csv(here::here("data-raw","Clear_Creek_2007_SCS_redds.csv"
   glimpse()
 
 redd_2020_raw <- read_csv(here::here("data-raw","Clear_Creek_2020_SCS_redds.csv")) |> # inches
-  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y")) |>
+  mutate(DATE = as.Date(DATE, format = "%m/%d/%Y"),
+         REACH = case_when(
+           River_Mile > 8.59 & River_Mile < 11 ~ "4",
+           TRUE ~ REACH)) |>
   glimpse()
 
 redd_2021_raw <- read_csv(here::here("data-raw","Clear_Creek_2021_SCS_redds.csv")) |> # new - note that SIDE_SUB data is different than other years
